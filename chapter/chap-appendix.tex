@@ -1,0 +1,314 @@
+﻿%%   appendix
+\chapter{软积分公式的详细推导}
+\label{chap:softIntegral}
+
+首先，圈积分中的红外发散约定为：
+\begin{eqnarray}
+I({k_i}) = C(\epsilon)\left(\frac{A_2}{\epsilon^2} + \frac{A_1}{\epsilon} + A_0\right)
+\end{eqnarray}
+其中
+\begin{eqnarray}
+C(\epsilon) = \frac{(4\pi)^{\epsilon}}{\Gamma(1-\epsilon)} = (4\pi)^{\epsilon}
+\frac{\Gamma(1+\epsilon)\Gamma(1-\epsilon)^2}{\Gamma(1-2\epsilon)} + \mathcal{O}(\epsilon^3)
+\end{eqnarray}
+同样，实胶子或光子辐射中也会出现同样的公因子$C(\epsilon)$。
+
+下面以三体末态为例进行推导，结果也适用于更一般的情况。我们假定第五个粒子是软胶子或软光子，则软积分
+公式为
+\begin{eqnarray}
+g_{ij} = \frac{(2\pi\mu)^{2\epsilon}}{2\pi}\int^{\Delta E}_{0} \frac{d^{D-1}\vec{p}_5}{E_5}
+\left[ 
+\frac{2(p_i\cdot p_j)}{(p_i\cdot p_5)(p_j\cdot p_5)} - \frac{p^2_i}{(p_i\cdot p_5)^2} 
+- \frac{p^2_j}{(p_j\cdot p_5)^2}
+\right]
+\end{eqnarray}
+上式中$\Delta E = \delta_s \sqrt{\hat{s}}/2$和$D = 4-2\epsilon$。
+为了给出上式的解析结果，通常会遇到如下特殊积分：
+\begin{eqnarray}
+I^{(k,l)}_D = \int\limits^{\pi}_{0} d\theta_1 \sin^{D-3}\theta_1 \int\limits^{\pi}_{0} \sin^{D-4}\theta_2
+\frac{(a+b\cos\theta_1)^{-k}}{(A+B\cos\theta_1+C\sin\theta_1\cos\theta_2)^l}
+\end{eqnarray}
+我们约定$p_5 = E_5 p'_5$和$p'_5 = (1,\sin\theta_1\sin\theta_2, \sin\theta_1\cos\theta_2, \cos\theta_1)$，
+则软积分公式简化为：
+\begin{eqnarray}
+g_{ij} &=& \frac{(4\pi^2\mu^2)^{\epsilon}}{2\pi}\int^{\Delta E}_{0}dE_5 E^{D-5}_5 \Omega_{D-4}
+\int d\theta_1 d\theta_2 \sin^{D-3}\theta_1 \sin^{D-4}\theta_2 
+\nonumber \\
+&& \times \left[
+\frac{2(p_i\cdot p_j)}{(p_i\cdot p'_5)(p_j\cdot p'_5)} - \frac{p^2_i}{(p_i\cdot p'_5)^2} 
+- \frac{p^2_j}{(p_j\cdot p'_5)^2}
+\right]
+\nonumber \\
+&=& \frac{(4\pi^2\mu^2)^{\epsilon}}{2\pi} \frac{2}{(4\pi)^{\epsilon}} 
+\frac{\Gamma(1-\epsilon)}{\Gamma(1-2\epsilon)}\left(-\frac{1}{2\epsilon}\right)\left(\frac{1}{\Delta E^2}
+\right)^{\epsilon}\times \int d\theta_1 d\theta_2 \cdots
+\nonumber \\
+&=& \left(\frac{4\pi\mu^2}{4\Delta E^2}\right)^{\epsilon} \frac{\Gamma(1-\epsilon)}{\Gamma(1-2\epsilon)}
+\left(-\frac{1}{2\pi\epsilon}\right) \times \int d\theta_1 d\theta_2 \cdots
+\nonumber \\
+&=& C(\epsilon)\left[\left(\frac{\mu^2}{4\Delta E^2}\right)^{\epsilon} \left(1-\frac{\pi^2}{6}
+\epsilon^2\right) \left(-\frac{1}{2\pi\epsilon}\right)\times \int d\theta_1 d\theta_2 \cdots \right]
+\nonumber \\
+&=& C(\epsilon) \left[\frac{1}{\epsilon} + \ln\left( \frac{\mu^2}{4\Delta E^2} \right)
++\epsilon \left( \frac{1}{2}\ln^2\left(\frac{\mu^2}{4\Delta E^2} \right) - \frac{\pi^2}{6}\right)\right]
+\left(-\frac{1}{2\pi} \right) \sum_i I^{(k_i,l_i)}_D
+\nonumber \\
+&=& C(\epsilon) f(\epsilon) \sum_i I^{(k_i,l_i)}_D
+\end{eqnarray}
+
+下面我们分情况讨论(略掉共因子$C(\epsilon)$)：
+\begin{enumerate}[(a)]
+\item 初初态软积分公式$g_{12}(p_1, p_2)$
+\begin{eqnarray}
+g_{12}(p_1,p_2) &=& \left[\frac{1}{\epsilon} + \ln\left( \frac{\mu^2}{4\Delta E^2} \right)
++\epsilon \left( \frac{1}{2}\ln^2\left(\frac{\mu^2}{4\Delta E^2} \right) - \frac{\pi^2}{6}\right)\right]
+\left(-\frac{1}{2\pi} \right)
+\nonumber \\
+&& \times \int d\theta_1 d\theta_2 \sin^{D-3}\theta_1\sin^{D-4}\theta_2 \frac{2p_1\cdot p_2}
+{(p_1\cdot p'_5)(p_2\cdot p'_5)}
+\end{eqnarray}
+我们假定讨论的过程是强子对撞机上的过程，$p_1$和$p_2$是无质量的夸克，$p_1 = \frac{\sqrt{\hat s}}{2}
+(1,0,0,1)$和$p_2 = \frac{\sqrt{\hat s}}{2}(1,0,0,-1)$，则
+\begin{eqnarray}
+g_{12} &=& f(\epsilon) \int d\theta_1 d\theta_2 \sin^{D-3}\theta_1 \sin^{D-4}\theta_2 \frac{4}
+{(1-\cos\theta_1)(1+\cos\theta_1)}
+\nonumber \\
+&=& f(\epsilon)\left(-\frac{4\pi}{\epsilon}\right)
+\nonumber \\
+&=& \frac{2}{\epsilon^2} + \frac{1}{\epsilon} \left(2\ln\left(\frac{\mu^2}{4\Delta E^2}\right)\right)
++ \ln^2\left(\frac{\mu^2}{4\Delta E^2}\right) - \frac{\pi^2}{3}
+\end{eqnarray}
+
+\item 初末态软积分公式$g_{13}(p_1, p_3)$ \\
+为了简化推导，我们利用$g_{ij}$的转动不变性，先选择一个便于计算的参考系，再转回原参考系。
+沿z轴转动参考系，使第三个粒子落在y-z平面，则粒子1和粒子3的四动量分别为
+$p_1 = (E_1, 0, 0, E_1)$和$p_3 = (E_3, 0, p_{3y}, p_{3z})$。下面分两种情况讨论：
+\begin{enumerate}[(i)]
+\item $p^2_3 = m^2_3 = 0$ \\
+软积分公式简化为
+\begin{eqnarray}
+\begin{split}
+& g_{13}(m_3 = 0)  \\
+& = f(\epsilon) \int d\theta_1 d\theta_2 \sin^{D-3}\theta_1 \sin^{D-4}\theta_2 
+\\
+& \times
+\frac{2p_1\cdot p_3} {(E_1 - E_1\cos\theta_1)(E_3 - p_{3z}\cos\theta_1 - p_{3y}\sin\theta_1\cos\theta_2)}
+\\
+&= f(\epsilon) 2\pi \frac{2p_1\cdot p_3}{E_1 E_3} \left(-\frac{1}{2\epsilon}\right) 
+\left(\frac{E_3 - p_{3t}}{2E_3}\right)^{-1-\epsilon}\left[1+\epsilon^2 
+Li_2\left(\frac{E_3+p_{3z}}{2E_3}\right)\right]
+\\
+&= \left[ \frac{1}{\epsilon} + \ln\left(\frac{\mu^2}{4\Delta E^2}\right) + \epsilon\left( \frac{1}{2}
+\ln^2\left(\frac{\mu^2}{4\Delta E^2}\right) - \frac{\pi^2}{6}\right)\right] \frac{2}{\epsilon}
+\\
+& \times \left(\frac{E_3-p_{3z}}{2E_3}\right)^{-\epsilon}\left[1 + \epsilon^2 Li_2\left(
+\frac{E_3+p_{3z}}{2E_3}\right)\right]
+\\
+&= \left[ \frac{2}{\epsilon^2} + \frac{2}{\epsilon}\ln\left(\frac{\mu^2}{4\Delta E^2}\right) 
++ \ln^2\left(\frac{\mu^2}{4\Delta E^2}\right) - \frac{\pi^2}{3}\right] \left[ 1 + 
+\epsilon\ln\left(\frac{2E_1E_3}{p_1\cdot p_3}\right) \right.
+\nonumber \\
+& + \left. \epsilon^2 \frac{1}{2}\ln^2\left(\frac{2E_1E_3}{p1\cdot p_3} \right) \right]
+\left[1 + \epsilon^2 Li_2\left(1- \frac{p_1\cdot p_3}{2E_1E_3} \right)\right]
+\\
+&= \frac{2}{\epsilon^2} + \frac{1}{\epsilon} 2\ln\left(\frac{\mu^2}{4\Delta E^2} 
+\frac{2E_1E_3}{p_1\cdot p_3}\right) + \ln^2\left(\frac{\mu^2}{4\Delta E^2}\right) - \frac{\pi^2}{3}
+\\
+&+ 2\ln\left(\frac{\mu^2}{4\Delta E^2}\right)\ln\left(\frac{2E_1E_3}{p_1\cdot p_3}\right)
++ \ln^2\left(\frac{2E_1E_3}{p_1\cdot p_3}\right) + 2Li_2\left(1-\frac{p_1\cdot p_3}{2E_1E_3}\right)
+\end{split}
+\end{eqnarray}
+
+\item $p^2_3 = m^2_3 > 0$ \\
+\begin{equation}
+\begin{split}
+& g_{13}(m_3 > 0) \\
+& = f(\epsilon) \int d\theta_1 d\theta_2 \sin^{D-3}\theta_1 \sin^{D-4}\theta_2
+\left[
+\frac{2(p_1\cdot p_3)}{(p_1\cdot p'_5)(p_3\cdot p'_5)} - \frac{p^2_3}{(p_3\cdot p'_5)^2}
+\right] \\
+&= f(\epsilon) \left[ 
+2(p_1\cdot p_3)\int d\theta_1 d\theta_2 \sin^{D-3}\theta_1 \sin^{D-4}\theta_2  \right. \\
+& \times \frac{1}{(E_1-E_1\cos\theta_1)(E_3 - p_{3z}\cos\theta_1-p_{3y}\sin\theta_1\sin\theta_2)}
+\\
+& \left. -m^2_3\frac{1}{(E_3-p_{3z}-p_{3y}\sin\theta_1\sin\theta_2)^2}
+\right] \\
+& = f(\epsilon) \Bigg\{ \frac{1}{\epsilon} - \ln\left(\frac{(p_1\cdot p_3)^2}{E^2_1m^2_3}\right)
++ \epsilon \big[ \ln^2\left(\frac{E_1(E_3-p_3)}{(p_1\cdot p_3)}\right) \\
+& - \frac{1}{2} \ln^2\left(\frac{E_3+p_3}{E_3-p_3}\right) + 2Li_2\left(\frac{p_{3z}-p_3}{E_3-p_3}\right)
+\\
+& - 2Li_2\left(\frac{-p_3-p_{3z}}{E_3-p_{3z}}\right)\big] + 1 + \epsilon\frac{E_3}{p_3}
+\ln\left(\frac{E_3+p_3}{E_3-p_3}\right) \Bigg\}  \\
+& = \frac{1}{\epsilon^2} + \frac{1}{\epsilon}\left[\ln\left(\frac{\mu^2}{4\Delta E^2}\right)
+-2\ln\left(\frac{p_1\cdot p_3}{E_1m_3}\right) + 1 \right] \\
+& + \frac{1}{2}\ln^2\left(\frac{\mu^2}{4\Delta E^2}\right) - \frac{\pi^2}{6} + 
+\left(1-2\ln\left(\frac{p_1\cdot p_3}{E_1m_3}\right)\right)\ln\left(\frac{\mu^2}{4\Delta E^2}\right)
+\\
+& - \frac{1}{2}\ln^2\left(\frac{1+\beta_3}{1-\beta_3}\right) -2Li_2\left(1-\frac{E_1E_3(1+\beta_3)}
+{p_1\cdot p_3}\right)
+\\
+& - 2Li_2\left(1-\frac{E_1E_3(1-\beta_3)}{p_1\cdot p_3}\right)
+ -\frac{1}{\beta_3}\ln\left(\frac{1-\beta_3}{1+\beta_3}\right)
+\end{split}
+\end{equation}
+其中$\beta_j = \sqrt{1-m^2_j/E^2_j}$，$p_3 = E_3\beta_3$，上式推导中利用了$Li_2$函数的性质：
+\begin{eqnarray}
+Li_2(1-z) + Li_2(1-\frac{1}{z}) = -\frac{1}{2} \ln^2(z)
+\end{eqnarray}
+
+\end{enumerate}
+
+\item 末末态软积分公式$g_{34}(p_3,p_4)$ \\
+根据粒子3和粒子4的质量可以分为四种情况：
+\begin{enumerate}[(i)]
+\item $m_3 = 0, m_4 = 0$\\
+此种情况跟$g_{13}(m_3=0)$类似，故
+\begin{eqnarray}
+\begin{split}
+& g_{34}(m_3 = m_4 = 0) \\ 
+& = \frac{2}{\epsilon^2} + \frac{1}{\epsilon} 2\ln\left(\frac{\mu^2}{4\Delta E^2}
+\frac{2E_3E_4}{p_3\cdot p_4}\right) + \ln\left(\frac{\mu^2}{4\Delta E^2}\right) - \frac{\pi^2}{3}
+\\
+& + 2\ln\left(\frac{\mu^2}{4\Delta E^2}\right)\ln\left(\frac{2E_3E_4}{p_3\cdot p_4}\right)
++ \ln^2\left(\frac{2E_3E_4}{p_3\cdot p_4}\right) + 2Li_2\left(1-\frac{p_3\cdot p_4}{2E_3E_4}\right)
+\end{split}
+\end{eqnarray}
+
+\item $m_3 = 0, m_4\ne 0$ \\
+此种情况跟$g_{13}(m_3\ne 0)$类似，所以
+\begin{eqnarray}
+\begin{split}
+& g_{34}(m_3 = 0, m_4\ne 0) \\
+& = \frac{1}{\epsilon^2} + \frac{1}{\epsilon}\left[\ln\left(\frac{\mu^2}{4\Delta E^2}\right)
+-2\ln\left(\frac{p_3\cdot p_4}{E_3m_4}\right) + 1 \right] \\
+& + \frac{1}{2} \ln^2\left(\frac{\mu^2}{4\Delta E^2}\right) - \frac{\pi^2}{6} + 
+\left(1-2\ln\left(\frac{p_3\cdot p_4}{E_3m_4}\right)\right)\ln\left(\frac{\mu^2}{4\Delta E^2}\right)
+\\
+& -\frac{1}{2}\ln^2\left(\frac{1+\beta_4}{1-\beta_4} \right) - 
+2Li_2\left(1-\frac{E_3E_4(1-\beta_4)}{p_3\cdot p_4}\right) \\
+& - 2Li_2\left(1-\frac{E_3E_4(1+\beta_4)}{p_3\cdot p_4}\right) + 
+\frac{1}{\beta_4} \ln\left(\frac{1-\beta_4}{1+\beta_4}\right)
+\end{split}
+\end{eqnarray}
+
+\item $m_3\ne 0, m_4 = 0$\\
+此种情况与$g_{34}(m_3= 0, m_4\ne 0)$类似，只需替换$3\leftrightarrow4$可得
+\begin{eqnarray}
+\begin{split}
+& g_{34}(m_3 \ne 0, m_4 = 0) \\
+& = \frac{1}{\epsilon^2} + \frac{1}{\epsilon}\left[\ln\left(\frac{\mu^2}{4\Delta E^2}\right)
+-2\ln\left(\frac{p_3\cdot p_4}{E_4m_3}\right) + 1 \right] \\
+& + \frac{1}{2} \ln^2\left(\frac{\mu^2}{4\Delta E^2}\right) - \frac{\pi^2}{6} + 
+\left(1-2\ln\left(\frac{p_3\cdot p_4}{E_4m_3}\right)\right)\ln\left(\frac{\mu^2}{4\Delta E^2}\right)
+\\
+& -\frac{1}{2}\ln^2\left(\frac{1+\beta_3}{1-\beta_3} \right) - 
+2Li_2\left(1-\frac{E_3E_4(1-\beta_3)}{p_3\cdot p_4}\right) \\
+& - 2Li_2\left(1-\frac{E_3E_4(1+\beta_3)}{p_3\cdot p_4}\right) + 
+\frac{1}{\beta_3} \ln\left(\frac{1-\beta_3}{1+\beta_3}\right)
+\end{split}
+\end{eqnarray}
+
+\item $m_3 \ne 0, m_4 \ne 0$ \\
+此种情况比较复杂，此处略去，详细推导可以参考文献\cite{Hooft:oneloop}和文献\cite{Denner:EWPhysics}。
+\end{enumerate}
+\end{enumerate}
+以上软积分的结果很容易推广到一般性的情况，例如三体末态的实辐射过程，只需把$g_{13}$公式中的下标做变换
+$3\leftrightarrow4$就成了$g_{14}$。对于初态有质量的情况本文就不详细讨论了，因为可以利用以上公式做一些
+简单的变换就可以得到。
+
+\chapter{VBF产生Higgs粒子对的相空间}
+\label{chap:HiggsPairPS}
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=1]{appendix_vbfhh.eps}
+\caption{2HDM模型下通过VBF道产生Higgs粒子对的示意图。}
+\label{fig:appendix1}
+\end{figure}
+
+本节讨论如何参数化VBF产生Higgs粒子对的相空间，该方法同样适用于单个Higgs粒子产生。如图
+(\ref{fig:appendix1})所示，入射质子和出射质子残余物的四动量分别记为$P_i$和$P_{X_i}$(i=1,2)。
+在质子的质心系中，$P_1$和$P_2$可以表示为
+\begin{eqnarray}
+P_1 = \frac{1}{2}(\sqrt{S}, 0, 0, \sqrt{S})\,, \quad P_2 = \frac{1}{2}(\sqrt{S}, 0, 0, -\sqrt{S})
+\end{eqnarray}
+洛伦兹不变的四体末态相空间可以写成：
+\begin{eqnarray}
+d PS &=&
+\left[
+\prod_{i=1,2}
+d s_i \frac{d^4 P_{X_i}}{\left( 2 \pi \right)^4} 2 \pi \delta \left( P_{X_i}^2 -s_i \right)
+\right]
+d PS_2(k_1, k_2) 
+\nonumber \\
+&\times& 
+\left( 2 \pi \right)^4 \delta^4 \left( P_1 + P_2 - P_{X_1} - P_{X_2} - \sum_{j=1,2} k_j \right)
+\end{eqnarray}
+其中，$k_1$和$k_2$是两个出射Higgs粒子的四动量，且Higgs对的相空间为
+\begin{eqnarray}
+d PS_2(k_1, k_2) =
+\frac{d^3 \vec{k}_1}{\left( 2 \pi \right)^3 2 E_1}
+\frac{d^3 \vec{k}_2}{\left( 2 \pi \right)^3 2 E_2}
+\end{eqnarray}
+根据四动量守恒可得
+\begin{eqnarray}
+q_1 = P_{X_1} - P_1\,, \quad q_2 = P_{X_2} - P_2
+\end{eqnarray}
+根据以上公式，相空间简化为
+\begin{eqnarray}
+d PS =
+\left[
+\prod_{i=1,2}
+\frac{d^4 q_i}{\left( 2 \pi \right)^3}
+\right]
+d PS_2(k_1, k_2)
+\left( 2 \pi \right)^4 \delta^4 \left( q_1 + q_2 + \sum_{j=1,2} k_j \right)
+\end{eqnarray}
+下面证明$d^4q_i$的积分测度可以简化为
+\begin{eqnarray}
+d^4 q_1 = \frac{Q_1^2}{x_1} d x_1 \frac{d^3 \vec{k}_3}{2 E_3}\,, \quad
+d^4 q_2 = \frac{Q_2^2}{x_2} d x_2 \frac{d^3 \vec{k}_4}{2 E_4}
+\label{eqn:IntegralMeasure}
+\end{eqnarray}
+上式中的$k_3$和$k_4$是类光(light-like)四动量，定义如下
+\begin{eqnarray}
+k_3 = q_1 + x_1 P_1\,,\quad
+k_4 = q_2 + x_2 P_2
+\end{eqnarray}
+以$q_1$为例，我们参数化$k_3 = (k_3, k_3\sin\theta\cos\phi, k_3\sin\theta\sin\phi, k_3\cos\theta)$，则
+\begin{eqnarray}
+q_1 = k_3 - x_1P_1 = (k_3 -x_1\sqrt{S}/2, k_3\sin\theta\cos\phi, k_3\sin\theta\sin\phi,
+k_3\cos\theta - x_1\sqrt{S}/2)
+\nonumber \\
+\end{eqnarray}
+然后需要从坐标系$(q^0_1, q^1_1, q^2_1, q^3_1)$变换到坐标系$(x_1, k_3, \theta, \phi)$，其Jacobian行列式为
+\begin{eqnarray}
+|J| &=& \left|\begin{array}{cccc}
+-\frac{\sqrt{S}}{2} & 1 & 0 & 0 \\
+0 & \sin\theta\cos\phi  &  k_3\cos\theta\cos\phi   &  -k_3\sin\theta\sin\phi \\
+0 & \sin\theta\sin\phi  &  k_3\cos\theta\sin\phi   &  k_3\sin\theta\cos\phi  \\
+-\frac{\sqrt{S}}{2} & \cos\theta  & -k_3\sin\theta &   0
+\end{array} \right|
+\nonumber \\
+&=&  \frac{\sqrt{S}}{2} k^2_3(1-\cos\theta)\sin\theta
+\end{eqnarray}
+进一步有
+\begin{eqnarray}
+d^4q_1 &=& |J| dx_1 dk_3 d\theta d\phi  \nonumber \\
+&=& \frac{\sqrt{S}}{2} (1-\cos\theta)dx_1 d^3 \vec{k}_3 \nonumber \\
+&=& \frac{Q^2_1}{x_1} dx_1 \frac{d^3\vec{k}_3}{2k_3}
+\end{eqnarray}
+因此我们证明了公式(\ref{eqn:IntegralMeasure})。
+
+我们记部分子的四动量为$p_i = x_i P_i~(i=1,2)$，最终的相空间可以表达成
+\begin{eqnarray}
+d PS =
+\frac{Q_1^2 Q_2^2}{x_1 x_2} d x_1 d x_2
+\left[
+\prod_{i=1}^4
+\frac{d^3 \vec{k}_i}{\left( 2 \pi \right)^3 2 E_i}
+\right]
+\left( 2 \pi \right)^4 \delta^4 \left( p_1 + p_2 - \sum_{i=1}^4 k_i \right)
+\end{eqnarray}
+上式的相空间就是通常的强子对撞产生四个粒子的相空间。其中，末态四动量$k_3,k_4$是零质量的“粒子”，$k_1,k_2$
+是有质量的Higgs粒子。因此相空间可以通过不断因子化的方法产生出来。

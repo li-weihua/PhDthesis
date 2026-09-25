@@ -1,0 +1,1121 @@
+﻿
+\chapter{LHC上WW+jet产生的次领头阶QCD与电弱修正及W玻色子衰变}
+\label{chap:wwjet}
+
+\section{研究意义}
+位于欧洲核子中心的ATLAS和CMS实验组在2012年宣布发现了一个中性的标量粒子－Higgs粒子
+\cite{ATLAS-2012,CMS-2012}。该粒子的性质与标准模型Higgs粒子的预言大致相符。下一步目标是进一步研究这个新发现
+粒子的性质，如CP，耦合强度，自旋等等，目前的LHC实验正在做这些检验。为了更进一步的精确测量，深入研究
+Higgs产生过程的信号和背景十分重要。
+
+在众多背景当中，$VV'+jet$(V,V' = W,Z)过程在LHC上产生可以用来检验规范耦合，这样可以更好的理解电弱自发对称
+破缺的机制。这些过程的产生截面目前已经精确计算到了次领头阶QCD。这些产生过程是Higgs产生过程的基本背景和
+一些新物理的背景。另外精确测量在LHC run2阶段将变成现实，巨大的亮度允许产生能量高达TeV量级的规范玻色子。
+我们在理论部分已经讨论过了，电弱Sudakov效应在这么高的能区将变得非常显著。
+
+由于$W$玻色子衰变的时候会产生轻子和丢失（missing）的横动量，$WW+jet$可以作为超对称粒子的背景。此外，
+$WW+jet$的次领头阶QCD修正可以作为$W$玻色子对产生的次次领头阶（NNLO）QCD修正的一部分。目前，$pp\to WW+jet$
+过程的次领头阶QCD修正已经在文献中\cite{Cambell:pp2WWjet,Ditt:pp2WWjet,Ditt:prl}给出。然而，该过程的
+次领头阶电弱修正还没有计算，我们的论文\cite{Li:wwjetEW}给出了该过程以及包含W玻色子衰变时的自旋关联效应
+的次领头阶QCD和EW修正。
+
+
+\section{WW+jet产生过程的NLO QCD修正}
+在LHC上$pp \to WW + jet$产生过程的NLO QCD已经在文献\cite{Cambell:pp2WWjet,Ditt:pp2WWjet,Ditt:prl}中
+研究过了，此部分计算的目的是为了跟以前的计算进行相互对照。根据Kinoshita-Lee-Nauenberg(KLN)定理
+\cite{KLNtheorem-K,KLNtheorem-LN}，$pp\to WW+jet$产生过程的NLO QCD总截面可以表示为：
+\begin{eqnarray}
+\sigma^{NLO}_{QCD} = \sigma^{LO} + \sigma^{R} + \sigma^{PDF} + \sigma^{V}
+\end{eqnarray}
+其中，$\sigma^R$为实辐射部分，并且包括初态胶子或夸克共线与末态胶子或夸克共线。其中，初态共线发散要引入
+相应的PDF抵消项才能抵消发散，这部分的贡献记为$\sigma^{PDF}$。
+$\sigma^V$表示虚修正部分的贡献。该过程的子过程部分子a和部分子b碰撞的LO的截面可以表示为：
+\begin{eqnarray}
+\hat{\sigma}^{LO}_{ab} = \frac{1}{2\hat{s}} \int \overline{\sum} \left|\mathcal{M}_{ab}^{LO}\right|^2 
+d\Omega_3
+\end{eqnarray}
+其中，末态粒子的自旋要求和，初态粒子的自旋和色荷要求平均。三体相空间$d\Omega_3$的定义为：
+\begin{eqnarray}
+d\Omega_3
+=
+(2 \pi)^4 \delta^{(4)}(p_1+p_2-p_3-p_4-p_5)
+\frac{d^3 \vec{p}_3}{(2\pi)^3 2E_3}
+\frac{d^3 \vec{p}_4}{(2\pi)^3 2E_4}
+\frac{d^3 \vec{p}_5}{(2\pi)^3 2E_5}
+\end{eqnarray}
+然后与初态部分子的PDF卷积可得LO的总截面：
+\begin{eqnarray}
+\sigma^{LO} &=& \sum\limits_{ab=q\bar{q},gq,g\bar{q}} \frac{1}{1+\delta_{ab}}\int dx_1 dx_2 \left[
+\Phi_{a|P_1}(x_1,\mu_F)\Phi_{b|P_2}(x_2,\mu_F) + (P_1\leftrightarrow P_2)\right] 
+\nonumber \\
+&& \times \hat{\sigma}^{LO}_{ab} (\hat{s} = x_1 x_2 S)
+\end{eqnarray}
+上式中的$\Phi_{a/b|P}$表示部分子a/b的横动量密度，$\mu_F$表示因子化能标。$\sqrt{\bar s}$和$\sqrt{S}$
+分别表示部分子质心系和质子质心系的对撞能量。
+
+对于不同子过程的PDF抵消项$\Delta \sigma^{q_1\bar{q}_2}_{QCD}$、$\Delta \sigma^{gq_1}_{QCD}$和
+$\Delta \sigma^{g\bar{q}_2}_{QCD}$分别为：
+\begin{eqnarray}
+\Delta \sigma^{q_1\bar{q}_2}_{QCD}
+&=&
+\int dx_1 dx_2
+\Big[
+\Phi_{q_1|P_1}(x_1, \mu_F) \Phi_{\bar{q}_2|P_2}(x_2, \mu_F) + \left( P_1 \leftrightarrow P_2, x_1 \leftrightarrow x_2 \right)
+\Big]
+\nonumber \\
+&& \times \left(
+\hat{\sigma}_{QCD}^{q_1\bar{q}_2,V} + \hat{\sigma}_{QCD}^{q_1\bar{q}_2,R}
+\right) \nonumber \\
+&+&
+\int dx_1 dx_2
+\Big[
+\delta \Phi^{QCD,(g)}_{q_1|P_1}(x_1, \mu_F) \Phi_{\bar{q}_2|P_2}(x_2, \mu_F)
+\nonumber \\
+&&
++
+\Phi_{q_1|P_1}(x_1, \mu_F) \delta \Phi^{QCD,(g)}_{\bar{q}_2|P_2}(x_2, \mu_F) 
++ \left( P_1 \leftrightarrow P_2, x_1 \leftrightarrow x_2 \right)
+\Big]
+\hat{\sigma}_{LO}^{q_1\bar{q}_2}, 
+\nonumber \\
+%%%%%
+\Delta \sigma^{q_1g}_{QCD}
+&=&
+\int dx_1 dx_2
+\Big[
+\Phi_{q_1|P_1}(x_1, \mu_F) \Phi_{g|P_2}(x_2, \mu_F) + \left( P_1 \leftrightarrow P_2, x_1 \leftrightarrow x_2 \right)
+\Big]
+\hat{\sigma}_{QCD}^{q_1g,R} \nonumber \\
+&+&
+\int dx_1 dx_2
+\Big[
+\Phi_{q_1|P_1}(x_1, \mu_F) \delta \Phi^{QCD,(q)}_{\bar{q}_2|P_2}(x_2, \mu_F) + \left( P_1 \leftrightarrow P_2, x_1 \leftrightarrow x_2 \right)
+\Big]
+\hat{\sigma}_{LO}^{q_1\bar{q}_2}, \nonumber \\
+\Delta \sigma^{\bar{q}_2g}_{QCD}
+&=&
+\int dx_1 dx_2
+\Big[
+\Phi_{g|P_1}(x_1, \mu_F) \Phi_{\bar{q}_2|P_2}(x_2, \mu_F) + \left( P_1 \leftrightarrow P_2, x_1 \leftrightarrow x_2 \right)
+\Big]
+\hat{\sigma}_{QCD}^{\bar{q}_2g,R} \nonumber \\
+&+&
+\int dx_1 dx_2
+\Big[
+\delta \Phi^{QCD,(q)}_{q_1|P_1}(x_1, \mu_F) \Phi_{\bar{q}_2|P_2}(x_2, \mu_F) + \left( P_1 \leftrightarrow P_2, x_1 \leftrightarrow x_2 \right)
+\Big]
+\hat{\sigma}_{LO}^{q_1\bar{q}_2}
+\nonumber \\
+\end{eqnarray}
+其中夸克的PDF的QCD抵消项$\delta \Phi^{QCD}_{q|P}$可以分为共线光子和共线夸克两部分：
+$\delta \Phi^{QCD}_{q|P} = \delta \Phi_{q|P}^{QCD,(g)} + \delta \Phi^{QCD,(q)}_{q|P}$。这两部分在
+$\overline{MS}$方案下的表达式为：
+\begin{eqnarray}
+&& \delta \Phi^{QCD,(g)}_{q|P}(x,\mu_F,\mu_R) =
+   \frac{1}{\epsilon} \left[
+                      \frac{C_F\alpha_s}{2 \pi}
+                      \frac{\Gamma(1 - \epsilon)}{\Gamma(1 - 2 \epsilon)}
+                      \left( \frac{4 \pi \mu_R^2}{\mu_F^2} \right)^{\epsilon}
+                      \right]
+   \int_x^1 \frac{dz}{z} \left[P_{qq}(z)\right]_+ \Phi_{q|P}(x/z,\mu_F), \nonumber \\
+&& \delta \Phi^{QCD,(q)}_{q|P}(x,\mu_F,\mu_R) =
+   \frac{1}{\epsilon} \left[
+                      \frac{T_F\alpha_s}{2 \pi}
+                      \frac{\Gamma(1 - \epsilon)}{\Gamma(1 - 2 \epsilon)}
+                      \left( \frac{4 \pi \mu_R^2}{\mu_F^2} \right)^{\epsilon}
+                      \right]
+   \int_x^1 \frac{dz}{z} P_{qg}(z) \Phi_{g|P}(x/z,\mu_F)
+\nonumber \\
+\end{eqnarray}
+其中，$C_F = 4/3$，$T_F = 1/2$且$\mu_R$为重整化能标。上式中劈裂函数的定义为
+\begin{eqnarray}
+\label{eq:spliting}
+P_{qq}(z) = \frac{1 + z^2}{1 - z}, ~~~~~ P_{qg}(z) = z^2 + (1 - z)^2,
+\end{eqnarray}
+其中Plus函数$\left[ \ldots \right]_+$定义为
+\begin{eqnarray}
+\int_0^1 dz \left[ g(z) \right]_+ f(z) = \int_0^1 dz \, g(z) \left[ f(z) - f(1) \right]
+\end{eqnarray}
+
+在本章的所有计算中，记夸克$q = u,d,c,s,b$且
+q的质量置成零。此外计算当中会涉及到红外和紫外发散，本章使用维数正规化方案来分离各部分发散，并令维数为
+$d = 4 - 2\epsilon$。
+
+\subsection{夸克混合效应}
+通常在高能对撞物理中，除了专门研究味物理外，可以近似的认为CKM矩阵只有前两代混合，具体形式可以表示为
+\begin{eqnarray}
+V_{CKM} = \left(\begin{array}{ccc}
+V_{ud} & V_{us} & 0 \\ 
+V_{cd} & V_{cs} & 0 \\
+0 & 0 & 1
+\end{array}\right)
+= \left(\begin{array}{ccc}
+\cos\theta_C & \sin\theta_C & 0 \\
+-\sin\theta_C & \cos\theta_C & 0 \\
+0 & 0 & 1
+\end{array}\right)
+\end{eqnarray}
+上式中$\theta_C$是Cabibbo角。下面我们证明当两个$W$玻色子同时与一条费米子链相耦合的时候，可以等效成不考虑
+CKM矩阵。
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=1]{CKM.eps}
+\caption{U和U'表示上型夸克，D和D'表示为下型夸克，Q和Q'表示任意夸克。}
+\label{fig:CKM}
+\end{figure}
+如图（\ref{fig:CKM}）所示，利用CKM的幺正性我们可以得到如下关系式
+\begin{eqnarray}
+\sum\limits_{D=d,s} V_{U'D}V^{*}_{UD} &=& \sum\limits_{D=d,s} V_{U'D}V^{\dagger}_{DU} = \delta_{UU'}\,,
+\nonumber \\
+\sum\limits_{U=u,c} V^{*}_{UD'}V_{UD} &=& \sum\limits_{U=u,c} V^{\dagger}_{D'U}V_{UD} = \delta_{DD'}
+\end{eqnarray}
+当中间的夸克求和后，CKM矩阵就等同于对角矩阵。对于图\ref{fig:CKM}(c)，显然有$Q=Q'$。由此我们可以得出，
+在领头阶，$pp\to WW+jet$可以分为以下几个子过程（$gb,g\bar{b}$过程由于b-tagging被去掉了，
+下一节有详细讨论）：
+\begin{eqnarray}
+q\bar{q} & \to & W^+ W^- g,
+\label{eqn:partonlo1} \\
+gq & \to & W^+W^- q, 
+\label{eqn:partonlo2} \\
+g\bar{q} & \to & W^+W^- \bar{q},
+\label{eqn:partonlo3} \\
+b\bar{b} & \to & W^+ W^- g.
+\label{eqn:partonlo4}
+\end{eqnarray}
+上式中$q = u,d,c,s$，子过程$uu\to WWg$的树图如图（\ref{fig:uu_wwg}）所示。注意$W$玻色子对始终同时耦合
+在一条费米子链上。另外对于$b\bar{b}$子过程，由于b夸克的亮度很低，该过程的贡献很小，在做次领头阶的计算
+时，我们只考虑其领头阶的贡献。
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=1]{uu_wwg_tree.eps}
+\caption{$uu\to WWg$树图}
+\label{fig:uu_wwg}
+\end{figure}
+
+下面我们将以上结论推广：当n个$W$玻色子同时与一条费米子链耦合时，若n为偶数，则最终结果与CKM矩阵无关；
+若n为奇数，则最终的结果仅依赖初末态的夸克混合的CKM矩阵元。
+当n为偶数时，求和所有的中间态夸克
+\begin{eqnarray}
+\sum\limits_{j_1,...,j_n} V_{ij_1}V^{\dagger}_{j_2j_1}...V_{j_{n-1}j_n}V^{\dagger}_{jj_n} = 
+\sum\limits_{j_2,...,j_n}\delta_{ij_2}\delta_{j_2j_4}...\delta_{j_nj} = \delta_{ij}
+\end{eqnarray}
+其中$i,j$同为上型或下型夸克，所以初末态夸克要相同。当n为奇数时，
+\begin{eqnarray}
+\sum\limits_{j_1,...,j_n} V_{ij_1}V^{\dagger}_{j_2j_1}...V_{j_{n-1}j_n}V^{\dagger}_{jj_n} = 
+\sum\limits_{j_n}\delta_{ij_n}V_{jj_n} = V_{ij}
+\end{eqnarray}
+
+有了以上规律，我们可以在计算的时候大大简化计算复杂度。例如$pp\to W+jet$过程，在领头阶的树图，只有一个
+$W$玻色子与费米子链耦合，故每个子过程都贡献一个整体的因子$|V_{ij}|^2$。在该过程的次领头阶修正中，部分
+圈图的贡献CKM因子为$\sum\limits_{i',j'}V_{ij'}V^{*}_{i'j'}V_{i'j}$，该因子与树图干涉后，总的贡献因子为
+$\sum\limits_{i',j'}V^{*}_{ij}V_{ij'}V^{*}_{i'j'}V_{i'j} = |V_{ij}|^2$。故计算该过程的次领头阶QCD修正时，
+同样可以因子化出来一个整体的CKM因子，使得计算大大简化。
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=1]{twochain.eps}
+\caption{$u\bar{d}\to WWu\bar{d}$，$W$玻色子与不同的费米子链耦合，结果依赖CKM矩阵。}
+\label{fig:twochain}
+\end{figure}
+
+对于我们研究的过程$pp\to WW+jet$，当我们做次领头阶QCD修正时，大部分子过程都与CKM矩阵无关，
+唯一有关的子过程是两个$W$玻色子分别与不同的费米子链耦合（如图\ref{fig:twochain}）。对于该过程的电弱修正，
+可以发现电弱的圈图和实辐射图的CKM矩阵元始终正比于$V_{ik}V^{*}_{lk}V_{lm}V^{*}_{jm}$或$V_{ik}V^{*}_{jk}$。
+当我们对重复指标求和后，这些CKM矩阵最终等效于单位阵$\delta_{ij}$。
+
+最后总结一下CKM矩阵有关的理论要点：(1) 在高能对撞实验中除了研究味物理外可以忽略掉前两代夸克与第三代夸克
+的混合，也即是只考虑一二代夸克的混合。(2) 在假设(1)的基础上，我们可以利用CKM的幺正性，根据费米子链与n个
+$W$玻色子耦合的规律大大简化计算过程和计算量。
+
+\subsection{b夸克的处理}
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=1]{gb_wwb.eps}
+\caption{子过程$gb\to W^+W^-b$领头阶费曼图}
+\label{fig:gb_wwb}
+\end{figure}
+对于子过程$gb\to W^+W^-b$（图\ref{fig:gb_wwb}），由于top夸克共振贡献，该子过程的贡献也是不可忽略的。
+如文献\cite{Ditt:pp2WWjet}的计算指出，当选取因子化能标$\mu_f$和重整化能标$\mu_r$相等且为$W$玻色子质量
+时，子过程$gb\to W^+W^-b$和$g\bar{b}\to W^+W^-\bar{b}$的贡献和没有b夸克的末态过程的贡献相当。由于这些
+过程可以看成$gb(\bar{b})\to Wt(\bar{t})$产生过程，原则上不属于我们要计算的$WW+jet$产生过程，所以要想
+办法把这类末态有b夸克的过程给排除掉。
+
+由于b夸克的寿命比较长，而top夸克的衰变时间比较短，这样实验上可以从b夸克的径迹中鉴别出b夸克。然而，这并不
+意味着所有包含b夸克的事例都可以鉴别出来。例如在实辐射过程中，仅要求两个jets中有一个被探测到，
+如果其中一个轻jet被探测到，而b-jet比较靠近束流没有被探测到。况且，b-tagging的效率低于100\%。
+理论上，为了把top共振的贡献给去掉，我们仍然假定b-tagging的效率是100\%。
+
+在本文的计算中，我们采用五味道方案（Five-flavour scheme）。在此方案下，除top夸克之外的夸克都被称为轻夸克，
+它们的质量都取成零。另外还要采用五味道的PDF和五味道下的$\alpha_s$。凡是末态包含b-jet的事例都由于b-tagging
+被排除掉。这样做的好处就是可以去掉产生过程$t\bar{t}$，$W^-t$和$W^+\bar{t}$中top夸克非在壳（off-shell）
+衰变的影响。然而需要注意的是：直接应用此法则会导致质量奇异的截面或观测量。这个问题源于$g\to b\bar{b}$
+劈裂过程会由于b-tagging被去掉，这些贡献原本要与含b夸克圈的胶子自能图中的发散相消。为了处理这个特殊
+情况，我们采用文献\cite{bmerging:1}和\cite{bmerging:2}中提到的方法，当两个b夸克根据特定的jet算法合并
+到一起后这个jet就不再是b-jet，而是一个轻（light）jet。如果最终两个b夸克可以区分开，我们把这种事例去掉。
+应用上述规则，相空间中的共线奇异性才能与虚修正圈图里的质量奇异性相消，得到红外安全的观测量。
+
+此外，文献\cite{Ditt:pp2WWjet}中还讨论了四味道方案（Four-flavour scheme）。在该方案下，b夸克被认为是有
+质量的，同时要采用四味道的PDF。由于初态没有b夸克，所以也不会出现top共振。另外由于b-tagging，$b\bar{b}$
+末态过程也不需要考虑。
+
+\subsection{QCD虚修正部分}
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=1]{wwjet-pen.eps}
+\caption{子过程$uu\to WWg$的QCD虚修正部分的五点图}
+\label{fig:wwjet-pen}
+\end{figure}
+$pp\to WW+jet$过程的次领头阶QCD虚修正可以分为自能图，三角图，四点图和五点图（参考图\ref{fig:wwjet-pen}）。
+对于所有外腿的部分子的波函数我们采用在壳重整化方案，而强耦合参数我们采用$\overline{MS}$的重整化方案。
+抵消项的幅度可以写成：
+\begin{eqnarray}
+M_{ct} = \left(\delta Z_q + \frac{1}{2}\delta Z_A + \delta Z_{g_s} \right)
+\end{eqnarray}
+相应的重整化常数为
+\begin{eqnarray}
+\delta Z_q &=& -\frac{\alpha_s}{3\pi}[\Delta^{UV}_1(\mu) - \Delta^{IR}_1(\mu)]
+\\
+\delta Z_A &=& -\frac{\alpha_s}{2\pi}\left[ \left(\frac{N_f}{3} - \frac{5}{2}\right)(\Delta^{UV}_1(\mu) 
+- \Delta^{IR}_1(\mu)) + \frac{1}{3}\sum\limits_{q,m_q\not= 0}\left(\Delta^{UV}_1(\mu) + 
+\ln\frac{m^2_W}{m^2_q}\right)\right]
+\nonumber \\
+\delta Z_{g_s} &=& \frac{\alpha_s}{4\pi}\left[\left(\frac{N_f}{3}-\frac{11}{2}\right)\left(
+\Delta^{UV}_1(\mu)-\ln\frac{\mu^2_r}{m^2_W} \right) + \frac{1}{3}\sum\limits_{q,m_q\not=0}
+\left(\Delta^{UV}_1(\mu) + \ln\frac{m^2_W}{m^2_q} \right) \right]
+\nonumber
+\end{eqnarray}
+其中，$q$代表所有的质量不为零的夸克，在五味道方案（$N_f = 5$）下$q=t$，在四味道方案（$N_f = 4$）下
+$q = b,t$。我们前面已经提过，紫外发散（UV）和红外发散（IR）都采用维数正规化且维数$D = 4-2\epsilon$。
+发散量$\Delta(\mu)$的定义为
+\begin{eqnarray}
+\Delta_k(\mu) = \left(\frac{4\pi\mu^2}{m^2_W}\right)\frac{\Gamma(1+\epsilon)}{\epsilon},\; k=1,2
+\end{eqnarray}
+上式中$\mu$是任意的维数正规化的参考能标，通常选取成重整化能标$\mu_r$。
+
+\subsection{QCD实胶子辐射部分}
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=1]{uu_wwgg.eps}
+\caption{实辐射过程$uu\to W^+W^-gg$的部分费曼图}
+\label{fig:real_wwgg}
+\end{figure}
+过程$pp\to WW+jet$的实辐射子过程可以分为$0\to W^+W^-q\bar{q}gg$和$0\to W^+W^-q\bar{q}q'\bar{q'}$，
+例如图（\ref{fig:real_wwgg}）显示了$uu\to W^+W^-gg$过程的部分费曼图。可以看出，子过程$uu\to W^+W^-gg$
+既包含了软红外发散又包含了共线发散，这些发散要与虚修正中的红外发散及初态PDF的抵消项相消。
+计算中我们采用两截断相空间分割(two cutoff phase space slicing (TCPSS))\cite{TCPSS}的方法来分离软红外
+和共线奇异性。我们引入两个任意小的截断（cutoff）参数$\delta_s$和$\delta_c$，把相空间分为软区域
+($E_g \le \frac{1}{2}\delta_s\sqrt{\hat{s}}$)，硬共线区域
+($E_g > \frac{1}{2}\delta_s\sqrt{\hat{s}}$， $\hat{s}_{qg} \leq \delta_c \hat{s}$或
+$\hat{s}_{gg} \leq \delta_c \hat{s}$)和硬的
+非共线区域($E_g > \frac{1}{2}\delta_s\sqrt{\hat{s}}$，$\hat{s}_{qg} > \delta_c \hat{s}$或
+$\hat{s}_{gg} > \delta_c \hat{s}$)。其中$\hat{s}_{ij} = (p_i+p_j)^2$是通常的Mandelstam不变量。
+软发散部分的部分子过程可以因子化成如下形式：
+\begin{eqnarray}
+d\hat{\sigma}^{ab}_{soft} = - d\hat{\sigma}^{ab}_{LO} \otimes \frac{\alpha_s}{2\pi} 
+\sum\limits^{5}_{i,j=1\atop i<j}(T_i\cdot T_j) g_{ij}(p_i, p_j)
+\end{eqnarray}
+其中$T_i$为色算符，符号$\otimes$表示色关联。$g_{ij}$是软积分公式，定义如下
+\begin{eqnarray}
+g_{ij} = \frac{(2\pi\mu)^{2\epsilon}}{2\pi}\int^{\Delta E}_{0} \frac{d^{D-1}\vec{p}_6}{E_6}
+\left[ 
+\frac{2(p_i\cdot p_j)}{(p_i\cdot p_6)(p_j\cdot p_6)} - \frac{p^2_i}{(p_i\cdot p_6)^2} 
+- \frac{p^2_j}{(p_j\cdot p_6)^2}
+\right]
+\end{eqnarray}
+上式中$\Delta E = \delta_s \sqrt{\hat{s}}/2$和$D = 4-2\epsilon$。软积分公式的详细推导可以参考附录
+\ref{chap:softIntegral}。
+
+实胶子辐射过程的硬共线部分可以分为初态共线和末态共线，由于末态带jet过程的共线情况比较复杂，本文仅列出一般
+性的共线部分的计算公式。末态贡献的公式为(假定第5个粒子与第6个粒子共线)：
+\begin{eqnarray}
+d\sigma^{1+2\to 3+4+5+6}_{HC} = d\sigma^{1+2\to 3+4+5'}_{LO} \left[\frac{\alpha_s}{2\pi} 
+\frac{\Gamma(1-\epsilon)}{\Gamma(1-2\epsilon)} \left(\frac{4\pi\mu^2_R}{\hat{s}}\right)^{\epsilon} \right]
+\left(\frac{A^{5'\to 5+6}_1}{\epsilon} + A^{5'\to 5+6}_0\right)
+\nonumber \\
+\end{eqnarray}
+其中$A^{q\to qg}, A^{g\to q\bar{q}}, A^{g\to gg}$的具体表达式以及初态共线的公式可以参考文献\cite{TCPSS}。
+
+\subsection{红外安全的jet算法}
+jet是指在高能夸克或胶子碎裂出来的准平行能量束。由于jet很容易在实验上测量，所以它们经常用来研究QCD的基本
+规律。jet的寻找一直是实验和理论研究中重要的一部分，其中jet算法可以方便的用来计算jet分布和重建jet事例。
+目前的jet算法大致可以分为两类\cite{fastjet}：序列组合（sequential recombination）算法和锥形（cone）算法。
+由于锥形算法不能保证红外安全，所以本文主要讨论序列组合算法。
+
+序列组合算法通常可以分为：$k_t$ jet算法\cite{ktjet:1,ktjet:2}，Cambridge/Aachen(C/A) jet算法\cite{cajet}
+和Anti-$k_t$ jet算法\cite{antiktjet}。下面我们对这三种算法做一些具体的讨论。
+\begin{itemize}
+\item $k_t$ jet算法：\\
+$k_t$ jet算法主要分为以下几步：
+\begin{enumerate}
+\item 对于任何一对原型（prototype）jet i和j计算出$k_t$距离
+\begin{eqnarray}
+d_{ij} =  \min(p^2_{ti}, p^2_{tj})\Delta R^2_{ij}/R^2
+\end{eqnarray}
+其中，$\Delta R^2_{ij} = (y_i - y_j)^2 + (\phi_i-\phi_j)^2$，$p_{ti}$、$y_i$和$\phi_i$分别是粒子i的
+横动量、快度和轴角，$R$是jet距离参数。另外，对于任意部分子i计算距离$d_{iB} = p^2_{ti}$。
+\item 在所有的$d_{ij}$和$d_{iB}$中找出最小的距离$d_{min}$。若$d_{min}$是某个$d_{ij}$，则把粒子i和粒子j
+组合（简单的四动量相加）到一起当成一个原型jet。若$d_{min}$是某个$d_{iB}$，则粒子i为真正的jet并把它从
+原型jet中剔除。
+\item 重复步骤1，直到没有原型jet。
+\end{enumerate}
+\item (C/A) jet算法：\\
+(C/A) jet算法定义以下距离：
+\begin{eqnarray}
+d_{ij} &=& \Delta R^2_{ij}/R^2 \\
+d_{iB} &=& 1
+\end{eqnarray}
+然后算法步骤和$k_t$算法一样。
+\item Anti-$k_t$ jet算法：\\
+Anti-$k_t$ jet算法定义以下距离：
+\begin{eqnarray}
+d_{ij} &=& \min(1/p^2_{ti}, 1/p^2_{tj})\Delta^2R_{ij}/R^2 \\
+d_{iB} &=& 1/p^2_{ti}
+\end{eqnarray}
+其算法步骤和$k_t$算法一样。
+\end{itemize}
+当末态只有两个jet时，三种jet算法等效。当末态有多于两个jet时，三种jet算法分别给出不同的结果，目前
+LHC的实验大多倾向于用Anti-$k_t$ jet算法。
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{WW+jet产生及包含W玻色子衰变过程的NLO EW修正}
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=1]{aq_wwq.eps}
+\caption{$\gamma q\to W^+W^-q$过程的领头阶费曼图}
+\label{fig:aq_wwq}
+\end{figure}
+
+本节我们主要讨论$pp\to WW+jet$产生的次领头阶电弱修正。该过程的电弱修正的阶数是
+$\mathcal{O}(\alpha^2\alpha_s)$，由于光子夸克对撞过程的领头阶和次领头阶QCD的阶数分别为
+$\mathcal{O}(\alpha^3)$和$\mathcal{O}(\alpha^3\alpha_s)$，所以这些过程也应该包含进去。这些过程也称为光子
+诱导（photon-induced）的过程，其领头阶表示为
+\begin{eqnarray}
+\gamma q(\bar{q}) \to W^+W^- q(\bar{q}),\; (q = u,d,c,s)
+\label{eqn:photonInduced}
+\end{eqnarray}
+$aq\to W^+W^-q$过程的Born阶的费曼图如图（\ref{fig:aq_wwq}）所示。
+$\gamma b(\bar{b}) \to W^+W^-b(\bar{b})$过程由于b-tagging被去掉了。
+所以，$pp\to WW+jet$过程的电弱修正要计算过程（\ref{eqn:partonlo1}）-（\ref{eqn:partonlo3}）的电弱修正和
+过程（\ref{eqn:photonInduced}）的QCD修正。下面我们分别讨论该过程的虚修正、实辐射部分。
+
+\subsection{电弱虚修正部分}
+过程$pp\to WW+jet+X$的电弱虚修正包括过程（\ref{eqn:partonlo1}）-（\ref{eqn:partonlo3}）的单圈电弱修正图和
+过程（\ref{eqn:photonInduced}）的单圈QCD修正图，这些贡献都在阶数$\mathcal{O}(\alpha^3\alpha_s)$。同样，
+我们采用维数正规化（$D = 4 - 2\epsilon$）方案来正规化紫外发散（UV）和红外发散（IR）。相关的重整化常数采用
+文献\cite{Denner:EWPhysics}中的约定。由于该过程的Born图中没有外腿光子，所以我们采用$G_F$（$G_{\mu}$）
+方案来重整电荷（参考第二章第三节的详细讨论）。
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=1]{uuxloop_box.eps}
+\caption{过程$u\bar{u}\to W^+W^-g$虚修正部分的一些典型的四点图}
+\label{fig:uuxloop_box}
+\end{figure}
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=1]{uuxloop_pen.eps}
+\caption{过程$u\bar{u}\to W^+W^-g$虚修正部分的一些典型的五点图}
+\label{fig:uuxloop_pen}
+\end{figure}
+
+图（\ref{fig:uuxloop_box}）和（\ref{fig:uuxloop_pen}）是一些典型的虚修正图。对这些单圈幅度的计算，我们
+采用传统的Passarino-Veltman(PV)\cite{PVreduction}化简方法。当然单圈幅度的计算还有其它一些新的化简方法，
+例如Ossola-Papadopoulos-Pittiau(OPP)\cite{OPPreduction}化简方法和一般幺正（generalized unitarity）
+\cite{GU:1,GU:2,GU:3,GU:4}方法。下面我们对PV方法做一个简单的介绍以及改进。
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.7]{circle.eps}
+\caption{一般性的有N个外腿动量的单圈费曼图}
+\label{fig:loop}
+\end{figure}
+
+如图（\ref{fig:loop}）所示，单圈幅度可以表示成：
+\begin{eqnarray}
+I_N \sim  \int \frac{{\rm d}^4 l}{(2\pi)^4} 
+\frac{{\cal N}(l)}{((l+q_0)^2 - m_1^2)((l+q_1)^2 - m_2^2)....
+((l+q_{N-1})^2 - m_N^2)}
+\label{eqn:loopintegral}
+\end{eqnarray}
+其中，$N$表示外腿粒子的数目，$q_j = \sum^j_{k=1}p_k$且由于四动量守恒$p_1 + p_2 +\ldots p_N = 0$。
+当$\mathcal{N}(l) = 1$时称为标量积分。一般情况下，$\mathcal{N}(l)$是圈动量$l$、外腿动量$p_i$、外腿
+极化矢量和自旋子（spinor）等等的多项式函数。首先我们可以定性地看出，当圈动量在分子上的指数$r\ge 2N-4$的
+时候会有紫外发散。对于标量积分，只有一点和两点标量（scalar）积分才会有紫外发散。另外在标准模型中，指数
+$r\le N$。所以，在标准模型下只有一、二、三和四点张量（tensor）积分才会有紫外发散。一般采用维数正规化的
+方法处理这些发散。任意一个张量积分都可以按照洛伦兹结构进行展开，也即是$I_N$可以写成单圈标量一点、两点、
+三点和四点积分的线性组合。
+\begin{eqnarray}
+I_N = c_{4;j}I_{4;j} + c_{3;j}I_{3;j} + c_{2;j}I_{2;j} + c_{1;j}I_{1,j} + \mathcal{R} + \mathcal{O}(D-4)
+\end{eqnarray}
+上式中$\mathcal{R}$是$D\to 4$时的有理项，$I_{1,2,3,4;j}$称为主值积分（master integral）。其中我们用到一个
+重要的结论就是：对于任何大于等于五点的标量积分都可以表示成主值积分的线性组合
+\cite{PVSreduction:1,PVSreduction:2,PVSreduction:3}，所以圈图计算的基本要素就是主值积分。
+我们下面把四种主值积分列出来：
+\begin{equation}
+\begin{split} 
+& I_1(m_1^2) =
+ \frac{\mu^{4-D}}{i \pi^{\frac{D}{2}}r_{\Gamma}}\int  \frac{d^D l}{d_1},  \\
+&I_2(p_1^2;m_1^2,m_2^2)  =
+\frac{\mu^{4-D}}{i \pi^{\frac{D}{2}}r_{\Gamma}}\int  \;
+\frac{d^D l}{d_1 d_2},   \\
+&I_3(p_1^2,p_2^2,p_3^2;m_1^2,m_2^2,m_3^2) =
+\frac{\mu^{4-D}}{i \pi^{\frac{D}{2}}r_{\Gamma}}
+\int \; \frac{d^D l}{d_1 d_2 d_3}, \;   \\
+&I_4(p_1^2,p_2^2,p_3^2,p_4^2;s_{12},s_{23};m_1^2,m_2^2,m_3^2,m_4^2)= 
+\frac{\mu^{4-D}}{i \pi^{\frac{D}{2}}r_{\Gamma}}
+\int  \frac{d^D l}{d_1 d_2 d_3 d_4}\;
+\end{split}
+\label{Scalarintegrals}
+\end{equation}
+上式中，$d_i = (l+q_{i-1})^2 -m^2_i +i\epsilon$，$q_n = \sum^n_{i=1}p_i$，$q_0=0$，$s_{ij}=(p_i+p_j)^2$
+且$r_{\Gamma} = \Gamma^2(1-\epsilon)\Gamma(1+\epsilon)/\Gamma(1-2\epsilon)$。
+这些标量积分的具体解析表达可以参考文献\cite{ScalarIntegral:1,ScalarIntegral:2,ScalarIntegral:3}。
+
+下面我们讨论单圈张量积分以及形式因子。前面我们已经提到，任意一个单圈张量积分都可以表示成主值积分的线性
+组合，最早由Passarino和Veltman提出，也称为Passarino-Veltman算法\cite{PVreduction}。在此方法下，一般用
+$A_0,B_0,C_0,D_0$来表示主值积分。
+\begin{equation}
+A_0(m_1)= 
+\frac{1}{i \pi^{D/2}}\int \; d^D l  \; \frac{1} {d_1},
+\end{equation}
+\begin{equation}
+B_0;B^\mu;B^{\mu\nu}(p_1,m_1,m_2)= 
+\frac{1}{i \pi^{D/2}}\int \; d^D l \;  \frac{1;l^\mu; l^\mu l^\nu} {d_1 d_2},
+\end{equation}
+
+\begin{equation}
+\label{eq:Cint}
+C_0;C^\mu;C^{\mu\nu};C^{\mu\nu\alpha}(p_1,p_2,m_1,m_2,m_3) = 
+\frac{1}{i \pi^{D/2}}\int \; d^D l \;  \frac{1;l^\mu; l^\mu l^\nu; l^\mu l^\nu l^\alpha}{d_1 d_2 d_3 },
+\end{equation}
+\begin{eqnarray}
+&&D_0;D^\mu;D^{\mu\nu};D^{\mu\nu\alpha};D^{\mu\nu\alpha\beta}(p_1,p_2,p_3,
+m_1,m_2,m_3,m_4) = \nonumber \\
+&&\frac{1}{i \pi^{D/2}}\int \; d^D l  \; 
+\frac{1;l^\mu; l^\mu l^\nu; l^\mu l^\nu l^\alpha; l^\mu l^\nu l^\alpha l^\beta}{d_1 d_2 d_3 d_4 }
+\end{eqnarray}
+其中分母中的$d_i = (l+\sum\limits^{i-1}_{k=1}p_k)^2 - m^2_i, i=1,\ldots,4$。
+下面以三点积分为例讨论如何化简张量积分。$C^{\mu}$和$C^{\mu\nu}$按照洛伦兹结构展开成：
+\begin{eqnarray}
+C^\mu &=& p_{1}^{\mu} C_1 +p_{2}^{\mu} C_2 \,, 
+\label{Crank1text} \\
+C^{\mu \nu} 
+            &=& g^{\mu\nu} C_{00} + \sum_{i,j=1}^2 p_i^\mu p_j^\nu C_{ij}\,, \;\;
+\mbox{where}~C_{21}=C_{12}\,. 
+\label{Crank2text}
+\end{eqnarray}
+上式中的$C_i$, $C_{00}$，$C_{ij}, i,j=1,2$被称为形式因子（form factor）。对于公式\ref{Crank1text}，我们
+可以使等式两边与$p_1$和$p_2$收缩，可以得到如下关系式
+\begin{eqnarray}
+l \cdot p_1 &=&  
+\frac{1}{2} ( f_1+d_2 -d_1),\;\;\; f_1 = m_2^2-m_1^2-p_1^2, 
+\label{ldotp1}  \\
+l \cdot p_2 &=&  \frac{1}{2} ( f_2+d_3 -d_2),\;\;\; 
+f_2 = m_3^2-m_2^2-p_2^2-2 p_1\cdot p_2\,. 
+\label{ldotp2}
+\end{eqnarray}
+然后我们用方程（\ref{Crank1text}）、（\ref{ldotp1}）和（\ref{ldotp2}）可以得到系数$C_1$和$C_2$。
+\begin{equation}
+G_2 \left( \begin{array}{c} C_{1}\\
+                            C_{2} \end{array}\right) =
+\left( \begin{array}{c} \langle l \cdot p_1\rangle \\
+                        \langle l \cdot p_2\rangle \end{array}\right) =
+\left( \begin{array}{c} R^{[c]}_1\\
+                        R^{[c]}_2 \end{array}\right),
+\label{Cformfactoreq0}
+\end{equation}
+其中$G_2$是$2\times 2$ Gram矩阵，表示如下：
+\begin{equation}
+G_2= \left( \begin{array}{cc} p_1\cdot p_1 & p_1 \cdot p_2  \\
+                              p_1\cdot p_2 &  p_2 \cdot p_2 \\
+                         \end{array}\right)
+\end{equation}
+然后我们引入如下约定
+\begin{eqnarray}
+\langle l \cdot p_{j} \rangle  =
+\int \;  \frac{d^D l}{i \pi^{D/2}}
+\; \frac{l \cdot p_{j}}{d_1 d_2 d_3},\;\;\mbox{for}~j=1,2 \; .
+\end{eqnarray}
+可以用公式（\ref{ldotp1}）和（\ref{ldotp2}）来推导出$R^{[c]}_{1,2}$的具体表达式
+\begin{equation}
+\begin{split}
+& R^{[c]}_{1} = \frac{1}{2} (f_1 C_0(1,2,3)+B_0(1,3)-B_0(2,3)), 
+\\
+& R^{[c]}_{2} = \frac{1}{2} (f_2 C_0(1,2,3)+B_0(1,2)-B_0(1,3)) \,. 
+\label{Rdef}
+\end{split}
+\end{equation}
+在上式中使用了比较紧凑的表达方式，例如$B_0(2,3)$的意思是
+\begin{eqnarray}
+B_{0}(2,3) \equiv B_{0}(p_2,m_2,m_3)=
+\int \;
+\frac{d^D l}{i \pi^{D/2}}
+  \frac{1} {(l^2-m_2^2) ((l+p_2)^2-m_3^2)}
+\label{CompactNotation1}
+\end{eqnarray}
+线性方程(\ref{Cformfactoreq0})的解为
+\begin{equation}
+\left( \begin{array}{c} C_{1}\\
+C_{2} \end{array}\right) =G_2^{-1} \left( \begin{array}{c} R^{[c]}_1\\
+ R^{[c]}_2 \end{array}\right)
+\label{Cformfactoreq1}
+\end{equation}
+同样的方法我们也可以化简张量积分的秩(rank)为2的积分$C^{\mu\nu}$。
+\begin{equation}
+\begin{split}
+& p_{1\;\mu} C^{\mu \nu} = p_1^\nu (p_1\cdot p_1 C_{11} +p_1\cdot p_2 C_{12}+C_{00}) 
++p_2^\nu (p_1\cdot p_1 C_{12} +p_1\cdot p_2 C_{22})  \\ 
+& p_{2\;\mu} C^{\mu \nu} = p_1^\nu (p_1\cdot p_2 C_{11} +p_2\cdot p_2 C_{12}) 
++p_2^\nu (p_1\cdot p_2 C_{12} +p_2\cdot p_2 C_{22}+C_{00})
+\label{Rank2}
+\end{split}
+\end{equation}
+利用公式(\ref{ldotp1})和(\ref{ldotp2})可得
+\begin{equation}
+G_2 \left( \begin{array}{c} C_{11}\\
+                            C_{12} \end{array}\right) =
+\left( \begin{array}{c} R^{[c1]}_1\\
+                        R^{[c1]}_2 \end{array}\right)
+\;\;\;\;\;
+G_2 \left( \begin{array}{c} C_{12}\\
+                            C_{22} \end{array}\right) =
+\left( \begin{array}{c} R^{[c2]}_1\\
+                        R^{[c2]}_2 \end{array}\right)
+\label{Cformfactoreq3}
+\end{equation}
+上式中的$R^{[c1]}_1$和$R^{[c1]}_2$分别为
+\begin{equation}
+\begin{split}
+& R^{[c1]}_{1} 
+=\frac{1}{2} (f_1 C_{1}(1,2,3)+B_1(1,3)+B_0(2,3)-2 C_{00}(1,2,3)), \\ 
+& R^{[c1]}_{2} =\frac{1}{2} (f_2 C_{1}(1,2,3)+B_1(1,2)-B_1(1,3)),  
+\label{Rc1}
+\end{split}
+\end{equation}
+$R^{[c2]}_1$和$R^{[c2]}_2$分别为
+\begin{equation}
+\begin{split}
+& R^{[c2]}_{1}=\frac{1}{2} (f_1 C_{2}(1,2,3)+B_1(1,3)-B_1(2,3)), \\ 
+& R^{[c2]}_{2}=\frac{1}{2} (f_2 C_{2}(1,2,3)-B_1(1,3)-2 C_{00}(1,2,3))\; . 
+\label{Rc2}
+\end{split}
+\end{equation}
+同理，更高阶的张量积分化简成洛伦兹不变的动量$p^{\mu}_i$与$g^{\mu\nu}$的线性组合。其中的形式因子如$D_{ij}$
+等又可以化简成其它形式因子、$A_0$、$B_0$、$C_0$和$D_0$的线性组合，而最终可以化简成$A_0$、$B_0$、$C_0$和
+$D_0$的线性组合。
+
+虽然Passarino-Veltman算法推导起来不复杂，但实际数值计算的时候会遇到Gram行列式过小的问题，导致主值计算
+不稳定和不可靠。例如
+\begin{equation}
+\left(\begin{array}{c} C_1\\
+                       C_2  \end{array}\right)
+= {\boldmath G_2^{-1}} \left(\begin{array}{c} \langle  l \cdot p_{1} \rangle  \\
+                                               \langle  l \cdot p_{2} \rangle  
+                                               \end{array}\right)
+\label{eq347}
+\end{equation}
+
+\begin{equation}
+G_2^{-1}= \frac{\left( \begin{array}{cc}  p_2\cdot p_2 & - p_1 \cdot p_2 \\
+                           - p_1\cdot p_2 &  p_1 \cdot p_1 \\
+                         \end{array}\right)}{\Delta_2(p_1,p_2)}
+\end{equation}
+其中$\Delta_2(p_1,p_2)$为
+\begin{eqnarray}
+\Delta_2(p_1,p_2)
+={\rm det}[ G_2 ] = p_1^2 p_2^2 -(p_1 \cdot p_2)^2
+\end{eqnarray}
+上式中的$p_1$和$p_2$可以分为三种情况：
+\begin{enumerate}
+\item 当$p_1$与$p_2$共线的时候：\\
+这时的四动量$p_1$和$p_2$是线性相关的，一种方法是把$C^{\mu}$展开成$C^{\mu} = p^{\mu}_1 C_1$；另外一种方法
+是做变换
+\begin{equation} 
+\tilde p_2^{\mu} = p_2^\mu  
+- \frac{p_1 \cdot p_2}{p_1^2} p_1^{\mu}
+\end{equation}
+则
+\begin{equation}
+C^{\mu} 
+= p_1^\mu {\tilde C}_1 + \tilde p_2^{\mu} {\tilde C}_2
+\label{eq457}
+\end{equation}
+
+\begin{equation} 
+\begin{split} 
+{\tilde C}_1 = \frac{\langle l \cdot p_1 \rangle }{p_1^2},
+\;\;\;
+{\tilde C}_2 = 
+\frac{p_1^2 \langle l \cdot \tilde p_2 \rangle}{\Delta_2(p_1,p_2)}\;. 
+\label{tildec2}
+\end{split} 
+\end{equation}
+
+\item 当$p_1$与$p_2$足够接近时：\\
+这时$G_2$的行列式的值会非常的小，这样的问题称为小Gram行列式（small Gram determinant）问题，我们下面主要
+讨论这个问题。
+
+\item 当$p_1$与$p_2$相距足够远时：\\
+上述公式（\ref{eq347}）完全适用。
+\end{enumerate}
+
+一般性的(N+1)个外腿的Gram矩阵可以写成
+\begin{eqnarray}
+G_N = \left(\begin{array}{ccc} p_1\cdot p_1 & \cdots & p_1\cdot p_N \\
+\vdots & \ddots & \vdots \\
+p_N\cdot p_1 & \cdots & p_N\cdot p_N
+\end{array}\right)
+\end{eqnarray}
+当$N\ge 4$时，我们采用Denner-Dittmaier方法\cite{DDreduction}直接把它们化简成四点积分。而对于$N=2,3$的
+时候，如果Gram行列式非常小，例如
+\begin{eqnarray}
+\frac{det(G_N)}{(p^2_{max})^N} < 10^{-5}
+\end{eqnarray}
+其中$p^2_{max}$是外腿动量的最大值，我们使用四精度计算\cite{quadcompute}。我们基于LoopTools-2.8，
+开发了自己的程序包。当Gram行列式过小时，该程序包会自动切换成四精度计算。
+
+
+\subsection{实光子辐射部分}
+
+实光子辐射过程罗列如下
+\begin{eqnarray}
+\label{eqn:partonlo1real}
+q\bar{q} &\to& W^+ W^- g \gamma \\
+\label{eqn:partonlo2real}
+gq(\bar{q}) &\to& W^+W^- q(\bar{q}) \gamma 
+\end{eqnarray}
+在计算这些实光子辐射的过程中，包括之前的实胶子辐射过程，我们同样采用两截断相空间分割
+(TCPSS)的方法来分离软红外和共线奇异性。我们引入两个任意小
+的截断（cutoff）参数$\delta_s$和$\delta_c$。这样相空间可以分为软区域
+($E_{\gamma} \le \frac{1}{2}\delta_s\sqrt{\hat{s}}$)， 硬共线区域
+($E_{\gamma} > \frac{1}{2}\delta_s\sqrt{\hat{s}}$， $\hat{s}_{q\gamma} \leq \delta_c \hat{s}$)和硬的
+非共线区域($E_{\gamma} > \frac{1}{2}\delta_s\sqrt{\hat{s}}$，$\hat{s}_{q\gamma} > \delta_c \hat{s}$)。
+上面表达式中的$\hat{s}$表示部分子层次上的质心系能量，$\hat{s}_{ij} = (p_i+p_j)^2$是通常的Mandelstam
+不变量。与实胶子辐射过程类似，只需把相应公式做替换$\alpha_s\to \alpha$和$T_i\to \tau_i Q_i$等等，其中
+对于初态的正粒子和末态的反粒子$\tau_i$约定为+1，而对于初态的反粒子和末态的正粒子约定$\tau_i$为-1。
+
+由于在领头阶存在红外发散，故我们要求jet的横动量满足$p_{T,j} > p^{cut}_{T,j}$。对于实辐射过程，
+末态的jet或光子需要用红外安全的算法（把光子也当成jet）在足够接近时合并在一起。当应用完上述jet算法
+后，对于过程（\ref{eqn:partonlo2real}）没有问题，但对于过程（\ref{eqn:partonlo1real}）会导致软胶子发散
+问题。该过程（\ref{eqn:partonlo1real}）的软胶子红外发散需要和过程$q\bar{q}\to W^+W^-\gamma$的次领头阶QCD
+修正的虚修正部分相消，但过程$q\bar{q}\to W^+W^-\gamma$不是本文要计算的过程，所以需要用一种精确的事例选择
+方案区分出$W^+W^-+jet$和$W^+W^-+\gamma$事例。
+
+我们在第二章第三节（\ref{sec:photon_jet_event}）已经详细讨论了如何区分jet和光子事例，这里结合
+具体过程进一步说明。当$R_{\gamma j} < 0.5$时，jet和光子根据jet算法合并到一起。然后我们在jet和光子距离较近
+的时候定义参数$z_{\gamma} = E_{\gamma}/(E_{\gamma} + E_j)$，若$z_{\gamma} > z^{cut}_{\gamma} = 0.7$，
+则合并的事例称为$W^+W^-+\gamma$事例，反之，称为$W^+W^-+jet$事例。然而，直接应用该规则会破坏KLN定理
+\cite{KLNtheorem-K,KLNtheorem-LN}，需要引入夸克光子碎裂函数（参考(\ref{sec:photon_jet_event})）。
+
+\section{矢量玻色子衰变时的自旋关联效应}
+由于$W$玻色子是不稳定粒子，所以它们的衰变也应该考虑。在本文中我们主要分析轻子衰变道，因为该衰变道在探测器
+里有非常干净的信号。对于$W$玻色子的衰变，我们主要考虑了传统的窄宽度近似、衰变时的自旋关联效应
+还有直接完整的计算。
+
+下面我们以过程$ab\to VX\to f\bar{f'}$为例进行详细讨论。
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=1]{abvx.eps}
+\caption{过程$ab\to VX\to f\bar{f'}X$的示意图}
+\label{fig:Vdecay}
+\end{figure}
+如图（\ref{fig:Vdecay}）所示，动量为$k$的矢量玻色子$V$衰变成无质量的动量为$k_{1,2}$的费米子对
+$f(k_1)\bar{f'}(k_2)$。该过程的总截面可以表示成
+\begin{eqnarray}
+\sigma_{ab\to VX\to f\bar{f'}X} = \frac{1}{2s_{ab}}\int d\Phi_{f\bar f'X}
+|\mathcal{M}_{ab\to VX\to f\bar{f'}X}|^2
+\end{eqnarray}
+当然对于完整的过程$ab\to f\bar{f'}X$来说不只有$V$共振的图，如果我们只考虑共振图的贡献，则幅度可以因子化成
+\begin{eqnarray}
+\mathcal{M}^{(res)}_{ab\to VX\to f\bar{f'}X} = T_{\mu}(k)\frac{-1}{k^2-M^2_V +iM_V\Gamma_V} 
+j^{\mu}(k_1,k_2)
+\end{eqnarray}
+其中，$T_{\mu}$表示产生非在壳$V$的幅度，$j^{\mu}(k_1,k_2)$表示$V$衰变的荷流算符。当衰变宽度$\Gamma_V$
+比较小的时候，产生过程主要由$V$共振过程贡献。此时，相空间可以因子化
+\begin{equation}
+\begin{split} 
+\int & d\Phi_{f\bar f'X} \frac{1}{k^2-M^2_V + iM_V\Gamma_V} \cdots \\
+& =\int\frac{dk^2}{2\pi} \frac{1}{k^2-M^2_V + iM_V\Gamma_V} \int d\Phi_{VX}(k) 
+\int d\Phi_{f\bar f'}(k_1,k_2)\cdots \\
+& \sim \int\frac{dk^2}{2\pi} \frac{\pi}{M_V\Gamma_V}\delta(k^2-M^2_V)\int d\Phi_{VX}(k)
+\int d\Phi_{f\bar f'}(k_1,k_2) \cdots \\
+& = \frac{1}{2M_V\Gamma_V}\int d\Phi_{VX}(\hat k)\int d\Phi_{f\bar{f'}}(\hat{k}_1, \hat{k}_2)\cdots
+\end{split} 
+\end{equation}
+上式中带帽的动量是指满足在壳条件的动量。注意$T^{\mu}$、$j^{\mu}$与$\mathcal{M}_{ab\to VX}$、
+$\mathcal{M}_{V\to f\bar f'}$不同，为了导出它们的关系，我们利用玻色子$V$的性质
+\begin{eqnarray}
+-T_{\mu}(\hat k) j^{\mu}(\hat{k}_1,\hat{k}_2) &=& T_{\mu}(\hat k) \left( 
+\sum\limits_{\lambda=0,\pm 1} \epsilon^{\mu}_{V}(\lambda)^*\epsilon^{\nu}_V(\lambda) - 
+\frac{\hat{k}^2 \hat{k}^2}{M^2_V} \right)j_{\nu}(\hat{k}_1,\hat{k}_2) \nonumber \\
+&=& \sum\limits_{\lambda=0,\pm 1} \mathcal{M}_{ab\to VX}(\lambda)\mathcal{M}_{V\to f\bar f'}(\lambda)
+\end{eqnarray}
+上式的推导中我们利用的电荷守恒关系$\hat{k}^{\nu}j_{\nu}(\hat{k}_1,\hat{k}_2) = 0$且
+\begin{eqnarray}
+\mathcal{M}_{ab\to VX}(\lambda) = T_{\mu}(\hat k)\epsilon^{\mu}_V(\lambda)^*\,, \quad
+\mathcal{M}_{V\to f\bar f'}(\lambda) = \epsilon^{\nu}_V(\lambda) j_{\nu}(\hat k_1,\hat k_2)
+\end{eqnarray}
+总截面在共振近似下可以简化为
+\begin{eqnarray}
+\sigma_{ab\to VX\to f\bar f'X} &\sim& \frac{1}{2s_{ab}}\int d\Phi_{VX}(\hat k) 
+\sum\limits_{\lambda,\lambda'=0,\pm 1} \mathcal{M}_{ab\to VX}(\lambda')^* \mathcal{M}_{ab\to VX}(\lambda)
+\nonumber \\
+&\times& \frac{1}{2M_V\Gamma_V}\int d\Phi_{f\bar f'}\mathcal{M}_{V\to f\bar f'}(\lambda')^*
+\mathcal{M}_{V\to f\bar f'}(\lambda)
+\end{eqnarray}
+如果费米子衰变的相空间被完整的积分掉，则由转动不变性可以得出
+\begin{eqnarray}
+\frac{1}{M_V}\int d\Phi_{f\bar f'}(\hat k_1,\hat k_2) \mathcal{M}_{V\to f\bar f'}(\lambda')^*
+\mathcal{M}_{V\to f\bar f'} = \Gamma_{V\to f\bar f'} \delta_{\lambda'\lambda}
+\label{eqn:decayInv}
+\end{eqnarray}
+这样总截面就变成了通常窄宽度近似下的形式
+\begin{eqnarray}
+\sigma_{ab\to VX\to f\bar f'X} &\sim& \frac{1}{2s_{ab}}\int d\Phi_{VX}(\hat k) 
+\sum\limits_{\lambda=0,\pm 1} |\mathcal{M}_{ab\to VX} (\lambda)|^2 \nonumber \\
+&=& \sigma_{ab\to VX} BR_{V\to f\bar f'}
+\label{eqn:decayBR}
+\end{eqnarray}
+上式中$\sigma_{ab\to VX}$代表非极化玻色子$V$的产生截面。注意：若衰变出的粒子的相空间不加任何截断，
+则总截面满足关系式（\ref{eqn:decayBR}）。但是，在微分层面上，物理量的每个区间并不满足公式
+（\ref{eqn:decayInv}），所以在微分层次上自旋关联的效应仍然存在。
+
+为了更详细地讨论自旋关联的效应，我们引入衰变关联矩阵
+\begin{eqnarray}
+\Delta^{V\to f\bar f'}_{\lambda'\lambda}(\hat k_1,\hat k_2) = \frac{\Phi_{f\bar f'}}{2M_V
+\Gamma_{V\to f\bar f'}}\mathcal{M}_{V\to f\bar f'}(\lambda')^* \mathcal{M}_{V\to f\bar f'}(\lambda)
+\end{eqnarray}
+因此总截面的表达式就可以写成如下形式
+\begin{eqnarray}
+\sigma_{ab\to VX\to f\bar f'X} &\sim& \frac{1}{2s_{ab}}\int d\Phi_{VX}(\hat k)
+\sum\limits_{\lambda,\lambda'= 0,\pm 1}\mathcal{M}_{ab\to VX}(\lambda')^* \mathcal{M}_{ab\to VX}(\lambda)
+\nonumber \\
+&\times& \int \frac{d\Phi_{f\bar f'}(\hat k_1,\hat k_2)}{\Phi_{f\bar f'}}
+\Delta^{V\to f\bar f'}_{\lambda'\lambda}(\hat k_1,\hat k_2)
+\end{eqnarray}
+关于自旋关联矩阵的计算主要有两种方法：第一种方法是直接用程序自动产生出极化幅度
+$\mathcal{M}_{V\to f\bar f'}(\lambda)$，然后计算出衰变关联矩阵；另外一种方法是手动推导出衰变矩阵的解析
+表达式。
+
+下面推导矢量玻色子$W/Z$衰变成轻子的衰变关联矩阵。在$ab$粒子的质心系中定义玻色子$V$的动量和
+极化矢量
+\begin{equation}
+\begin{split}
+& \hat k^{\mu} = E_V(1,\beta_V\cos\phi_V\sin\theta_V, \beta_V\sin\phi_V\sin\theta_V,\beta_V\cos\theta_V),
+\; \beta_V = \sqrt{1-M^2_V/E^2_V} \\
+& \epsilon^{\mu}_V(\pm 1) = \frac{e^{\mp i\phi_V}}{\sqrt 2}(0,-\cos\phi_V\cos\theta_V\pm i\sin\phi_V,
+-\sin\phi_V\cos\theta_V\mp i\cos\phi_V, \sin\theta_V) \\
+& \epsilon^{\mu}_V(0) = \gamma_V(\beta_V, \cos\phi_V\sin\theta_V, \sin\phi_V\sin\theta_V, \cos\theta_V)
+\\
+& \gamma_V = 1/\sqrt{1-\beta^2_V} = E_V/M_V
+\end{split}
+\end{equation}
+然后变换到玻色子$V$的静止系$\widetilde{\Sigma}$中，变换矩阵为
+\begin{eqnarray}
+(\Lambda^{\mu}_{\nu}) &=& \left(\begin{array}{cccc}
+\gamma_V & 0 & 0 & -\beta_V\gamma_V \\
+0 & 1 & 0 & 0 \\
+0 & 0 & 1 & 0 \\
+-\beta_V\gamma_V & 0 & 0 & \gamma_V
+\end{array} \right)
+\\
+&\times& \left(\begin{array}{cccc}
+1 & 0 & 0 & 0 \\
+0 & \cos\phi_V\cos\theta_V & \sin\phi_V\cos\theta_V & -\sin\theta_V \\
+0 & -\sin\phi_V & \cos\phi_V & 0 \\
+0 & \cos\phi_V\sin\theta_V & \sin\phi_V\sin\theta_V & \cos\theta_V
+\end{array} \right)
+\end{eqnarray}
+在此洛伦兹变换后的玻色子的动量与极化为
+\begin{eqnarray}
+\tilde {\hat k}{}^\mu = (M_V,0,0,0), \; \tilde \epsilon^{\mu}_V(\pm 1) = \frac{e^{\mp i\phi_V}}{\sqrt 2}
+(0,-1,\mp i, 0), \; \tilde \epsilon^{\mu}_V(\pm 1) = (0,0,0,1)
+\end{eqnarray}
+在参考系$\tilde \Sigma$下的衰变粒子的动量$\tilde{\hat{k}}_{1,2}$为
+\begin{eqnarray}
+\tilde{\hat k}_1 = (1,\cos\tilde{\phi}_1\sin\tilde{\theta}_1, \sin\tilde{\phi}_1\sin\tilde{\theta}_1,
+\cos\tilde{\theta}_1), \; \tilde{\hat k}_2 = \tilde{\hat k}_2 - \tilde{\hat k}_1
+\end{eqnarray}
+衰变矩阵元为
+\begin{eqnarray}
+\mathcal{M}^{\sigma}_{V\to f\bar f'}(\lambda) = eg^{\sigma}_{Vf\bar f'} \bar{u}_f(\tilde{\hat k}_1)
+\tilde{\slashed{\epsilon}}(\lambda) \omega_{\sigma}v_{\bar f'}(\tilde{\hat k}_2)
+\label{eqn:decayMatrix}
+\end{eqnarray}
+上式中$\sigma = \pm$表示粒子的手征，手征投影算符$\omega_{\pm} = (1\pm\gamma_5)/2$，手征耦合
+$g^{\sigma}_{Vf\bar f'}$的定义为
+\begin{eqnarray}
+g^{\sigma}_{\gamma ff} = -Q_f, \; g^{\sigma}_{Zff} = \frac{\delta_{\sigma^-}I^3_{W,f}-\sin^2\theta_W Q_f}
+{\sin\theta_W\cos\theta_W}, \; g^{\sigma}_{Wf\bar f'} = \frac{\delta_{\sigma^-}}{\sqrt{2}\sin\theta_W}
+\end{eqnarray}
+其中$Q_f$和$I^3_{W,f} = \pm \frac{1}{2}$是费米子$f$的电荷和弱同位旋第三分量。衰变幅度最终可以简化为
+\begin{eqnarray}
+\mathcal{M}^+_{V\to f\bar f'}(\lambda) &=& eg^+_{Vff'}M_V\left(+\frac{1}{\sqrt 2}e^{i(\tilde{\phi}_1-
+\phi_V)}(1+\cos\tilde{\theta}_1),\sin\tilde{\theta}_1, -\frac{1}{\sqrt 2}e^{-i(\tilde{\phi}_1 - \phi_V)}
+(1-\cos\tilde{\theta}_1) \right) \nonumber \\
+\mathcal{M}^-_{V\to f\bar f'}(\lambda) &=& eg^-_{Vff'}M_V\left(-\frac{1}{\sqrt 2}e^{i(\tilde{\phi}_1-
+\phi_V)}(1-\cos\tilde{\theta}_1),\sin\tilde{\theta}_1, +\frac{1}{\sqrt 2}e^{-i(\tilde{\phi}_1 - \phi_V)}
+(1+\cos\tilde{\theta}_1) \right) \nonumber \\
+\end{eqnarray}
+把上面的式子代入公式（\ref{eqn:decayMatrix}）中，可以推导出衰变矩阵$\Delta^{V\to f\bar f'}$的解析表达式，
+本文略去，详细的表达式可以参考文献\cite{Ditt:pp2WWjet}。
+
+除了上面的方法外，还有一种考虑自旋关联效应的方法，就是先估计出自旋关联效应的上限，然后利用舍选法产生
+衰变后的事例。该方法虽然没有前面的方法精确，但这种方法程序实现（MadSpin）起来特别方便，具体的推导可以
+参考文献\cite{madspin:theory,madspin:program}。
+
+\section{数值结果与讨论}
+\subsection{输入参数}
+标准模型相关的输入参数为\cite{pdg2014}
+\begin{equation}
+\begin{split}
+& M_W = 80.385~{\rm GeV},~~ M_Z = 91.1876~{\rm GeV},~~ M_H = 125.7~{\rm GeV}, \nonumber \\
+& M_t=173.21~{\rm GeV},~~ G_{\mu} = 1.1663787 \times 10^{-5}~{\rm GeV}^{-2},~~ \alpha_s(M_Z) = 0.118
+\end{split}
+\label{eq:SMpar}
+\end{equation}
+在领头阶和电弱修正的次领头阶计算中，CKM矩阵设置成单位阵。然而，在次领头阶的QCD计算当中，有部分过程会依赖
+CKM矩阵，我们取CKM矩阵为
+\begin{eqnarray}\label{CKM}
+ V_{CKM} = \left(
+\begin{array}{rcc}
+     0.97425 \ &  0.22547 \ &  0 \\
+    -0.22547 \ &  0.97425 \ &  0 \\
+       0~~~~ \ &  0 \ &  1
+\end{array}  \right)
+\end{eqnarray}
+$W$玻色子的衰变宽度是$\Gamma_W = 2.045294~\rm{GeV}$，且所有的轻夸克质量置为零。我们选取质子－质子碰撞的
+质心系能量为$14~\rm{TeV}$，PDF为$NNPDF2.3~QED~PDF$\cite{NNPDF}。
+
+\subsection{事例选择标准}
+对于四体末态$W^+W^-+2jets$和$W^+W^-+jet+\gamma$事例，当两个jet或者jet与光子距离较近时，我们需要把它们
+合并（merge）到一起。当末态两个jet（$j_{1,2}$）的距离$R_{j_1j_2}< 0.5$时，我们把这两个jet合并到一起。
+若末态涉及到jet和光子，则当$R_{j\gamma} < 0.5$时，把jet和光子合并到一起，然后我们用定义好的参数
+$z_{\gamma} = E_{\gamma}/(E_{\gamma}+E_j)$来判断是jet事例还是光子事例。当$z_{\gamma} > 0.7$时，我们认为
+合并后的事例为$W^+W^-+\gamma$事例（舍去），反之称为$W^+W^-+jet$事例（保留）。
+
+当我们的分析涉及到$W$玻色子的衰变时，例如$pp\to W^+W^-+jet+X\to e^+\mu^-\nu_e\bar{\nu}_{\mu}+jet+X$时，
+为了跟实验的结果更加接近，我们需要额外的相空间截断：
+\begin{eqnarray}
+\label{eqn:finalcut1}
+|y_j| < 4.5,\quad |y_{\ell}| < 2.5, \quad p_{T,\ell} > 25~{\rm GeV},\quad p_{\textrm{T}, {\rm miss}} > 25~{\rm GeV}, \quad R_{j\ell} > 0.4, \quad R_{\ell \ell} > 0.2 
+\nonumber \\
+\end{eqnarray}
+上式中$P_{T,l}$表示带电轻子的横动量，$P_{T,miss}$表示所有中微子合并后的横动量。
+
+\subsection{总截面}
+我们采用FeynArts-3.7/FormCalc-7.3/LoopTools-2.8程序包来计算总截面和$W$玻色子未衰变前的末态粒子的分布。
+为了保证程序的正确性，我们还使用了$MadGraph5\_aMC@NLO$\cite{mg5}程序包计算$pp\to WW+jet$的次领头阶
+QCD修正，两个结果完全相符。
+
+\begin{table}
+\center
+\begin{tabular}{|c|c|ccccc|}
+\hline
+\multicolumn{2}{|c|}{$p^{cut}_{T,j}$~[GeV]}   & 50 &  100  &  200 & 500 & 1000   \\
+\hline
+\multirow{2}{*}{$\sigma_{{\rm LO}}$~[fb]}  & $\mu = M_W$ & 22976(5) & 10035(2)  & 2833.8(6) & 208.56(5) & 10.971(2) \\
+&  $\mu = \mu_0$ & 20492(4) &  8407(2)  &  2100.1(5) & 115.25(3) & 4.329(1)   \\
+\hline
+\multirow{2}{*}{$\sigma^{{\rm QCD}}_{{\rm NLO}}$~[fb]} & $\mu = M_W$ & 30416(67) & 13685(50)  & 4077(15) & 348(1) & 23.48(8) \\
+& $\mu = \mu_0$ & 28912(55)  &  13006(39)  &  3747(10) & 268(1) & 13.25(7) \\
+\hline
+\multirow{2}{*}{$\delta^{{\rm QCD}}$~[\%]} & $\mu = M_W$ & 32.4 & 36.4  & 43.9 & 66.9 & 114 \\
+& $\mu = \mu_0$ & 41.1  & 54.7 &  78.4 &  132.5 & 206.1 \\
+\hline
+\multirow{2}{*}{$\sigma^{{\rm EW}}_{{\rm NLO}}$~[fb]} & $\mu = M_W$ & 23344(11) & 10059(6)  & 2733(2) & 180.8(1) & 8.53(1) \\
+& $\mu = \mu_0$ & 20972(7) &  8588(5)  & 2095(2) & 92.3(8) & 3.2(2)  \\
+\hline
+\multirow{2}{*}{$\delta^{{\rm EW}}$~[\%]} & $\mu = M_W$ & 1.6 & 0.24  & -3.6 & -13.3 & -22.2 \\
+& $\mu = \mu_0$ &  2.3  &  2.2  & -0.2  & -19.9 & -26.1 \\
+\hline
+\multirow{2}{*}{$\sigma^{{\rm QCD + EW}}_{{\rm NLO}}$~[fb]} & $\mu = M_W$ & 30784(68) & 13709(51) & 3976(15) & 320(1) & 21.04(8) \\
+& $\mu = \mu_0$ & 29392(53) & 13187(39) & 3742(11) & 245(1) & 12.12(8) \\
+\hline
+\multirow{2}{*}{$\delta^{{\rm QCD + EW}}$~[\%]} & $\mu = M_W$ & 34.0 & 36.6  & 40.3 & 53.5 & 91.8 \\
+& $\mu = \mu_0$ & 43.4 & 56.9 & 78.2 & 112.6 & 180.0 \\
+\hline
+\end{tabular}
+\caption{过程$pp\to W^+W^-+jet$的领头阶，次领头阶QCD和电弱修正后的总的积分截面以及相应的相对修正。
+表格中的能标选取为$\mu = M_W$和$\mu_0$，且改变jet的横动量截断$p^{cut}_{T,j}$值。}
+\label{tab:ptcut}
+\end{table}
+
+在表格（\ref{tab:ptcut}）中我们列出了领头阶、次领头阶QCD和EW修正后的总的截面以及相应的相对修正。相对修正
+的定义为
+\begin{eqnarray}
+\delta^{{\rm QCD}} = \frac{\sigma^{{\rm QCD}}_{{\rm NLO}}}{\sigma_{{\rm LO}}} - 1,~~~~
+\delta^{{\rm EW}} = \frac{\sigma^{{\rm EW}}_{{\rm NLO}}}{\sigma_{{\rm LO}}} - 1,~~~~
+\delta^{{\rm QCD + EW}} = \frac{\sigma^{{\rm QCD + EW}}_{{\rm NLO}}}{\sigma_{{\rm LO}}} -1.
+\end{eqnarray}
+因子化和重整化能标的选取为$\mu_r = \mu_f = \mu = M_W$和$\mu_0 = \sqrt{2M^2_W+\sum_i p^2_{T,i}}$，其中指标
+$i$表示末态的jet和光子。从表格中我们可以看出，随着jet的横动量截断$p^{cut}_{T,j}$的增加，次领头阶的电弱
+修正变得越来越明显。当$p^{cut}_{T,j} = 1000~\rm{GeV}$时，电弱修正在取能标为$\mu = M_W$和$\mu = \mu_0$时，
+分别是$-22.2\%$和$-26.1\%$。为了探讨因子化和重整化能标的理论不确定度，我们定义能标不确定度的上下边界分别
+为:
+\begin{eqnarray}
+\eta_+ = \frac{\max\{\sigma(\mu_f,\mu_r)\}}{\sigma(\mu_0,\mu_0)}-1\, , \quad
+\eta_- = \frac{\min\{\sigma(\mu_f,\mu_r)\}}{\sigma(\mu_0,\mu_0)}-1
+\end{eqnarray}
+其中，$\mu_r$和$\mu_f$取下面的值
+\begin{eqnarray}
+\left\{
+\left( \frac{\mu_f}{\mu_0}, \frac{\mu_r}{\mu_0} \right)
+\biggl| \,
+\left( 2, 2 \right), \,
+\left( 2, 1/2 \right), \,
+\left( 1/2, 2 \right), \,
+\left( 1/2, 1/2 \right)
+\right\}
+\end{eqnarray}
+当$p^{cut}_{T,j} = 50~\rm{GeV}$时，领头阶和次领头阶QCD+EW修正后的截面分别为
+$\sigma_{{\rm LO}} = 20492^{+11\%}_{-9.5\%}~fb$和
+$\sigma_{{\rm NLO}}^{{\rm QCD + EW}} = 29392^{+4.3\%}_{-5.5\%}~fb$。
+在下面的微分分布的分析当中，我们采用固定能标方案$\mu_r = \mu_f = M_W$。
+
+
+\subsection{领头阶（LO）微分分布}
+在领头阶，对于过程$pp\to W^+W^-+jet\to e^+\mu^-\nu_e\bar{\nu}_{\mu}+jet$我们主要对比简单的窄宽度近似和
+MadSpin两种方法。我们主要计算了$W$玻色子衰变后的轻子的分布。自旋关联的效应可以通过这两种方法对比出来，
+我们定义如下相对偏差
+\begin{eqnarray}
+\delta(x) = \left( \frac{d\sigma_{\rm MadSpin}}{dx} - \frac{d\sigma_{\rm nwa}}{dx} \right)\biggl/\frac{d\sigma_{\rm nwa}}{dx}
+\end{eqnarray}
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.4]{wwj_Fig3a.eps}
+\includegraphics[scale=0.4]{wwj_Fig3b.eps}
+\caption{领头阶$\mu^-$粒子的横动量分布和相对偏差，其中分别应用了简单的窄宽度近似和MadSpin方法。
+图(a)应用了$p_{T,j} > 50~{\rm GeV}$，而图(b)应用了$p_{T,j} > 50~{\rm GeV}$和额外的约束关系式
+(\ref{eqn:finalcut1})。}
+\label{fig:lomupt}
+\end{figure}
+在图(\ref{fig:lomupt})(a,b)中我们分别展示了领头阶$\mu^-$粒子的横动量分布和相对偏差。
+在图(\ref{fig:lomupt}a)中，我们
+仅施加了末态领头(leading)jet的横动量截断$p_{T,j} > 50~{\rm GeV}$。我们明显的看出这两种方法的区别，尤其在
+低横动量区域$p_{T,\mu^-} < 30~\rm{GeV}$和高横动量区域$p_{T,\mu^-} > 100~\rm{GeV}$，相对偏差在图中所示的
+区域可以达到$19.8\%$。对于图(\ref{fig:lomupt}b)，我们除了对领头jet施加横动量截断$p_{T,j} > 50~{\rm GeV}$，
+而且还施加了额外的约束(\ref{eqn:finalcut1})，我们可以看到相对偏差从$-7.8\%$达到$10.1\%$。
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.4]{wwj_Fig4a.eps}
+\includegraphics[scale=0.4]{wwj_Fig4b.eps}
+\caption{领头阶$e^+$粒子的横动量分布和相对偏差，其中分别应用了简单的窄宽度近似和MadSpin方法。
+图(a)应用了$p_{T,j} > 50~{\rm GeV}$，而图(b)应用了$p_{T,j} > 50~{\rm GeV}$和额外的约束关系式
+(\ref{eqn:finalcut1})。}
+\label{fig:loept}
+\end{figure}
+图(\ref{fig:loept})(a,b)展示了领头阶正电子$e^+$的横动量分布，其中我们分别应用了简单的窄宽度近似和
+MadSpin方法。图(\ref{fig:loept}a)所得到的结果中我们仅约束领头jet的横动量$p_{T,j} > 50~\rm{GeV}$。
+同样，我们看到自旋关联的效应是很明显的，在图中所示区域相对偏差可以从$-17.3\%$变化到$24.9\%$。
+图(\ref{fig:loept}b)中不仅施加了约束$p_{T,j} > 50~\rm{GeV}$而且还应用了约束式(\ref{eqn:finalcut1})。
+我们可以从图中得出MadSpin方法和简单的窄宽度近似方法在区域$p_{T,e^+}\in[25,150]~\rm{GeV}$上的偏差
+从$-14.8\%$到$16.3\%$，并且在$p_{T,e^+} = 25~\rm{GeV}$时达到最大值。
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.4]{wwj_Fig5a.eps}
+\includegraphics[scale=0.4]{wwj_Fig5b.eps}
+\caption{领头阶末态粒子$e^+$和$\mu^-$的轴角差$\phi_{e^+\mu^-}$的分布和相对偏差，其中分别应用了简单的
+窄宽度近似和MadSpin方法。图(a)应用了$p_{T,j} > 50~{\rm GeV}$，而图(b)应用了$p_{T,j} > 50~{\rm GeV}$和
+额外的约束关系式
+(\ref{eqn:finalcut1})。}
+\label{fig:lophi}
+\end{figure}
+我们在图(\ref{fig:lophi})(a,b)中展示了领头阶的正电子$e^+$和缪子$\mu^-$的轴角差$\phi_{e^+\mu^-}$的分布和
+相对偏差的分布，其中我们仍然用了MadSpin和简单的窄宽度近似方法作为对比。图(\ref{fig:lophi})(a,b)中施加的
+相空间截断和图(\ref{fig:loept})(a,b)中相同。我们同样发现MadSpin方法和简单的窄宽度方法有着显著的差别，且
+相对偏差随着$\phi_{e^+\mu^-}$值的增加而变大。图(\ref{fig:lophi}a)显示两种方法的偏差在区间
+$[-6.0\%,6.4\%]$。从图(\ref{fig:lophi}b)中我们可以看出相对偏差$\delta(\phi_{e^+\mu^-})$从$-6.6\%$变化到
+$3.1\%$，而且当$\phi_{e^+\mu^-} < 1.5$时绝对偏差大于$5\%$。
+
+综上所述，从图(\ref{fig:lomupt})(a,b)、(\ref{fig:loept})(a,b)和(\ref{fig:lophi})(a,b)中的领头阶
+$p_{T,\mu^-}$、$p_{T,e^+}$和$\phi_{e^+\mu^-}$微分分布，我们可以看出自旋关联的效应是很显著的。另外，
+为了确保程序的正确性，我们还计算了过程$pp\to e^+\mu^-\nu_e\nu_{\mu}+jet+X$的微分分布，发现MadSpin方法
+是非常可靠的。MadSpin程序是一个非常有效且精确的工具来计算共振粒子自旋关联的衰变分布。所以，在次领头阶的
+计算当中，我们采用MadSpin程序包来计算$W$玻色子的衰变。
+
+
+\subsection{次领头阶（NLO）微分分布}
+在这一部分我们主要讨论过程$pp\to W^+W^-+jet+X$的次领头阶QCD和EW修正后的微分分布，其中对于领头(leading)jet
+施加了横动量约束$p_{T,j} > 50~\rm{GeV}$。对于$W$玻色子的衰变，额外的相空间约束关系式(\ref{eqn:finalcut1})
+施加在衰变后的轻子和丢失的能量(missing energy)上。相对的次领头阶QCD和电弱修正在微分层面上的定义为
+\begin{eqnarray}
+  \delta^{{\rm QCD}}(x) &=& \biggl(\frac{d\sigma^{{\rm QCD}}_{{\rm NLO}}}{dx} - \frac{d\sigma_{{\rm LO}}}{dx}\biggr)\biggl/\frac{d\sigma_{{\rm LO}}}{dx} \nonumber \\
+  \delta^{{\rm EW}}(x) &=& \biggl(\frac{d\sigma^{{\rm EW}}_{{\rm NLO}}}{dx} - \frac{d\sigma_{{\rm LO}}}{dx}\biggr)\biggl/\frac{d\sigma_{{\rm LO}}}{dx}
+\end{eqnarray}
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.4]{wwj_Fig6a.eps}
+\includegraphics[scale=0.4]{wwj_Fig6b.eps}
+\caption{$W^+$和$W^-$粒子在领头阶、次领头阶QCD和EW修正后的横动量$p_T$分布。}
+\label{fig:nloWWpt}
+\end{figure}
+图(\ref{fig:nloWWpt})(a,b)分别描述了末态$W^+$和$W^-$粒子在领头阶、次领头阶QCD和次领头阶电弱修正后的横动量
+分布。对于$p_{T,W^+}$和$p_{T,W^-}$的分布，随着它们从0增加到$300~\rm{GeV}$，QCD相对修正分别从$45.2\%$
+降到$14.8\%$和从$41.4\%$降到$18.3\%$。电弱修正后的$p_{T,W^{\pm}}$的分布随着横动量的增加而减小，且当
+$p_{T,W^{\pm}} > 80~\rm{GeV}$时电弱相对修正变成负数。由于大的Sudakov对数项，电弱修正在$p_{T,W^{\pm}}$
+比较大的时候变得显著。当$p_{T,W^{\pm}} = 300~\rm{GeV}$时，对于$p_{T,W^+}$和$p_{T,W^-}$电弱相对修正大约
+分别为$-4.9\%$和$-3.6\%$。
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.4]{wwj_Fig7a.eps}
+\includegraphics[scale=0.4]{wwj_Fig7b.eps}
+\caption{$W^+$和$W^-$粒子在领头阶、次领头阶QCD和EW修正后的快度$\eta$分布。}
+\label{fig:nloWWrap}
+\end{figure}
+图(\ref{fig:nloWWrap})(a,b)分别描述了$W^+$和$W^-$在领头阶、次领头阶QCD和次领头阶EW修正后的快度分布。
+我们可以看到$W^+$和$W^-$的快度分布很相似。对于QCD相对修正来说，当$|y_{W^{\pm}}|$从0增加到3时，$y_{W^+}$
+的分布分别从$27.6\%$增加到$42.2\%$，而$y_{W^-}$从$28.3\%$增加到$41.9\%$。对于次领头阶电弱修正，
+$y_{W^+}$和$y_{W^-}$的相对修正在图中所示范围小于$3\%$。
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.4]{wwj_Fig8.eps}
+\caption{$W$玻色子对不变质量$M_{WW}$在领头阶、次领头阶QCD和次领头阶EW修正后的分布。}
+\label{fig:nlomww}
+\end{figure}
+图(\ref{fig:nlomww})描述了领头阶、次领头阶QCD和次领头阶电弱修正后的$W$玻色子对不变质量$M_{WW}$的分布和
+相应的相对修正。随着$M_{WW}$从180变化到800~GeV，QCD的相对修正从39.2\%降到了7.4\%。电弱相对修正在图中
+所示区域总是正的，且因为光子诱导过程的贡献，最大值能达到5\%。
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.4]{wwj_Fig9a.eps}
+\includegraphics[scale=0.4]{wwj_Fig9b.eps}
+\caption{缪子$\mu^-$(a)和正电子$e^+$(b)在领头阶、次领头阶QCD和次领头阶电弱修正后的横动量的分布。}
+\label{fig:nloleptonpt}
+\end{figure}
+图(\ref{fig:nloleptonpt})(a,b)分别描述了缪子$\mu^-$和正电子$e^+$的横动量在领头阶、次领头阶QCD和
+次领头阶电弱修正后的分布。从两张图中我们看出，$p_{T,\mu^-}$和$p_{T,e^+}$从25到150~GeV时的相对QCD修正
+变化区间分别为[22.3\%, 33.4\%]和[9.3\%,34.8\%]。当$p_T = 150~\rm{GeV}$时，$p_{T,\mu^-}$和$p_{T,e^+}$
+的相对电弱修正分别约为-3.5\%和-1.0\%。
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.4]{wwj_Fig10.eps}
+\caption{丢失的(missing)横动量$p_{T,miss}$在领头阶、次领头阶QCD和次领头阶电弱修正后的分布。}
+\label{fig:nloptmiss}
+\end{figure}
+在图(\ref{fig:nloptmiss})中我们展示了丢失的横动量$p_{T,miss}$在领头阶、次领头阶QCD和次领头阶电弱修正后的
+分布。我们可以看出$p_{T,miss}$的相对QCD修正比较稳定，且在区间[25,150]~GeV的变化范围为25.6\%到32.7\%。
+相对的电弱修正的范围为[-2.3\%, 2.7\%]，且在$p_{T,miss} = 90~\rm{GeV}$的时候达到最大值。
+
+\section{小结}
+在此项工作中，我们首次计算了LHC上$pp\to W^+W^-+{\rm jet} +X$过程的完整的次领头阶QCD和电弱修正，
+并且考虑了$W$玻色子衰变时的自旋关联效应。
+计算结果显示，由于电弱Sudakov效应，次领头阶电弱修正在高能区域变得很重要，这些信号有望在未来
+的LHC实验上探测到。例如，当领头jet的横动量约束为$p_{T,j} > 1~\rm{TeV}$时，电弱相对修正在$\mu = M_W$时
+可以达到-22.2\%。在处理$W$玻色子衰变的时候，我们采用了MadSpin方法来包含$W$衰变时的自旋关联
+效应，我们发现MadSpin方法比直接用窄宽度近似的方法精确很多。因此，我们得出结论，在高精确的理论计算当中，
+应该包含玻色子衰变的自旋关联效应。
+在本文中，我们还分析了末态$W^{\pm}$以及它们的衰变产物在领头阶、次领头阶QCD和
+次领头阶电弱修正后的分布，我们发现$W^{\pm}$的横动量和$W$玻色子对的不变质量分布的电弱相对修正很显著。
+
+

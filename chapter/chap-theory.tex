@@ -1,0 +1,950 @@
+﻿
+\chapter{标准模型，双Higgs二重态模型及相关计算理论}
+\label{chap:theory}
+本章主要介绍粒子物理学中的标准模型及其一种简单的扩展模型——双Higgs二重态模型（2HDM）。
+
+\section{标准模型简介}
+\subsection{标准模型的粒子谱}
+在本节中，我们主要介绍标准模型的粒子谱，规范变换以及自发对称破缺的Higgs机制。标准模型的场可以分为物质场
+和规范场。物质场按手征可以分为三代左手和右手费米子，也可以按基本相互作用分为夸克和轻子。左手费米子
+是弱同位旋群$SU(2)_L$的二重态（doublet），而右手是该群的单态（singlet）。
+
+我们把轻子的第一、二、三代分别称为电子味、缪子味和陶子味。每一代轻子都由一个带电轻子和一个中性的无质量的
+粒子-中微子构成。
+三代夸克可以分为上型和下型夸克，其中上型夸克带有电荷$Q_U = 2/3$，而下型夸克带有电荷$Q_D = -1/3$。
+夸克除了可以参与电弱相互作用外，还可以参与强相互作用，并且它们是$SU(3)$规范群的三重态。三个上型夸克分别
+是u（up），c（charm）和t（top）夸克，而三个下型夸克分别为d（down），s（strange）和b（bottom）夸克。
+下面我们分别用$L_i$和$Q_i$表示左手轻子和夸克同位旋二重态，其中$i$表示代数：
+\begin{eqnarray}
+L_1 = \left( \begin{array}{cc} \nu_e \\ e^- \end{array}\right)_L , \qquad
+Q_1 = \left( \begin{array}{cc} u \\ d \end{array} \right)_L ,
+\nonumber \\
+L_2 = \left( \begin{array}{cc} \nu_{\mu} \\ \mu^- \end{array}\right)_L , \qquad
+Q_2 = \left( \begin{array}{cc} c \\ s \end{array} \right)_L ,
+\nonumber \\
+L_3 = \left( \begin{array}{cc} \nu_{\tau} \\ \tau^- \end{array}\right)_L , \qquad
+Q_3 = \left( \begin{array}{cc} t \\ b \end{array} \right)_L .
+\end{eqnarray}
+
+下面我们列出标准模型的右手费米子，
+\begin{eqnarray}
+e_R^i &=& \{e_R, \mu_R, \tau_R\}
+\nonumber \\
+u_R^i &=& \{u_R, c_R, t_R \}, \qquad d_R^i = \{d_R, s_R, b_R\} .
+\end{eqnarray}
+其中$e_R$，$u_R$和$d_R$是$SU(2)$群的单态。
+左手费米子的同位旋第三分量为$I_{f_L} = \pm \frac{1}{2}$， 而右手费米子为$I_{f_R} = 0$。
+粒子的超荷依赖于电荷和同位旋，它们的关系为：
+\begin{eqnarray}
+Y_f = 2Q_f - 2I_f \, .
+\label{eqn:hyperchargeDef}
+\end{eqnarray}
+我们可以看到，右手中微子的同位旋、电荷和超荷都是零，故该类粒子与标准模型的其它粒子退耦合（decouple）。
+
+\subsection{定域规范不变性}
+我们都知道标准模型是建立在规范群$SU(3)_c \otimes SU(2)_L \otimes U(1)_Y$之上，所以对规范变换的深入理解
+是很必要的。首先，以QED为例探讨定域规范不变性。自由电子的拉氏量（拉氏密度）为
+\begin{eqnarray}
+\mathscr{L} = \bar{\Psi} (i\gamma^{\mu}\partial_{\mu} - m)\Psi
+\label{eqn:freeElectronL}
+\end{eqnarray}
+我们可以看到，这个拉氏量在整体相变（global phase）变换$\Psi \to e^{i\theta}\Psi$下保持不变，但当我们
+要求拉氏量在定域规范（local gauge）变换$\Psi \to e^{i\theta(x)}\Psi$下保持不变时，上述拉氏量显然不满足要求。
+问题出在偏导项：电子场$\Psi(x)$沿矢量$n^{\mu}$方向的导数为
+\begin{eqnarray}
+n^{\mu}\partial_{\mu} \Psi(x) = \lim_{\epsilon\to 0}\frac{1}{\epsilon}[\Psi(x+\epsilon n) - \Psi(x)] \, .
+\end{eqnarray}
+可以看出，$\Psi(x+\epsilon n)$和$\Psi(x)$在定域变换下有不同的相角。因此，我们需要重新定义偏导。最简单的
+一种方法是定义量$U(y, x)$，它在规范变换下为
+\begin{eqnarray}
+U(y,x) \to e^{i\theta(y)}U(y,x)e^{-i\theta(x)} \, .
+\label{eqn:UyxGaugeTranse}
+\end{eqnarray}
+当$x=y$时，我们令$U(x,x) = 1$。偏微分重新定义为协变导数（covariant derivative）如下：
+\begin{eqnarray}
+n^{\mu} D_{\mu}\Psi(x) = \lim_{\epsilon \to 0}\frac{1}{\epsilon}[\Psi(x+\epsilon n) - U(x+\epsilon n)\Psi(x)]\, .
+\label{eqn:coviarant}
+\end{eqnarray}
+事实上，$U(y,x)$是个纯相（pure phase）：$U(y,x) = e^{i\phi(y,x)}$。当x和y靠的比较近的时候，$U(y,x)$可以
+泰勒（Taylor）展开为
+\begin{eqnarray}
+U(x+\epsilon n, x) = 1 - ie\epsilon n^{\mu} A_{\mu}(x) + \mathcal{O}(\epsilon^2) \, .
+\label{eqn:UyxExpand}
+\end{eqnarray}
+这里引入了一个新的矢量场$A_{\mu}(x)$，这样的场也称为定域变换下的联络（connection）。协变导数可以简化成
+\begin{eqnarray}
+D_{\mu} \Psi(x) = \partial_{\mu}\Psi(x) + ieA_{\mu} \Psi(x) \, .
+\label{eqn:covariantDerivative}
+\end{eqnarray}
+把公式（\ref{eqn:UyxExpand}）代入到公式（\ref{eqn:UyxGaugeTranse}）中，我们可以推出$A_{\mu}$在规范变换下
+的变换为
+\begin{eqnarray}
+A_{\mu}(x) \to A_{\mu}(x) - \frac{1}{e}\partial_{\mu}\theta(x) \, .
+\end{eqnarray}
+有了以上公式，我们可以检验协变导数$D_{\mu}\Psi(x)$在规范变换下的行为：
+\begin{eqnarray}
+D_{\mu}\Psi(x) &\to& \left[\partial_{\mu} + ie(A_{\mu} - \frac{1}{e}\partial_{\mu}\theta(x) \right]
+e^{i\theta(x)} \Psi(x)
+\nonumber \\
+&=& e^{i\theta(x)}(\partial_{\mu} + ieA_{\mu})\Psi(x) 
+\nonumber \\
+&=& e^{i\theta(x)} D_{\mu}\Psi(x)
+\end{eqnarray}
+上式表明，为了构造定域规范不变的QED拉氏量，需要引入光子场。当然，光子场$A_{\mu}$的动能也需要构造出来。
+可以利用Wilson圈，也可以考察协变导数的对易子在规范变换下的行为。
+\begin{eqnarray}
+[D_{\mu}, D_{\nu}] \Psi(x) \to e^{i\theta(x)}[D_{\mu}, D_{\nu}] \Psi(x)
+\end{eqnarray}
+把$D_{\mu}$的具体表达式（\ref{eqn:covariantDerivative}）代入上式中，可得
+\begin{eqnarray}
+[D_{\mu}, D_{\nu}]\Psi(x) &=& [\partial_{\mu}, \partial_{\nu}]\Psi(x) + ie([\partial_{\mu}, A_{\nu}] 
+- [\partial_{\nu},A_{\mu}])\Psi(x) - e^2 [A_{\mu}, A_{\nu}]\Psi(x)
+\nonumber \\
+&=& ie(\partial_{\mu}A_{\nu} - \partial_{\nu}A_{\mu})\Psi(x)
+\end{eqnarray}
+因此，$\partial_{\mu}A_{\nu} - \partial_{\nu}A_{\mu}$在规范变换下不变。我们定义此物理量为$F_{\mu\nu}$，
+也就是光子场的场强张量。考虑到可重整化（renormalization）的要求，可能的拉氏量为
+\begin{eqnarray}
+\mathscr{L} = \bar{\Psi}(i\slashed{D} - m)\Psi - \frac{1}{4}(F_{\mu\nu})^2 - 
+\lambda\epsilon^{\alpha\beta\rho\sigma}F_{\alpha\beta}F_{\rho\sigma} \, .
+\end{eqnarray}
+然而，上式却破坏了P和T守恒，故我们把最后一项排除，就成了熟知的QED拉氏量：
+\begin{eqnarray}
+\mathscr{L}_{qed} = \bar{\Psi}(i\slashed{D} - m)\Psi - \frac{1}{4}(F_{\mu\nu})^2 \, .
+\label{eqn:qedlagrangian}
+\end{eqnarray}
+
+上面讨论的QED拉氏量是在阿贝尔群$U(1)$下推导出的，下面我们讨论如何在非阿贝尔群下构造出定域规范不变的
+拉氏量。首先假定我们的定域变换群是$SU(N)$，则Dirac场为：
+\begin{eqnarray}
+\Psi(x) = \left(\begin{array}{c} \Psi_1(x) \\ \vdots \\ \Psi_N(x) \end{array}\right)
+\end{eqnarray}
+该场的规范变换为
+\begin{eqnarray}
+\Psi(x) \to V(x) \Psi(x)\,, \qquad V(x) = e^{i\theta^a(x)t^a}
+\end{eqnarray}
+其中，$\theta^a$是变换相角，$t^a$是$SU(N)$群的生成元并满足如下对易关系
+\begin{eqnarray}
+[t^a, t^b] = i f^{abc} t^c
+\end{eqnarray}
+上式中$f^{abc}$称为$SU(N)$群的结构常数（structure constant）。同QED拉氏量的构造过程类似，我们定义比较
+算符$U(y,x)$，其变换为
+\begin{eqnarray}
+U(y,x) \to V(y) U(y,x) V^{\dagger}(x)
+\label{eqn:nonAbelUyxTrans}
+\end{eqnarray}
+同样，我们把$U(y,x)$在$x$和$y$足够接近时展开为
+\begin{eqnarray}
+U(x+\epsilon n, x) = 1 + ig\epsilon n^{\mu}A^a_{\mu} t^a + \mathcal{O}(\epsilon^2)
+\end{eqnarray}
+代入公式（\ref{eqn:coviarant}），我们可以得到协变导数为
+\begin{eqnarray}
+D_{\mu} = \partial_{\mu} - ig A^a_{\mu} t^a
+\end{eqnarray}
+把$U(x+\epsilon n,x)$的展开式代入公式（\ref{eqn:nonAbelUyxTrans}）中可以得到
+\begin{eqnarray}
+A^a_{\mu}(x) t^a \to V(x)\left(A^a_{\mu}(x) t^a + \frac{i}{g} \partial_{\mu}\right)V^{\dagger}(x)
+\end{eqnarray}
+如果展开$V(x)$到$\theta$的一次阶可以得到$A^a_{\mu}$的变换为
+\begin{eqnarray}
+A^a_{\mu} \to A^a_{\mu} + \frac{1}{g}\partial_{\mu}\theta^a + f^{abc} A^b_{\mu} \theta^c
+\end{eqnarray}
+为了构造规范场$A^a_{\mu}$的动能项，我们利用协变导数的对易子变换
+\begin{eqnarray}
+[D_{\mu}, D_{\nu}] \Psi(x) \to V(x)[D_{\mu}, D_{\nu}]\Psi(x)
+\end{eqnarray}
+和
+\begin{eqnarray}
+[D_{\mu}, D_{\nu}] = -ig F^a_{\mu\nu} t^a 
+\end{eqnarray}
+导出规范场的场强张量
+\begin{eqnarray}
+F^a_{\mu\nu} = \partial_{\mu}A^a_{\nu} - \partial_{\nu}A^a_{\mu} + gf^{abc}A^b_{\mu}A^c_{\nu}
+\end{eqnarray}
+场强张量的规范变换为
+\begin{eqnarray}
+F^a_{\mu\nu} \to F^a_{\mu\nu} - f^{abc} \theta^b F^c_{\mu\nu}
+\end{eqnarray}
+注意，和$U(1)$群的场强张量不同的是非阿贝尔群的场强张量不是规范不变量，故我们需要用下面的方式构造
+\begin{eqnarray}
+\mathscr{L}_k = -\frac{1}{2} Tr\left[ F^a_{\mu\nu} F^{a,\mu\nu} \right] = -\frac{1}{4} (F^a_{\mu\nu})^2
+\end{eqnarray}
+考虑到可重整性和C、P、T这些离散对称性的要求，得到类似于QED的拉氏量
+\begin{eqnarray}
+\mathscr{L}_{SU(N)} = \bar{\Psi} (i\slashed{D} - m) \Psi - \frac{1}{4}(F^a_{\mu\nu})^2
+\end{eqnarray}
+上式的拉氏量也称为Yang-Mills场拉氏量\cite{Yang-Mills}。
+
+上面构造出的拉氏量没有考虑标量场存在的情况，下面以QED为例讨论如何加入标量场。如果标量场是实数场，
+则动能项$(\partial_{\mu}\Phi)(\partial^{\mu}\Phi)$不是规范不变的，故标量场应该是复数场。考虑到
+可重整性和离散对称性的要求，标量场部分的拉氏量的可能形式为
+\begin{eqnarray}
+\mathscr{L}(\Phi) = |D_{\mu}\Phi|^2 - \mu^2 \Phi^{\dagger}\Phi - \lambda(\Phi^{\dagger}\Phi)^2
+\end{eqnarray}
+综上所述，定域规范不变性原理，离散对称性（如C/P/T变换）和可重整性可以用来构造相互作用理论的拉氏量。
+定域规范不变原理已成为物理学中的基本原理，对构造标准模型以及新物理模型起了至关重要的作用。
+
+\subsection{自发对称破缺和Higgs机制}
+虽然定域规范不变性原理可以用来构造相互作用理论的拉氏量，但纯粹的规范理论给出的预言是无质量的规范玻色子。
+这和W/Z玻色子有质量的实验事实并不相符，所以需要一种新的机制赋予W/Z玻色子质量。当一个系统的真空的极小值
+不具备该系统拉氏量的对称性时称为自发对称破缺。当自发对称破缺后出现新的无质量的粒子称为Goldstone玻色子。
+然而，如果规范玻色子和Goldstone玻色子存在相互作用，则对称性破缺之后无质量的规范玻色子会获得质量，而
+Goldstone粒子会消失（非物理粒子），我们称这样的机制为Higgs机制。下面以标量QED为例探讨Higgs机制。
+该模型的拉氏量为
+\begin{eqnarray}
+\mathscr{L} = \frac{1}{2}|D_{\mu}\Phi|^2 - V(|\Phi|) - \frac{1}{4}F_{\mu\nu}F^{\mu\nu} \,, \quad
+V(|\Phi|)  = -\frac{1}{2}\mu^2 |\Phi|^2 + \frac{\lambda^2}{4}(\Phi^{\dagger}\Phi)^2
+\end{eqnarray}
+上式中$\Phi$是复标量场$\Phi=\Phi_1+i\Phi_2$，$F_{\mu\nu}$是$U(1)$规范场的场强张量，且
+\begin{eqnarray}
+D_{\mu} = \partial_{\mu} + iqA_{\mu}\, , \quad F_{\mu\nu} = \partial_{\mu}A_{\nu}-\partial_{\nu}A_{\mu}
+\end{eqnarray}
+显然，拉氏量具有$U(1)$定域规范变换对称性，
+\begin{eqnarray}
+\Phi(x) \to e^{i\theta(x)}\Phi(x)\, , \quad A_{\mu}(x) \to A_{\mu}(x) -\frac{1}{q}\partial_{\mu}\theta(x)
+\end{eqnarray}
+势能最小曲线为
+\begin{eqnarray}
+<\Phi> = <\Phi_1>^2 + <\Phi_2>^2 = \frac{\mu^2}{\lambda^2} = v^2
+\end{eqnarray}
+系统具有$U(1)$对称性，我们选取一个特殊的势能最小值
+\begin{eqnarray}
+<\Phi_1> = \frac{\mu}{\lambda} = v , \quad <\Phi_2> = 0
+\end{eqnarray}
+我们称$\Phi_1$场获得了真空期望值。为了方便推导，我们引入以下新的场
+\begin{eqnarray}
+\eta = \Phi_1 - v , \quad \xi = \Phi_2
+\end{eqnarray}
+最终可以得到新的拉氏量
+\begin{eqnarray}
+\mathscr{L} &=& \left[\frac{1}{2}(\partial_{\mu}\eta)^2 - \mu^2 \eta^2\right] + 
+\frac{1}{2}(\partial_{\mu}\xi)^2 + \left[-\frac{1}{4}F^2_{\mu\nu} + \frac{q^2v^2}{2}A_{\mu}A^{\mu}\right]
+\nonumber \\
+&-& 2iqv(\partial_{\mu}\eta)A^{\mu} + \Big\{ q[\eta(\partial_{\mu}\xi)-\xi(\partial_{\mu}\eta)]A^{\mu} 
++ q^2v(\eta A_{\mu}A^{\mu}) 
+\nonumber \\
+&+& \frac{q^2}{2}(\xi^2 + \eta^2)A_{\mu}A^{\mu} - \lambda\mu(\eta^3 + \eta\xi^2) - 
+\frac{1}{4}(\eta^4 + 2\eta^2\xi^2 + \xi^4) \Big\}
+\nonumber \\
+&+& \frac{\mu^2v^2}{4}
+\end{eqnarray}
+从上式中我们可以得出如下结论：
+\begin{enumerate}
+\item
+场$\eta$获得了质量$m_{\eta} = \sqrt{2}\mu$。
+\item
+规范场$A_{\mu}$也获得了质量$m_A = qv$。
+\item
+场$\xi$没有质量，它被称为Goldstone玻色子。
+\end{enumerate}
+我们发现在推导中有一项是$A^{\mu}\partial_{\mu}\xi$，其物理含义并不明确。为了更加明确的解释，我们
+可以选取幺正规范，剔除非物理的Goldstone场。幺正规范就是选取特殊的$\theta(x)$使得复标量场$\Phi(x)$在
+任何点x都是实数，下面我们利用拉氏量的无穷小的规范变换进行推导。
+\begin{eqnarray}
+\Phi \to \Phi' = (1 + i\theta)(\Phi_1 + i\Phi_2), \quad \theta(\eta + v) + \xi = 0
+\end{eqnarray}
+这样，拉氏量在幺正规范下简化为
+\begin{eqnarray}
+\mathscr{L} &=& \left[\frac{1}{2}(\partial_{\mu}\eta)^2 - \mu^2 \eta^2\right] + 
+\left[-\frac{1}{4}F^2_{\mu\nu} + \frac{q^2v^2}{2}A_{\mu}A^{\mu}\right]
+\nonumber \\
+&+& \left\{ q^2v(\eta A_{\mu}A^{\mu}) + \frac{q^2}{2}\eta^2 A_{\mu}A^{\mu} - \lambda\mu\eta^3 
+- \frac{\lambda^2}{4} \eta^4  \right\} + \frac{\mu^2v^2}{4} 
+\end{eqnarray}
+这样拉氏量中就没有了无质量的Goldstone场，并且可以看出场$\eta$有三次和四次自耦合项。我们也可以从另外
+一个角度来分析破缺之后的拉氏量。自发对称破缺之前，$\Phi$场有两个自由度，光子场有两个自由度，总共四个
+自由度。自发对称破缺之后，有一个标量场$\eta$有一个自由度且获得了质量，另外还有一个有质量的规范玻色子，
+它有三个自由度。可以形象的说无质量的光子场吃掉了复标量场$\Phi$的一个自由度来获得质量，这样的机制称为
+Higgs机制，$\eta$场也称为“Higgs粒子”。
+
+我们从上面的分析中可以得出如下结论：Higgs机制的内在原因是定域规范不变原理和自发对称破缺机制。
+如果我们构造的理论是结合整体规范不变和自发对称破缺，那么得到的将是一些物理的无质量的Goldstone粒子。
+在标准模型中，Higgs机制导致了三个有质量的规范玻色子（$W^{\pm}$, $Z$），一个无质量的规范玻色子（光子）
+和一个Higgs粒子。
+
+\subsection{标准模型的Higgs机制}
+电弱统一是基于对称群$SU(2)_L\otimes U(1)_Y$破缺到$U(1)_{EM}$，其中下表Y表示
+超荷（参考公式(\ref{eqn:hyperchargeDef})）。根据Goldstone定理，破缺后Goldstone粒子的数目等于减少的
+对称性数目。由此可以得出共有三个Goldstone粒子，同时也产生三个有质量的规范玻色子。在标准模型中，
+只引入了一个超荷为1/2的Higgs二重态。首先规范场的拉氏量可以写成如下形式
+\begin{eqnarray}
+\mathscr{L}_{GF} = -\frac{1}{4}(W^a_{\mu\nu})^2 -\frac{1}{4}B^2_{\mu\nu} + 
+(D_{\mu}\Phi)^{\dagger}(D^{\mu}\Phi)
++ m^2 \Phi^{\dagger}\Phi - \lambda(\Phi^{\dagger}\Phi)^2
+\label{eqn:EWLagrangianO}
+\end{eqnarray}
+其中，$B_{\mu}$是$U(1)$规范玻色子且$B_{\mu\nu} = \partial_{\mu}B_{\nu} - \partial_{\nu}B_{\mu}$；
+$W^a_{\mu}$是$SU(2)$规范玻色子且$W^a_{\mu\nu}$是它的场强张量；$\Phi$是Higgs场；协变导数的定义是
+\begin{eqnarray}
+D_{\mu}\Phi = \partial_{\mu}\Phi -igW^a_{\mu}\tau^a\Phi - \frac{1}{2}ig'B_{\mu}\Phi
+\label{eqn:SMCov}
+\end{eqnarray}
+这里$g$和$g'$分别是$SU(2)$和$U(1)_Y$场耦合强度，最后一项因子$\frac{1}{2}$源于Higgs场的超荷。
+在Higgs势的特定最小值处展开后，Higgs场可以写成
+\begin{eqnarray}
+\Phi = e^{\frac{2i\theta^a\tau^a}{v}}\left(\begin{array}{cc}0 \\ \frac{v+h}{\sqrt{2}}\end{array}\right)
+\end{eqnarray}
+其中，$v = \frac{m}{\sqrt{\lambda}}$且$\tau^a = \frac{1}{2}\sigma^a$是$SU(2)$群的归一化生成元；$h$是
+实标量场。首先我们忽略场$h$，并且用幺正规范（$\theta^a = 0$）。把真空期望值插入原始拉氏量后可得
+\begin{eqnarray}
+|D_{\mu}\Phi|^2 &=& \frac{g^2v^2}{8}(\begin{array}{cc}0 & 1\end{array}) 
+\left( \begin{array}{cc} 
+\frac{g'}{g}B_{\mu}+W^3_{\mu} & W^1_{\mu}-iW^2_{\mu} \\ W^1_{\mu}+iW^2{\mu} & \frac{g'}{g}B_{\mu}-W^3_{\mu} 
+\end{array} \right)
+\nonumber \\
+&\times&
+\left( \begin{array}{cc} 
+\frac{g'}{g}B_{\mu}+W^3_{\mu} & W^1_{\mu}-iW^2_{\mu} \\ W^1_{\mu}+iW^2{\mu} & \frac{g'}{g}B_{\mu}-W^3_{\mu} 
+\end{array} \right) 
+\left(\begin{array}{cc}0\\1\end{array}\right)
+\nonumber \\
+&=& \frac{g^2v^2}{8}\left[(W^1_{\mu})^2 + (W^2_{\mu})^2 +(\frac{g'}{g}B_{\mu}-W^3_{\mu})^2 \right]
+\end{eqnarray}
+上式是三个规范玻色子的质量项，但最后一项有混合，为了表达的更清晰，做如下变换
+\begin{eqnarray}
+\left.\begin{array}{c}Z_{\mu} = \cos\theta_w W^3_{\mu}-\sin\theta_wB_{\mu} \\ 
+A_{\mu} = \sin\theta_w W^3_{\mu} + \cos\theta_w B_{\mu} \end{array} \right\} 
+\Leftrightarrow
+\left\{ \begin{array}{c} 
+B_{\mu} = \cos\theta_w A_{\mu} -\sin\theta_w Z_{\mu} \\
+W^3_{\mu} = \sin\theta_w A_{\mu} + \cos\theta_w Z_{\mu}
+\end{array} \right.
+\end{eqnarray}
+且$\tan\theta_w = \frac{g}{g'}$，$\theta_w$为Weinberg角。$Z_{\mu}$和$A_{\mu}$的动能项（包括质量项）为
+\begin{eqnarray}
+\mathscr{L} = -\frac{1}{4}F^2_{\mu\nu} - \frac{1}{4}Z^2_{\mu\nu} + \frac{1}{2} M^2_Z Z_{\mu} Z^{\mu}
+\end{eqnarray}
+其中$m_Z = \frac{gv}{2\cos\theta_w}$，$Z_{\mu\nu} = \partial_{\mu}Z_{\nu} - \partial_{\nu}Z_{\mu}$和
+$F_{\mu\nu} = \partial_{\mu}A_{\nu} - \partial_{\nu}A_{\mu}$。
+由于规范玻色子是在adjoint表示下变换的，它们的相互作用由对易算符决定。对于光子，我们做对易
+$g[A_{\mu}, W^a\tau^a] =  g\sin\theta_w W^3W^a[\tau^3,\tau^a]$，因此电磁耦合强度是
+$e = g\sin\theta_w = g'\sin\cos\theta_w$。
+同样可以重定义$W$场$W^{\pm}_{\mu} = \frac{1}{\sqrt 2}(W^1_{\mu}\mp iW^2_{\mu})^2$，然后写出规范场的
+拉氏量（注意相同指标求和）：
+\begin{eqnarray}
+\mathscr{L} &=& \frac{1}{4}F^2_{\mu\nu} -\frac{1}{4}Z^2_{\mu\nu} + \frac{1}{2}m^2_Z Z^{\mu}Z_{\mu}
+-\frac{1}{2}(\partial_{\mu}W^+_{\nu} - \partial_{\nu}W^+_{\mu})(\partial_{\mu}W^-_{\nu}-\partial_{\nu}
+W^-_{\mu})  \nonumber \\
+&+& m^2_W W^+_{\mu}W^-_{\mu} - ie \cot\theta_w\Big[\partial_{\mu}Z_{\nu}(W^+_{\mu}W^-_{\nu} - 
+W^+_{\mu}W^-_{\nu})  \nonumber \\
+&+& Z_{\nu}(-W^+_{\mu}\partial_{\nu}W^-_{\mu} + W^-_{\mu}\partial_{\nu}W^+_{\mu} + 
+W^+_{\mu}\partial_{\mu}W^-_{\nu} - W^-_{\mu}\partial_{\mu}W^+_{\nu}) \Big]
+\nonumber \\
+&-& ie\Big[ \partial_{\mu}A_{\nu}(W^+_{\mu}W^-_{\nu} -  W^+_{\nu}W^-_{\mu}) + 
+A_{\nu}(-W^+_{\nu}\partial_{\nu}W^-_{\mu} + W^-_{\mu}\partial_{\nu}W^+_{\mu} 
+\nonumber \\
+&+& W^+_{\mu}\partial_{\nu}W^-_{\nu} - W^-_{\mu}\partial_{\mu}W^+_{\nu}) \Big]
+\nonumber \\
+&-& \frac{1}{2}\frac{e^2}{\sin^2\theta_w}W^+_{\mu}W^-_{\mu}W^+_{\nu}W^-_{\nu}
++ \frac{1}{2}\frac{e^2}{\sin^2\theta_w}W^+_{\mu}W^-_{\nu}W^+_{\mu}W^-_{\nu}
+\nonumber \\
+&-& e^2\cot^2\theta_w(Z_{\mu}W^+_{\mu}Z_{\nu}W^-_{\nu} - Z_{\mu}Z_{\mu}W^+_{\nu}W^-_{\nu})
+\nonumber \\
+&+& e^2(A_{\mu}W^+_{\mu}A_{\nu}W^-_{\nu} - A_{\mu}A_{\mu}W^+_{\nu}W^-_{\nu})
+\nonumber \\
+&+& e^2\cot\theta_w\Big[A_{\mu}W^+_{\mu}W^-_{\nu}Z_{\nu} + A_{\mu}W^-_{\mu}W^+_{\nu}Z_{\nu} 
+- W^+_{\mu}W^-_{\mu}A_{\nu}Z_{\nu}\Big]
+\end{eqnarray}
+并且有以下关系:
+\begin{eqnarray}
+m_W = \frac{v}{2}g
+\end{eqnarray}
+和
+\begin{eqnarray}
+m_Z = \frac{1}{2\cos\theta_w}gv = \frac{v}{2}\sqrt{g^2 + g'^2} = \frac{m_W}{\cos\theta_w}
+\end{eqnarray}
+可以看出，$W$玻色子的质量低于$Z$玻色子的质量。相应的费曼规则这里就不一一列出。
+
+下面分析Higgs玻色子场部分的拉氏量。
+\begin{eqnarray}
+\mathscr{L}_{Higgs} &=& \frac{1}{2}\left((\partial_{\mu}h)^2 - m^2_h h^2\right) - \frac{gm^2_h}{4m_W}h^3
+- \frac{g^2}{32}\frac{m^2_h}{m^2_W}h^4
+\nonumber \\
+&+& 2\frac{h}{v}\left(m^2_W W^+_{\mu}W^{-,\mu} + \frac{1}{2}M^2_Z Z^2_{\mu}\right)
+\nonumber \\
+&+& \left(\frac{h}{v}\right)^2 \left(m^2_W W^+_{\mu} W^{-,\mu}+\frac{1}{2}m^2_Z Z^2_{\mu} \right)
+\end{eqnarray}
+上式中，$m_h = \sqrt{2}m$。可以看到，Higgs粒子有三次和四次自相互作用，Higgs和玻色子的相互作用方式为
+$h-WW$，$h-ZZ$，$hh-WW$和$hh-ZZ$。
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=1]{hcouple.eps}
+\caption{Higgs粒子与玻色子对（a），Higgs与费米子链（b），三个Higgs自耦合（c）, Higgs对与玻色子对耦合（d）,
+四Higgs粒子耦合（e）}
+\label{fig:hcouple}
+\end{figure}
+上图\ref{fig:hcouple}对应的费曼规则如下
+\begin{eqnarray}
+(a) &=& -2ig^{\mu\nu}m^2_V/v\,, \quad (b) = im_f/v\,, \quad (c) = 3im^2_H/v
+\nonumber \\
+(d) &=& 3im^2_H/v\,,\qquad (e) = 3im^2_H/v^2
+\end{eqnarray}
+有此可以清楚的得出：如果在实验上研究Higgs的自耦合，末态粒子必须至少包含两个Higgs粒子。
+
+
+下面讨论费米子是如何通过Higgs机制获得质量的。首先假设未自发对称破缺之前费米子就存在质量项如
+\begin{eqnarray}
+\Delta\mathscr{L} = - m_e (\bar{e}_L e_R + \bar{e}_R e_L)
+\end{eqnarray}
+很明显，上式破坏了整体规范不变性，而且$e_L$和$e_R$属于不同的$SU(2)$表示且有不同的$U(1)$超荷。所以，
+破缺前的拉氏量中并没有费米子的质量项，它们的质量只能通过自发对称破缺机制才能获得。考虑如下拉氏量
+\begin{eqnarray}
+\Delta\mathscr{L}_e = -Y_e \bar{L} \Phi e_R + h.c.
+\end{eqnarray}
+把$\Phi$在真空最小值处展开后可得
+\begin{eqnarray}
+\Delta\mathscr{L}_e = -\frac{1}{\sqrt 2} Y_e v \bar{e}_L e_R + h.c. + \ldots
+\end{eqnarray}
+刚好是电子的质量项且电子的质量为$m_e = \frac{1}{\sqrt 2} Y_e v$。通过这样的机制，带电的轻子和
+下型夸克获得了质量。接着，我们讨论上型夸克是如何获得质量的。下面我们写出夸克场部分最一般的规范不变的
+质量项
+\begin{eqnarray}
+\mathscr{L}_m = - Y^{ij}_d \bar{Q}^i_L \Phi d^j_R - Y^{ij}_u \epsilon^{ab}\bar{Q}^i_{La}
+\Phi^{\dagger}_b u^j_R + h.c.
+\end{eqnarray}
+其中，指标$i$，$j$表示夸克的代数，$Y$为Yukawa耦合常数。由于Yukawa矩阵通常情况下是复数，这样可能会导致
+夸克的质量项也是复数。但实际上我们总可以做规范变换$q_R \to e^{i\theta} q_R$使质量变成实数。
+在自发对称破缺之后，夸克质量项变成
+\begin{eqnarray}
+\mathscr{L}_m &=& -\frac{v}{\sqrt 2}Y^d_{ij}\bar{d}^i_L d^j_R - \frac{v}{\sqrt 2}Y^u_{ij}\bar{u}^i_L u^j_R
++ h.c.
+\nonumber \\
+&=& \frac{v}{\sqrt 2}[\bar{d}_L Y_d d_R + \bar{u}_L Y_u u_R] + h.c.
+\end{eqnarray}
+最后一行的等式是矩阵表示。为了对角化质量，我们引入两个对角的矩阵$M_d$和$M_u$，两个幺正矩阵$U_d$和$U_u$。
+这些矩阵满足如下关系式
+\begin{eqnarray}
+Y_d Y^{\dagger}_d = U_d M^2_d U^{\dagger}_d\, , \quad Y_u Y^{\dagger}_u = U_u M^2_u U^{\dagger}_u
+\end{eqnarray}
+由于$YY^{\dagger}$是厄米矩阵（Hermitian），所以存在实的本征态。
+\begin{eqnarray}
+Y_d = U_d M_d K^{\dagger}_d \, , \quad Y_u = U_u M_u K^{\dagger}_u
+\end{eqnarray}
+上式中的$K_u$和$K_d$为幺正矩阵。因此，拉氏量可以写成如下形式
+\begin{eqnarray}
+\mathscr{L}_m = -\frac{v}{\sqrt 2} [\bar{d}_L U_dM_d K^{\dagger}_d d_R + 
+\bar{u}_L U_u M_u K^{\dagger}_u u_R] + h.c.  
+\end{eqnarray}
+然后，我们重新选取右手夸克为$d_R \to K_d d_R$和$u_R \to K_u u_R$，左手夸克为$u_L \to U_u u_L$和
+$d_L \to U_d d_L$。这样就可以消除拉氏量中的$U$和$K$矩阵，只剩下对角的质量矩阵$M_u$和$M_d$。这样的
+表示出的拉氏量也称为质量基下的拉氏量，表示为
+\begin{eqnarray}
+\mathscr{L}_m = -m^d_j \bar{d}^j_L d^j_R - m^u_j \bar{u}^j_L u^j_R + h.c.
+\end{eqnarray}
+需要注意的是：上式的拉氏量仍有$U(1)^6$的整体对称性。这些整体规范变换可以写成
+\begin{eqnarray}
+d^j_L \to e^{i\alpha_j}d^j_L\,, \; d^j_R \to e^{i\alpha_j}d^j_R\,, \;
+u^j_L \to e^{i\beta_j}u^j_L\,, \; u^j_R \to e^{i\beta_j}u^j_R
+\end{eqnarray}
+共有六个角度$\alpha_j$和$\beta_j$。由于我们选取了夸克的质量基表象，拉氏量中的费米子的动能项也要做
+相应的修改，从夸克的味表象（flavor basis）变换到质量表象。变换后的拉氏量为
+\begin{eqnarray}
+\mathscr{L}_{mass-basis} &=& \frac{e}{\sin\theta_w}Z_{\mu}J^Z_{\mu} + eA_{\mu}J^{\mu}_{EM} 
+- m^d_j (\bar{d}^j_L d^j_R + \bar{d}^j_R d^j_L) - m^u_j (\bar{u}^j_L u^j_R + \bar{u}^j_R u^j_L)
+\nonumber \\
+&+& \frac{e}{\sqrt{2}\sin\theta_w}\left[W^+_{\mu}\bar{u}^i_L \gamma^{\mu}(V)^{ij}d^j_L +
+W^-_{\mu} \bar{d}^i_L \gamma^{\mu} (V^{\dagger})^{ij} u^j_L \right]
+\end{eqnarray}
+其中$V = U^{\dagger}_u U_d$，$V$的矩阵形式为
+\begin{eqnarray}
+V = U^{\dagger}_u U_d = \left( \begin{array}{ccc} 
+V_{ud} & V_{us} & V_{ub} \\
+V_{cd} & V_{cs} & V_{cb} \\
+V_{td} & V_{ts} & V_{tb} \\
+\end{array}\right)
+\end{eqnarray}
+该矩阵称为Cabibbo–Kobayashi–Maskawa(CKM)矩阵，并且CKM矩阵是复幺正矩阵。
+
+以上讨论了电弱统一模型，标准模型基于的对称群是
+$SU(3)_{QCD}\otimes SU(2)_{weak}\otimes U(1)_{hypercharge}$破缺到群$SU(3)_{QCD}\otimes U(1)_{EM}$。
+若不考虑中微子的质量，标准模型共有18个独立参数。
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{双Higgs二重态模型（2HDM）}
+在本节当中，我们主要介绍双Higgs二重态模型（2HDM）的提出动机、Higgs场部分和该模型的现状。
+
+\subsection{模型提出动机}
+尽管标准模型成功地描述了基本粒子有关的现象学，但没有基本的物理规律限制Higgs场二重态仅有一个，
+有可能存在两个甚至更多个Higgs场二重态。对标准模型Higgs场部分最简单的扩增模型就是双Higgs二重态模型(2HDM)
+\cite{higgs-guide}，该模型假定存在另外
+一个新的Higgs二重态，并与标准模型中的Higgs场具有同样的量子数。另外一个引入动机是第三代夸克的汤川
+(Yukawa)耦合存在等级差问题。顶(top)夸克和底(bottom)夸克的Yukawa耦合之比大概是
+$m_t/m_b \approx 173.2/4.75 \approx 36$。在标准模型中，由于顶夸克和底夸克的质量都源于同一个Higgs二重态，
+所以这两个夸克的Yukawa耦合存在着等级差问题。假如底夸克通过与Higgs二重态中的一个(记为$\Phi_1$)耦合获得质量
+而顶夸克通过耦合另外一个Higgs二重态(记为$\Phi_2$)获得质量，这样它们的等级差问题就自然地得到缓解。
+另一方面，对于CP破缺的2HDM还能解释宇宙学观测到的重子物质不对称。在标准模型中，CP破缺源于CKM矩阵的
+复数相（complex phase），但不足以解释重子物质的不对称。不过，本文的讨论主要限定在CP守恒的2HDM。
+
+另外一种引入2HDM的动机是研究味改变中性流(Flavor Changing Neutral Currents - FCNC)过程。尽管这些过程在
+理论上是允许的，但这些过程的截面由于实验的限制受到很强的抑制。在标准模型中，轻子场部分不存在味改变中性流，
+夸克场部分也不存在树图阶的贡献，而圈图阶的贡献由于GIM机制\cite{GIM}受到强烈压低。
+所以在未来的实验上如果发现了味改变中性流的现象，
+那么也就是发现了新物理，而2HDM恰好可以为味改变中性流现象提供一种简单的解释。在2HDM中，树图阶就存在
+味改变中性流的现象。最后一个研究2HDM的动机是2HDM类型II是最小超对称模型（MSSM）的一部分，研究它有助于理解
+MSSM理论。
+
+\subsection{2HDM模型的Higgs场部分}
+双Higgs二重态模型是在标准模型的基础上扩展了它的Higgs场部分，假设有两个Higgs二重态，这样会出现很多新的、
+有趣的物理现象。2HDM的拉氏量可以表示为
+\begin{eqnarray}
+\mathscr{L} = \mathscr{L}_F + \mathscr{L}_B + \mathscr{L}_Y + \mathscr{L}_H
+\end{eqnarray}
+其中，下标F、B、Y和H分别表示为费米子场动能项、规范玻色子项、Yukawa耦合项和Higgs拉氏项。其中前两项跟
+标准模型一样，后两项$\mathscr{L}^Y$和$\mathscr{L}^H$与标准模型不同。虽然提出2HDM的最早动机是为了解释
+CP破坏的现象，但为了简化，本论文主要探讨CP守恒的2HDM。
+
+对于一般性的双Higgs二重态模型，Higgs二重态场$\Phi_1$和$\Phi_2$都可以与上型和下型费米子耦合。而且，上型与
+下型的Yukawa矩阵不会同时对角化。这将会导致在树图上通过传递电中性的标量粒子产生味改变中性流(FCNC)的现象。
+为了避免树图阶的味改变中性流，Glashow和Weinberg\cite{GW:2hdm}，以及Paschos\cite{Paschos:2hdm}独立提出
+可以通过让特定电荷的费米子仅与单独一个Higgs二重态耦合来获得质量，这个结论也称为
+Glashow-Weinberg-Paschos定理。也就是说，可以通过对场$\Phi_1$和$\Phi_2$施加离散或连续对称性来实现。
+例如$Z_2$对称性可以用来避免树图层次上的味改变中性流。$Z_2$对称性是指拉氏量在如下变换下保持不变。
+\begin{eqnarray}
+\Phi_1 \to \Phi_1 \,, \; \Phi_2 \to -\Phi_2 \quad or \quad
+\Phi_1 \to -\Phi_1 \,, \; \Phi_2 \to \Phi_2
+\end{eqnarray}
+对于$Z_2$对称性，共有四种不同的方式作用到费米子场部分，对应于四种不同类型的双Higgs二重态模型：
+\begin{enumerate}[(I)]
+\item 类型I(Type I)：所有的夸克和轻子仅与一个Higgs场二重态$\Phi_2$耦合。 
+\item 类型II(Type II)：$\Phi_2$仅与上型夸克耦合，而$\Phi_1$只与下型夸克和轻子耦合(与最小超对称模型的Higgs
+场部分相同)。
+\item 类型X(Type X)或者称为轻子特性类型('lepton specific')：$\Phi_2$与所有的夸克耦合，
+而$\Phi_1$只与所有的轻子耦合。
+\item 类型Y(Type Y)或者称为翻转类型('flipped')：$\Phi_2$仅与上型夸克和轻子耦合，而$\Phi_1$仅与下型夸克
+耦合。
+\end{enumerate}
+
+下面具体讨论2HDM的Higgs场部分。在定域规范群$SU(2) \otimes U(1)$变换下保持不变的Higgs场拉氏量为
+\begin{eqnarray}
+\mathscr{L}_H =  (D_{\mu}\Phi_1)^{\dagger}(D^{\mu}\Phi_1) + (D_{\mu}\Phi_2)^{\dagger}(D^{\mu}\Phi_2) - 
+V(\Phi_1, \Phi_2)
+\end{eqnarray}
+上式中$V(\Phi_1,\Phi_2)$是Higgs场的势能，$D_{\mu}$为协变导数(参考公式(\ref{eqn:SMCov}))。
+双Higgs二重态定义为
+\begin{eqnarray}
+\Phi_i = \left(\begin{array}{c} \phi^+_i \\ \frac{1}{\sqrt 2}(v_i + \eta_i + i\chi_i)\end{array}\right)
+\, , \; i= 1, 2
+\end{eqnarray}
+其中，$\phi^+_i$是复标量场，$\eta_i$和$\chi_i$是实标量场。
+当引入自发对称破缺机制后，复标量场$\Phi_1, \Phi_2$会有真空期望值，记为
+\begin{eqnarray}
+\Phi^0_i = \left(\begin{array}{c} 0 \\ \frac{v_i}{\sqrt 2} \end{array} \right) \, , \; i = 1, 2
+\end{eqnarray}
+然后我们定义两个场的真空期望值$v_1/\sqrt{2}$和$v_2/\sqrt{2}$的比值为$\tan\beta = v_2/v_1$
+（$0 \le \beta \le \pi/2$）。由此可以引入下面关系
+\begin{eqnarray}
+v_1 = v\cos\beta\,, \; v_2 = v\sin\beta\,, \; v = \sqrt{v^2_1+v^2_2} \simeq 246\,GeV
+\end{eqnarray}
+
+在考虑了CP守恒和$Z_2$对称性后最一般的Higgs势形式为
+\begin{eqnarray}
+V(\Phi_1, \Phi_2) &=& m^2_{11}\Phi^{\dagger}_1\Phi_1 + m^2_{22}\Phi^{\dagger}_2\Phi_2 + 
+\frac{1}{2}\lambda_1(\Phi^{\dagger}_1\Phi_1)^2 + \frac{1}{2}\lambda_2(\Phi^{\dagger}_2\Phi_2)^2
+\nonumber \\
+&+& \lambda_3(\Phi^{\dagger}_1\Phi_1)(\Phi^{\dagger}_2\Phi_2) + 
+\lambda_4(\Phi^{\dagger}_1\Phi_2)(\Phi^{\dagger}_2\Phi_1) 
+\nonumber \\
+&+& \frac{1}{2}\lambda_5\left[(\Phi^{\dagger}_1\Phi_2)^2 + (\Phi^{\dagger}_2\Phi_1)^2\right]
+\end{eqnarray}
+其中，参数$m^2_{11}$，$m^2_{22}$和$\lambda_i$（i=1,...,5）都是实数。在电弱自发对称破缺后，场$\Phi_1$和
+$\Phi_2$获得了真空期望值。我们把Higgs势中的质量项写成
+\begin{eqnarray}
+V_{mass} &=& (\begin{array}{cc}\phi^-_1 & \phi^-_2 \end{array})M^2_{charge}
+\left(\begin{array}{c}\phi^+_1 \\ \phi^+_2 \end{array}\right) + 
+\frac{1}{2}(\begin{array}{cc}\chi_1 & \chi_2\end{array}) M^2_{CP-odd}
+\left(\begin{array}{c}\chi_1 \\ \chi_2 \end{array}\right) 
+\nonumber \\
+&+& \frac{1}{2}(\begin{array}{cc}\eta_1 & \eta_2\end{array}) M^2_{CP-even}
+\left(\begin{array}{c}\eta_1 \\ \eta_2 \end{array}\right) 
+\end{eqnarray}
+上式中，$M_{charge}$是带电部分的质量矩阵，$M_{CP-odd}$是CP为奇的场的质量矩阵，而$M_{CP-even}$是CP为偶的
+Higgs场部分的质量矩阵。
+
+为了使Higgs的质量矩阵对角化，需要做如下变换
+\begin{eqnarray}
+\left(\begin{array}{c}H^0 \\ h^0 \end{array}\right) &=& R(\alpha)
+\left(\begin{array}{c}\eta_1 \\ \eta_2 \end{array}\right) \,,\;
+\left(\begin{array}{c}G^0 \\ A^0 \end{array}\right) = R(\beta)
+\left(\begin{array}{c}\chi_1 \\ \chi_2 \end{array}\right)
+\nonumber \\
+\left(\begin{array}{c}G^{\pm} \\ H^{\pm} \end{array}\right) &=& R(\beta)
+\left(\begin{array}{c}\phi^{\pm}_1 \\ \phi^{\pm}_2 \end{array}\right)
+\end{eqnarray}
+其中
+\begin{eqnarray}
+R(\theta) = \left(\begin{array}{cc}\cos\theta & \sin\theta \\ -\sin\theta & \cos\theta \end{array}\right)
+\end{eqnarray}
+然后我们可以得到质量本征态下的场：两个中性的CP为偶的场$h^0$和$H^0$；一个中性的CP为奇的场$A^0$；两个带电的
+CP为奇的场$H^{\pm}$。场$G^0$和$G^{\pm}$是Goldstone玻色子，可以形象的说，它们的自由度被$Z$和
+$W^{\pm}$玻色子的横向分量吃掉了。为了能够存在稳定的真空，下面关系式必须满足
+\begin{eqnarray}
+m^2_{11}v_1 + \frac{1}{2}\lambda_1 v^3_1 + \frac{1}{2}(\lambda_3 + \lambda_4 + \lambda_5)v_1 v^2_2 = 0
+\nonumber \\
+m^2_{22}v_1 + \frac{1}{2}\lambda_2 v^3_2 + \frac{1}{2}(\lambda_3 + \lambda_4 + \lambda_5)v_2 v^2_1 = 0
+\end{eqnarray}
+为了在质量本征态下分析，我们可以用以下物理参数作为输入参数
+\begin{eqnarray}
+m_{h^0}\,,\; m_{H^0}\,,\; m_{A^0}\,,\; m_{H^{\pm}}\,,\; \sin\alpha\,,\; v
+\end{eqnarray}
+然后，拉氏量中的耦合常数$\lambda_{1...5}$可以表示成
+\begin{eqnarray}
+\lambda_1 &=& \frac{1}{v^2\cos^2\beta}(m^2_{h^0}\sin^2\alpha + m^2_{H^0}\cos^2\alpha)\,,
+\nonumber \\
+\lambda_2 &=& \frac{1}{v^2\sin^2\beta}(m^2_{h^0}\cos^2\alpha + m^2_{H^0}\sin^2\alpha)\,,
+\nonumber \\
+\lambda_3 &=& 2\frac{m^2_{H^{\pm}}}{v} + \frac{\sin2\alpha}{v^2\sin2\beta}(m^2_{H^0}-m^2_{h^0})\,,
+\nonumber \\
+\lambda_4 &=& \frac{1}{v^2} (m^2_{A^0} - 2m^2_{H^{\pm}})\,,
+\nonumber \\
+\lambda_5 &=& -\frac{1}{v^2}m^2_{A^0}\,.
+\label{eqn:2HDMlammass}
+\end{eqnarray}
+
+Higgs场部分的动能项为：
+\begin{eqnarray}
+(D_{\mu}\Phi_i)^{\dagger}(D^{\mu}\Phi_i) &=& \left[\partial_{\mu}\phi^-_i + \frac{ig}{2c_W}
+[(c^2_w-s^2_w)Z_{\mu} + 2c_w s_w A_{\mu}]\phi^-_i \right.
+\nonumber \\
+&& \left. + \frac{ig}{2}W^{\dagger}_{\mu}(v_i + \eta_i -i\chi_i)
+\right]
+\nonumber \\
+&\times& \left[\partial^{\mu}\phi^+_i - \frac{ig}{2c_W}
+[(c^2_w-s^2_w)Z^{\mu} + 2c_w s_w A^{\mu}]\phi^+_i \right.
+\nonumber \\
+&& \left. - \frac{ig}{2}W^{\mu}(v_i + \eta_i + i\chi_i)
+\right]
+\nonumber \\
+&+& \left[\frac{1}{\sqrt 2}\partial_{\mu}(\eta_i - i\chi_i) - \frac{ig}{2\sqrt{2}c_W}Z^{\mu}
+(v_i + \eta_i - i\chi_i) + \frac{ig}{\sqrt 2}W_{\mu}\phi^-_i \right]
+\nonumber \\
+&\times& \left[\frac{1}{\sqrt 2}\partial_{\mu}(\eta_i + i\chi_i) + \frac{ig}{2\sqrt{2}c_W}Z^{\mu}
+(v_i + \eta_i + i\chi_i) - \frac{ig}{\sqrt 2}W_{\dagger\mu}\phi^+_i \right]
+\nonumber \\
+\end{eqnarray}
+其中$s_w = \sin\theta_W$和$c_w = \cos\theta_W$。经过进一步的计算后我们可以得出$W^{\pm}$和$Z^0$玻色子的
+质量：
+\begin{eqnarray}
+m^2_W(W^{\dagger}_{\mu} W^{\mu}) = \frac{g^2}{4}(W^{\dagger}_{\mu} W^{\mu})(v^2_1 + v^2_2) 
+= \frac{g^2v^2}{4}(W^{\dagger}_{\mu} W^{\mu})
+\end{eqnarray}
+因此$m_W = gv/2$。同样我们可以推出Z玻色子的质量：
+\begin{eqnarray}
+m^2_Z (Z_{\mu}Z^{\mu}) = \frac{v^2}{4}(g^2+g'^2)(Z_{\mu}Z^{\mu})
+\end{eqnarray}
+所以$m_Z = \frac{v}{2}\sqrt{g^2+g'^2}$。
+进一步可以推导出Higgs粒子与规范玻色子之间的耦合，详细过程可参考文献\cite{Osland:2hdm}的附录B。
+
+对于费米子场部分，我们采用文献\cite{cpc:2hdmc}的约定，写成最一般的形式：
+\begin{equation}
+  \begin{aligned}
+    -\mathcal{L}_{Y}=&\frac{1}{\sqrt{2}}\overline{D}\Bigl\{\kappa^D \sin(\beta-\alpha) + 
+  \rho^D\cos(\beta-\alpha) \Bigr\}Dh^0
+\\
+& +\frac{1}{\sqrt{2}}\overline{D}\Bigl\{\kappa^D\cos(\beta-\alpha)-\rho^D\sin(\beta-\alpha) \Bigr\}DH^0
+  + \frac{\mathrm{i}}{\sqrt{2}}\overline{D}\gamma_5\rho^D DA^0 \\
+&  +\frac{1}{\sqrt{2}}\overline{U}\Bigl\{\kappa^U\sin(\beta-\alpha)+\rho^U\cos(\beta-\alpha) \Bigr\}Uh^0
+\\
+&  +\frac{1}{\sqrt{2}}\overline{U}\Bigl\{\kappa^U\cos(\beta-\alpha)-\rho^U\sin(\beta-\alpha) \Bigr\}UH^0- 
+ \frac{\mathrm{i}}{\sqrt{2}}\overline{U}\gamma_5\rho^U UA^0 \\
+&  +\frac{1}{\sqrt{2}}\overline{L}\Bigl\{\kappa^L\sin(\beta-\alpha)+\rho^L\cos(\beta-\alpha) \Bigr\}Lh^0
+\\
+&  +\frac{1}{\sqrt{2}}\overline{L}\Bigl\{\kappa^L\cos(\beta-\alpha)-\rho^L\sin(\beta-\alpha) \Bigr\}LH^0+ 
+ \frac{\mathrm{i}}{\sqrt{2}}\overline{L}\gamma_5\rho^L LA^0 \\
+&+\Bigl[\overline{U}\bigl\{V_{\rm{CKM}}\rho^D P_R-\rho^U V_{\rm{CKM}} P_L\bigr\}DH^+ + 
+\overline{\nu}\rho^L P_RL H^+ + \rm{h.c.}\Bigr].  
+\end{aligned}
+\label{eq:2hdmYukawa}
+\end{equation}
+其中D和U分别代表下型和上型夸克，L和$\nu$分别代表带电轻子和中微子。对角化的$3\times 3$的矩阵$\kappa^F$的定义为
+$\kappa^F \equiv \sqrt{2} M^F/v$，其中$M^F$是费米子(F=D,U,L)的质量矩阵，且$P_{R/L} = (1\pm \gamma_5)/2$。
+理论上$\rho^F$的值是任意选取的，但实际上$\rho^F$有着很强的约束，例如当我们考虑CP守恒、$Z_2$对称和要求
+树图阶没有味改变中性流时。
+
+本文主要围绕2HDM的类型II进行讨论，我们在表(\ref{tab:2HDMcoupling})中列出该类型下的费曼规则：
+\begin{table}
+  \centering
+  \begin{tabular}{c|c|c|c}
+    \hline\hline
+     ~~~~~ & ~~~~$WW$, $ZZ$~~~~ & ~~~~up-type quarks~~~~ & down-type quarks, leptons \\
+    \hline
+    $h^0$ & $\sin(\beta-\alpha)$ & $\cos\alpha/\sin\beta$ & $-\sin\alpha/\cos\beta$ \\
+    $H^0$ & $\cos(\beta-\alpha)$ & $\sin\alpha/\sin\beta$ &  $\cos\alpha/\cos\beta$ \\
+    $A^0$ &                  $0$ & $i\gamma^5\cot\beta$   &  $i\gamma^5\tan\beta$ \\
+    \hline\hline
+  \end{tabular}
+  \caption{
+  树图阶中性Higgs粒子与规范玻色子和费米子的耦合，每个耦合都是与相应的标准模型的比值。
+   }
+\label{tab:2HDMcoupling}
+\end{table}
+从表格（\ref{tab:2HDMcoupling}）中我们可以看出，2HDM的信号与标准模型的偏差总是正比于
+$\sin(\beta-\alpha)$（或$\cos(\beta-\alpha)$），$1/\sin\beta$和$1/\cos\beta$。通常情况下，2HDM的参数空间用
+$\sin\alpha$和$\tan\beta$为输入参数。但分析时用$\sin(\beta-\alpha)$和$\tan\beta$作为独立的相空间参数
+能够很方便的研究Higgs与规范玻色子的耦合。
+
+\subsection{2HDM模型的现状}
+由于目前的实验只观测到一个Higgs粒子且其性质和标准模型的Higgs粒子性质符合的很好，所以对2HDM产生很大的约束。
+目前对2HDM的参数的限制可以分为：理论上的约束和实验上的约束。
+
+\begin{enumerate}
+\item 理论上的约束 \\
+理论上的约束主要包括以下方面：
+\begin{itemize}
+\item 真空稳定性\\
+真空稳定性是指自发对称破缺之后，Higgs势有稳定的最小值。当场值比较大时，Higgs势由四次相互作用项主导。
+可以用下面的方式参数化Higgs势\cite{Osland:2hdm}
+\begin{eqnarray}
+|\Phi_1| = r\cos\phi\,,\; |\Phi_2| = r\sin\phi\,,\; 
+\frac{\Phi^{\dagger}_2\Phi_1}{|\Phi_1||\Phi_2|} = \rho e^{i\theta} 
+\end{eqnarray}
+其中，$r\in[0,+\infty)$，$\phi\in[0,\pi/2]$，$\rho\in[0,1]$且$\theta\in[0,2\pi)$。去掉公共因子$r^4$后，
+四次项的势能可以写成
+\begin{eqnarray}
+V_4 &=& \frac{1}{2}\lambda_1\cos^4\phi + \frac{1}{2}\lambda_2\sin^4\phi + 
+\lambda_3\cos^2\phi\sin^2\phi 
+\nonumber \\
+&+& \lambda_4\rho^4\cos^2\phi\sin^2\phi + \lambda_5\rho^2\cos^2\phi\sin^2\phi\cos(2\theta) 
+\nonumber \\
+&+& [\lambda_6\cos^2\phi + \lambda_7\sin^2\phi]2\rho\cos\phi\sin\phi\cos\theta
+\end{eqnarray}
+由于上式必须为正，故$\lambda_i$应该满足以下条件
+\begin{eqnarray}
+\lambda_1 > 0 \,,\; \lambda_2 > 0\,,\; \lambda_3 > -\sqrt{\lambda_1\lambda_2}\,,\;
+\lambda_3 + \lambda_4 - |\lambda_5| > -\sqrt{\lambda_1\lambda_2}
+\end{eqnarray}
+以上几个条件通过关系式（\ref{eqn:2HDMlammass}）会对Higgs场的质量和真空混合角$\tan\beta$产生很大限制
+\cite{Deshpande:2hdm,Sher:2hdm,Osland:2hdm}。
+
+\item 微扰性\\
+为了满足微扰性，物理的Higgs场四次耦合应该满足$\lambda_{h_i h_j h_l h_l} < 4\pi$
+\cite{TL:unitarity,Ginzburg:unitarity}。
+有些文献还指出，顶夸克的Yukawa耦合$y_t$在$\tan\beta$比较小的时候会变得非微扰。
+为了使$y_t$在1~TeV以下都保持微扰性， 要求$\tan\beta \ge 0.35$\cite{Bijnens:2hdm}。
+
+\item 幺正性\\
+我们都知道，在标准模型中横向$W$玻色子散射过程如$W^+W^-\to W^+W^-$只有在包含Higgs粒子传播子的图后才能
+保证该过程的幺正性。由于2HDM下的Higgs耦合与标准模型不同，要求Higgs-Higgs，Higgs-$V_L$散射的S矩阵的本征
+值小于$16\pi$\cite{Ginzburg:unitarity}。
+
+\end{itemize}
+
+\item 实验上的约束 \\
+目前的LHC实验已经研究了Higgs到$\gamma\gamma$，$ZZ$，$WW$，$\tau\tau$和$bb$的衰变道。ATLAS和CMS实验组
+2012年已经发布报告称发现了一个新的质量在126~GeV左右并且超过$5\sigma$信号的共振粒子
+\cite{ATLAS-2012,CMS-2012,ATLAS:01,ATLAS:02,ATLAS:03,ATLAS:04,ATLAS:05,ATLAS:06,CMS:01}。
+2HDM下类型II的Higgs粒子的产生截面和衰变宽度与标准模型的差异可以从表格(\ref{tab:2HDMcoupling})中得出。
+因此，可以与ATLAS、CMS的实验结果比较，将实验给出的排除参数区间应用于2HDM模型。
+例如可以用程序HiggsBounds\cite{HiggsBounds:1,HiggsBounds:2}来施加LEP和Tevatron上关于Higgs研究的
+参数排除线\cite{LEP:01,LEP:02,LEP:03}。
+进一步的分析可以结合程序HiggsSignals\cite{HiggsSignal}来研究各个Higgs衰变道的信号。
+
+除了Higgs实验外，电弱精确测量也会对很多新物理的参数产生一定的约束。例如Z-pole精确测量， 
+斜参数（oblique parameter）S，T和U都会对新物理模型中与$W$、$Z$相关的耦合产生约束\cite{Peskin:01}。
+特别是T参数对新物理模型的custodial对称性破缺产生很强的约束。
+在2HDM中，这使得Higgs粒子之间的质量差受到较强约束\cite{pdg2014}。
+
+此外，很多重味物理实验会对2HDM的Yukawa耦合有一定的约束。这类约束可以用目前比较流行的程序SuperIso
+\cite{SuperIso}实现。味约束主要考虑以下过程：$B\to X_s \gamma$，$B^-\to \tau^- \bar{\nu}_{\tau}$，
+$B\to \tau^+\tau^-$和$B_{d,s}\to \mu^+ \mu^-$等等\cite{F:01,F:02,F:03,F:04,F:05,F:06}。
+\end{enumerate}
+
+\section{电弱修正理论简介}
+随着LHC实验的顺利进行，目前已经进入run2阶段，实验室质心对撞能量已经达到13~TeV，未来可以达到14~TeV。
+在这么大的质心系对撞能量和亮度下，很多反应截面较小的过程都可以在LHC上研究。一般来说，LHC是一个超大的
+QCD机器，夸克和胶子过程占据重要地位。由于QCD修正通常较大，研究LHC上的过程时一般优先考虑QCD修正。
+但随着实验精度的不断提高，电弱辐射修正也变得越来越重要。通常认为由于电弱修正正比于电磁精细结构常数
+$\alpha$，电弱修正不大。但当进入高能区后，由于电弱Sudakov对数项会变得很大导致电弱修正在这些区域变得很
+可观。
+
+电弱Sudakov效应源于虚交换的软的或共线的有质量的规范玻色子\cite{Sudakov:org,Sudakov:new}。Sudakov效应
+主导项的形式为$\alpha_w\ln^2(Q^2/m^2_W)$，式中$Q$为硬散射过程的能标，
+此外$\alpha_w = \alpha/\sin^2\theta_w =  e^2/(4\pi\sin^2\theta_w)$且$\theta_w$是前面提到过的弱混合角。
+如果虚修正中交换的是无质量的规范玻色子如光子，这些对数项（logarithms）和相应的实辐射过程相互抵消。
+在高能区$|Q^2| >> m^2_W$，Sudakov对数项会变得很大，最终导致较大的负修正。尽管这些修正在总截面
+上是微不足道的，这些修正在横动量$p_T$进入TeV能区时能达到10-20\%。
+
+目前尝试自动化计算电弱修正的程序主要有Recola\cite{recola}，GoSam\cite{gosam}，Munich结合Sherpa
+\cite{munich}， Madgraph5\_aMC@NLO\cite{mg5}，当然也可以用半自动化的FeynArts/FormCalc结合LoopTools
+\cite{FeynArts,FormCalc}程序包。但由于电弱修正涉及的情况复杂、计算难度较大，目前还不能完全自动化计算。
+随着LHC实验精度不断提高，对高阶微扰计算的需求也日益迫切。2013年在Les Houches举办的国际
+高能物理会议上重点强调了电弱修正与QCD修正计算的重要性\cite{LHwishlist}，迫切需求以下过程的高精确计算
+结果：
+\begin{enumerate}
+\item 与Higgs有关的末态过程
+\item 与jet或重夸克有关的末态过程
+\item 与电弱规范玻色子有关的末态过程
+\end{enumerate}
+
+在讨论了电弱修正的重要性后，我们接着讨论一般性的电弱修正中遇到的一些理论问题。
+\subsection{$\alpha$和$\alpha_s$的阶数}
+以简单的散射过程为例，领头阶的散射截面（cross section）具有一个固定的微扰阶数$\alpha^n_s\alpha^m$，
+其中$m,n$都是固定的整数。那么该过程的次领头阶QCD和EW修正的阶数分为$\alpha^{n+1}_s\alpha^m$和
+$\alpha^n_s\alpha^{m+1}$。然而，当$n+m$固定时可以有不同的Born图贡献到阶数$\alpha^n_s\alpha^m$。
+例如对于末态涉及一个正反夸克对及以上的过程，单纯的分离QCD和EW的贡献是不可能的，也就是说QCD和EW的奇异点
+有重合。
+%%%%
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.5]{qq_a.eps}
+\includegraphics[scale=0.5]{qq_b.eps}
+\includegraphics[scale=0.5]{qq_c.eps}
+\caption{以$\mathcal{O}(\alpha^2_s)$为Born图的次领头阶电弱修正图}
+\label{fig:qqabc}
+\end{figure}
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.5]{qq_d.eps}
+\includegraphics[scale=0.5]{qq_e.eps}
+\includegraphics[scale=0.5]{qq_f.eps}
+\caption{以$\mathcal{O}(\alpha^2_s\alpha)$为Born图的次领头阶QCD修正图}
+\label{fig:qqdef}
+\end{figure}
+图（\ref{fig:qqabc}）和（\ref{fig:qqdef}）展示了$q\bar{q}\to q'\bar{q'}$散射过程的Born阶及修正阶数为
+$\mathcal{O}(\alpha^2_s\alpha)$的费曼图。图（\ref{fig:qqabc}a）展示了传统的Born图阶数为
+$\mathcal{O}(\alpha^2_s)$，也可以看成是阶数$\alpha_s\times\alpha_s$树图的干涉。图（\ref{fig:qqabc}b）和
+图（\ref{fig:qqabc}c）分别为该过程的实光子辐射和虚修正过程的费曼图。然而需要特别注意的是：Born图
+（\ref{fig:qqdef}a）的阶数为$\mathcal{O}(\alpha_s\alpha)$，其实胶子辐射图（\ref{fig:qqdef}b）和
+虚修正图（\ref{fig:qqdef}c）都可以贡献到同样的阶数$\mathcal{O}(\alpha^2_s\alpha)$。另外，注意到
+图（\ref{fig:qqabc}c）中既有软光子又有软胶子的红外发散，其发散要和实辐射图（\ref{fig:qqabc}b）和
+图（\ref{fig:qqdef}e）才能完全消除。所以我们不能分离QCD和EW修正的贡献，只能定义观测量为阶数
+$\mathcal{O}(\alpha^2_s\alpha)$上的观测量。
+
+总之，当我们的计算阶数到达
+$\mathcal{O}(\alpha^n_s\alpha^{m+1})$时，我们既要考虑阶数为$\alpha^n_s\alpha^m$的次领头阶EW修正，也要
+考虑阶数为$\alpha^{n-1}_s\alpha^{m+1}$的次领头阶QCD修正，当然要在这些Born图存在的情况下。
+还有，做电弱修正时，有可能存在光子诱导的过程，例如当我们做过程$pp\to W+jet$的电弱修正时，也必须考虑
+Born过程$\gamma q\to W q'$及其次领头阶QCD修正。
+
+
+
+\subsection{电弱输入参数方案}
+对于标准模型来说，通常的输入参数方案如下：电磁耦合精细结构常数$\alpha = e^2/(4\pi)$，强耦合精细结构常数
+$\alpha_s =  g^2_s/(4\pi)$，弱规范玻色子质量$m_W$和$m_Z$，Higgs粒子质量$m_H$，费米子质量$m_f$和CKM矩阵。
+粒子的质量可以用奇点质量（pole mass）来定义，该质量对应于粒子传播子（propagator）的奇异点。但对于夸克
+来说，有时候需要用某能标下的跑动质量。质量选取的合适与否应该以理论预言的结果不敏感的依赖质量为标准。
+
+在高能物理计算中，由于一二代与第三代夸克的混合效应可以完全忽略，
+所以可以近似认为CKM矩阵只有前两代夸克混合。例如在单个$W$玻色子的产生过程中，
+CKM矩阵效应等同于在不考虑CKM矩阵时的子过程$q_i\bar{q}_j$乘以一个全局因子$|V_{ij}|^2$。一般的来讲，
+当一条费米子链上连接奇数个$W$玻色子时等同于一个CKM因子，而当一条费米子链上连接偶数个$W$玻色子时等同于
+不考虑CKM矩阵，而且此结论在次领头阶电弱(NLO EW)修正的计算中也成立，在第三章中我们有更详细的讨论。
+
+对于玻色子的质量$m_W$，$m_Z$和$m_H$通常选取它们的在壳（on-shell）质量。对于电弱耦合常数$\alpha$的选取
+通常有以下几种方案：(1) 选取精细结构常数$\alpha(0)\approx 1/137$，也即是$\alpha(0)$方案；
+(2) 选取有效值$\alpha(m_Z)\approx 1/129$（$\alpha(m_Z)$方案），然后$\alpha(0)$是通过重整化群演化计算
+求得；(3) 选取$G_F$为输入参数导出$\alpha_{G_F} = \sqrt{2}G_F m^2_W(1-m^2_W/m^2_Z)/\pi \approx 1/132$。
+通常这几种方案相差2\%-6\%，至于哪种方案更好取决于我们计算的过程。
+
+下面我们对几种方案做详细的分析，分析中用到的符号和约定如外场重整化常数与文献\cite{Denner:EWPhysics}
+保持一致。分析中，我们假定领头阶的阶数为$\alpha^m_s\alpha^n$，则电弱修正的阶数为
+$\alpha^m_s\alpha^{n+1}$。最好的参数选取方案应该能够尽可能把修正中的大的对数项形式的贡献吸收到
+领头阶（LO）中，这样将会导致较小的修正，具有更好的微扰性。在$\alpha(0)$方案下，精细结构常数$\alpha$
+定义为Thomson极限下的在壳的e-e-$\gamma$三点关联函数。裸的电荷（bare electric charge）和重整化后的
+电荷有这样的关系：
+$e_0 = (1+\delta Z_e)e$。利用Ward等式和在壳（on-shell）重整化条件，电子的电荷重整化常数$\delta Z_e$在
+$\alpha(0)$方案下可以写成\cite{Denner:EWPhysics}
+\begin{eqnarray}
+\delta Z^{\alpha(0)}_e &=& -\frac{1}{2}\delta Z_{AA} - \frac{1}{2} \tan\theta_W \delta Z_{ZA}
+\nonumber \\
+&=&
+\frac{1}{2}\frac{\partial \sum^{AA}_T(p^2) }{\partial p^2}\bigg{|}_{p^2\to 0} - \tan\theta_W \frac{\sum^{AZ}_T(0)}{M^2_Z}
+\end{eqnarray}
+其中，$\theta_W$是弱混合角，$\sum^{ab}_T(p^2)$是未重整的自能函数在四动量的平方为$p^2$时的横向分量。
+然而，在软极限$p^2\to 0$时，光子的自能会导致大的对数项$\log(m^2_f/\mu^2)$。对数项中的$m_f$为轻费米子的
+质量，$\mu$是该过程典型的能标。
+
+假定我们计算的过程有$l$（$l<=n$）个外腿光子，在$\alpha(0)$方案下，每一个外腿光子场的波函数重整化会引入
+抵消项$\frac{1}{2}\delta Z_{AA}$，刚好能抵消一个电弱耦合顶点产生的抵消项$\delta Z_e$。当$l=n$的时候，
+这些大的对数项刚好抵消掉了。但当$l < n$时，就会有$n-l$个未被抵消的$\delta Z_e$。解决方法就是把这些
+未抵消掉的对数项吸收到跑动的精细结构常数$\alpha(m_Z)$（$\alpha(m_z)$方案）或者$\alpha_{G_F}$
+（$G_F$方案）中。
+
+在$G_F$方案中，$\alpha_{G_F}$和$\alpha(0)$的关系为
+\begin{eqnarray}
+\alpha_{G_F} = \frac{\sqrt{2}G_F m^2_W}{\pi} \left(1-\frac{m^2_W}{m^2_Z}\right)
+= \alpha(0)(1+\Delta r)
+\label{eqn:Gmu}
+\end{eqnarray}
+上式中，$G_F$是费米子常数，$\Delta r$是缪子衰变的次领头阶电弱修正。
+$\Delta r$明确的表达式为\cite{muondecay}
+\begin{eqnarray}
+\Delta r
+&=&
+-\delta Z_{AA}
+- \cot^2\theta_W \left( \frac{\sum^{ZZ}_T(M^2_Z)}{M^2_Z} - \frac{\sum^{WW}_T(M^2_W)}{M^2_W} \right)
++ \frac{\sum^{WW}_T(0)-\sum^{WW}_T(M^2_W)}{M^2_W} \nonumber \\
+&& + 2 \cot\theta_W \frac{\sum^{AZ}_T(0)}{M^2_Z}
++ \frac{\alpha(0)}{4\pi \sin^2\theta_W} \left( 6 + \frac{7 -4 \sin^2\theta_W}{2 \sin^2\theta_W} \log(\cos^2\theta_W) \right)
+\label{eqn:deltar}
+\end{eqnarray}
+则电弱重整化常数在$G_{\mu}$方案下的表达式为
+\begin{eqnarray}
+\delta Z^{G_{\mu}}_e = \delta Z^{\alpha(0)}_e - \frac{1}{2}\Delta r
+\end{eqnarray}
+可以看出，在$G_{\mu}$方案下重整化常数$\delta Z^{\alpha(0)}_e$与$\frac{1}{2}\Delta r$中大的对数项相互
+抵消。$\alpha(m_Z)$方案和$G_F$方案类似，这里就不详细讨论了。
+
+
+\subsection{光子诱导的过程}
+光子作为质子中一个部分子（parton）导致的过程称为光子诱导（photon-induced）的过程。在次领头阶电弱修正过程
+中，光子诱导的过程可以看成实光子辐射过程的交叉图过程。例如考虑领头阶子过程$qq'\to F$，则实辐射过程为
+$qq'\to F+\gamma$，相对应的光子诱导的过程为$\gamma q \to F+\bar{q'}$和$\gamma q' \to F+\bar{q}$。
+对于特定的产生过程，例如末态是$W^+W^-$，在领头阶会有$\gamma\gamma$散射的过程
+（例如$\gamma\gamma\to W^+W^-$）。一般来说，由于光子的亮度以及电磁耦合常数比较小，光子诱导过程的贡献
+不是很大。
+
+
+\subsection{光子与jet事例的判别}
+\label{sec:photon_jet_event}
+在计算末态F伴随一个硬jet或硬光子产生过程的次领头阶QCD和EW修正时，需要正确区分
+jet或光子事例的问题。产生过程$F+jet$和$F+\gamma$的实辐射修正会遇到共同的产生过程$F+jet+\gamma$，
+也就是产生过程$F+jet+\gamma$既可以来源于产生过程$F+jet$的次领头阶EW修正同时也可以来源于产生过程
+$F+\gamma$的次领头阶QCD修正。所以，需要合理的区分$F+jet$和$F+\gamma$事例才能保证计算过程的红外安全
+（Infrared safety）。
+
+在实验上，由于量能器里的信息可以用来重建jet和光子，一种自然的想法就是采用强子或电磁喷柱（shower）
+里的电磁能量比作为判选标准来决定是jet或光子事例。需要注意的是：该判选标准使得光子夸克共线发散不能
+完全消除。为了解决这个问题，需要引入夸克光子碎裂函数（quark-to-photon fragmentation function）
+来吸收掉额外的共线发散，类似于初态共线可以用PDF来消除。下面我们详细介绍夸克光子碎裂函数。
+
+夸克光子碎裂函数描述了一个夸克碎裂成一个jet并包含一个光子的概率。我们以$z_{\gamma}$来表示光子在
+光子和jet系统中所占的能量比。由于碎裂是一个长程（long-distance）物理过程，所以不能完全用微扰论的方法
+计算出来。夸克光子碎裂函数的贡献可分为两部分：(a) 夸克通过微扰过程辐射光子，这部分包含共线发散，
+并且可以用微扰论的方法计算出来。(b) 在夸克的强子化过程中非微扰地产生一个光子，这部分可以用裸的非
+微扰的碎裂函数$D^{bare}_{q\to\gamma}(z_{\gamma})$描述。非微扰部分对总截面的贡献在$\bar{MS}$方案下
+可以写成下式
+\begin{eqnarray}
+d\sigma^{frag}(z_{cut}) = d\sigma^{LO}\int^1_{z_{cut}} dz_{\gamma} D^{bare}_{q\to\gamma}(z_{\gamma})
+\end{eqnarray}
+上式中$z_{cut}$表示光子在共线的光子与jet系统中最小的能量比，高于$z_{cut}$的事例认为是光子事例。
+裸的碎裂函数可以分成在因子化能标为$\mu_F$时的发散部分和一个现象学贡献
+$D_{q\to\gamma}(z_{\gamma},\mu_F)$，裸的碎裂函数用公式可以表示如下：
+\begin{eqnarray}
+D^{bare, DR}_{q\to\gamma}(z_{\gamma}) = \frac{\alpha Q^2_q}{2\pi}\frac{1}{\epsilon}\left(\frac{4\pi\mu^2}
+{\mu^2_F}\right)^{\epsilon}\frac{1}{\Gamma(1-\epsilon)}P_{q\to\gamma}(z_{\gamma}) + 
+D_{q\to\gamma}(z_{\gamma},\mu_F)
+\end{eqnarray}
+上式中，$Q_q$是无质量的夸克的电荷，$P_{q\to\gamma} = (1+(1-z_{\gamma})^2)/z_{\gamma}$
+是$q\to q+\gamma$的劈裂函数。上标$DR$表示
+维数正规化且维数$D = 4-2\epsilon$。$\mu$是任意的参考能标，通常选取成重整化能标$\mu_r$。
+文献\cite{maasureD}提出了一种方法，通过过程$e^+e^-\to n~\textrm{jet} + \gamma$测量
+$D_{q\to\gamma}(z_{\gamma,\mu_F})$。这种方法的要点就是在用jet算法时把光子和夸克等同看待，与此同时记录
+光子的能量比。表达式最早由ALEPH实验组给出\cite{ALEPH}
+\begin{eqnarray}
+D_{q\to\gamma}(z_{\gamma}, \mu_f) = \frac{\alpha Q^2_q}{2\pi}\left[ P_{q\to\gamma}(z_{\gamma})
+\ln\left( \frac{\mu^2_f}{(1-z_{\gamma})^2\mu^2_0}\right) + C \right]
+\end{eqnarray}
+其中，$\mu_0 = 0.14~GeV$和$C = -13.26$。
+最终我们可以得出夸克-光子碎裂函数在两截断相空间(TCPSS)\cite{TCPSS}下的表达形式
+\begin{eqnarray}
+{\mathscr D}_{q\to \gamma}(z_{\gamma}) = \frac{\alpha Q^2_q}{2\pi}
+\left[P_{q\to\gamma}\left(z_{\gamma}\right) \ln\left(\frac{z_{\gamma}\left(1-z_{\gamma}\right)\delta_c s}{\mu^2_f}\right) + z_{\gamma}\right] + D_{q\to\gamma}(z_{\gamma},\mu_f)
+\end{eqnarray}
+
+
+%\subsection{电弱重整化简介}

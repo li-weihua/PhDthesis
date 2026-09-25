@@ -1,0 +1,111 @@
+﻿
+\begin{cnabstract}
+2012年7月，欧洲核子研究中心大型强子对撞机上的ATLAS和CMS实验组宣布发现Higgs玻色子，标准模型的粒子谱
+由此得到补全。实验表明，新发现粒子的性质与标准模型Higgs玻色子的预言大致相符。
+为了确认该粒子是标准模型的Higgs玻色子，还是新物理模型中的Higgs粒子，并进一步理解电弱自发对称破缺机制，
+需要更精确的实验检验。为此，首先需要对Higgs粒子各产生道的信号和背景给出精确的理论预言。
+此外，检验矢量玻色子的规范耦合、研究Higgs粒子的自耦合及Higgs势也同样重要。
+尽管标准模型取得了巨大成功，但它并非终极理论，因此仍需探索新物理规律。
+
+为了更精确地检验W玻色子对与Z玻色子或光子的耦合，我们研究了LHC上
+$pp\to W^+W^-+{\rm jet}+X$过程的次领头阶QCD和电弱修正，并考虑了W玻色子衰变的自旋关联效应。
+在LHC Run 2阶段，更高的对撞能量和亮度使得产生横动量达到TeV量级的规范玻色子成为可能；
+此时，次领头阶电弱修正因Sudakov效应而尤为重要。2013年的Les Houches国际高能物理会议也强调，
+亟需计算矢量玻色子对伴随jet产生过程及玻色子衰变的次领头阶电弱和QCD修正。
+我们研究了领头阶及次领头阶截面对领头jet横动量截断值的依赖关系，并采用MadSpin方法处理W玻色子衰变的
+自旋关联效应。我们还给出了末态粒子的横动量和快度分布；结果表明，在高横动量区域，电弱修正的贡献十分显著。
+
+为了研究Higgs粒子的自耦合性质，我们计算了双Higgs二重态模型类型II下矢量玻色子聚合过程
+$pp\to h^0h^0+2jets+X$的次次领头阶QCD修正。
+在标准模型下，矢量玻色子聚合产生Higgs粒子对有着第二大的散射截面。
+此外，该过程具有两个位于前向和后向区域的jet这一清晰的实验特征，可用于研究Higgs粒子的自耦合并重构Higgs势。
+我们采用结构函数法计算了此过程的次次领头阶QCD修正，研究了总截面对模型参数的依赖、因子化和重整化能标的
+不确定度，以及PDF和$\alpha_s$的不确定度。结果表明，次次领头阶QCD修正可以显著减小能标不确定度。
+我们还给出了末态Higgs粒子的运动学分布，可用于研究Higgs粒子的自耦合
+（$\lambda_{H^0h^0h^0}$和$\lambda_{h^0h^0h^0}$）。
+
+
+本论文的创新点如下：
+\begin{itemize}
+\item 我们首次计算了LHC上$pp\to W^+W^-+{\rm jet}+X$过程的次领头阶电弱修正，
+给出了次领头阶QCD与电弱修正的组合结果，并考虑了W玻色子衰变的自旋关联效应。
+计算中我们巧妙地利用CKM 矩阵的幺正性极大地简化了计算量。另外，通过改变领头jet的横动量截断值，
+我们验证了电弱Sudakov效应。
+在处理W玻色子衰变的时候，我们用MadSpin方法来包含W玻色子衰变的自旋关联效应。
+
+\item 在处理过程$pp\to WW+{\rm jet}+X$的单圈张量积分时，会遇到由小Gram行列式带来的数值计算不稳定问题，
+我们开发了双精度和四精度联合计算的程序包，解决了数值不稳定问题，并显著提高了计算效率。
+对于实辐射过程涉及到的$W^+W^-+jet+\gamma$四体事例，我们采用精确的事例选择规则来区分jet和光子事例，
+并利用夸克-光子碎裂函数处理红外发散问题。
+
+\item 我们首次采用结构函数法计算了双Higgs二重态模型类型II下矢量玻色子聚合过程
+$pp\to h^0h^0+2jets+X$的次次领头阶QCD修正。结果显示次次领头阶的计算使得能标不确定度极大地减小。
+此外，我们开发的程序包高效灵活，能计算矢量玻色子聚合道产生单个或多个Higgs粒子的过程，
+适用于标准模型和双Higgs二重态模型。
+\end{itemize}
+
+\keywords{标准模型，双Higgs二重态模型，QCD修正，电弱修正，次次领头阶}
+\end{cnabstract}
+
+
+\begin{enabstract}
+In July 2012, the ATLAS and CMS collaborations at the CERN Large Hadron Collider (LHC)
+announced the discovery of a Higgs boson, completing the particle spectrum of the standard model (SM).
+Measurements indicate that the properties of this particle are broadly consistent with those predicted
+for the SM Higgs boson. More precise tests are needed to establish whether it is the SM Higgs boson
+or a Higgs particle associated with new physics, and to deepen our understanding of electroweak
+symmetry breaking (EWSB). Such tests require precise theoretical predictions for the signals and
+backgrounds in Higgs production channels. Measurements of vector-boson gauge couplings, studies of
+Higgs self-couplings and the Higgs potential, and searches for new physics are also important.
+
+To test the couplings of W bosons more precisely, we investigate the next-to-leading order (NLO)
+electroweak (EW) and QCD corrections to the process
+$pp\to W^+W^-+{\rm jet}+X \to e^+ \mu^- \nu_e \bar \nu_{\mu}+{\rm jet}+X$ at the LHC.
+The higher collision energy and luminosity of LHC Run 2 make it possible to produce gauge bosons
+with transverse momenta at the TeV scale, where NLO EW corrections become important because of
+the Sudakov effect. The 2013 Les Houches workshop also emphasized the need for NLO EW and QCD
+corrections to vector-boson pair production in association with a jet, including boson decays.
+We study the dependence of the leading-order (LO) and NLO cross sections on the leading-jet
+transverse-momentum cut. We use MadSpin to include spin correlations in the W-boson decays and
+present the transverse-momentum and rapidity distributions of the final-state particles.
+The results show that EW corrections are significant at high transverse momentum.
+
+To study Higgs self-couplings, we calculate the next-to-next-to-leading order (NNLO) QCD
+corrections to the vector-boson fusion (VBF) process $pp\to h^0h^0+2jets+X$ in the type-II
+two-Higgs-doublet model (2HDM). In the SM, VBF has the second-largest cross section among
+Higgs-pair production channels. Its characteristic final state contains two Higgs bosons and
+two jets in the forward and backward rapidity regions, allowing the Higgs self-couplings
+and potential to be studied. Using the structure-function approach, we examine the dependence
+of the total cross section on model parameters and evaluate uncertainties associated with the
+factorization and renormalization scales, parton distribution functions (PDFs), and $\alpha_s$.
+We find that NNLO QCD corrections significantly reduce the scale uncertainty. We also present
+kinematic distributions of the final-state Higgs bosons, which can be used to study the
+self-couplings $\lambda_{H^0h^0h^0}$ and $\lambda_{h^0h^0h^0}$.
+
+
+The main contributions of this thesis are as follows:
+\begin{itemize}
+\item We calculate the NLO EW corrections to the process
+$pp\to W^+W^-+{\rm jet}+X \to e^+ \mu^- \nu_e \bar \nu_{\mu}+{\rm jet}+X$
+at the LHC and combine them with the NLO QCD corrections. We use the unitarity of the CKM matrix
+to simplify the calculation and study the EW Sudakov effect by varying the leading-jet
+transverse-momentum cut. MadSpin is used to include spin correlations in the W-boson decays.
+
+\item Small Gram determinants cause numerical instabilities in the one-loop tensor integrals
+for $pp\to WW+jet+X$. We developed a program that combines double and quadruple precision
+to address these instabilities and improve computational efficiency. For the real-photon
+radiation contribution, we use a precise event-selection rule to distinguish jets from
+photons in $W^+W^-+jet+\gamma$ final states and a quark-to-photon fragmentation function
+to handle the associated infrared divergence.
+
+\item 
+Using the structure-function approach, we calculate the NNLO QCD corrections to the VBF
+process $pp\to h^0h^0+2jets+X$ in the type-II 2HDM. These corrections significantly reduce
+the scale uncertainty. Our code can also calculate the production of one or more Higgs
+bosons via VBF in both the SM and the 2HDM.
+\end{itemize}
+
+\enkeywords{Standard Model, Two Higgs Doublet Model, QCD correction, Electroweak correction, 
+next-to-next-to-leading order}
+
+\end{enabstract}

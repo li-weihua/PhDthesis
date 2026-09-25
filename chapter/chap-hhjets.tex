@@ -1,0 +1,1132 @@
+﻿
+\chapter{2HDM下pp$\to$ $h^0$ $h^0 +2jets$过程的高阶QCD修正}
+\label{chap:vbfhh}
+
+\section{研究意义}
+随着LHC上的两大实验组ATLAS和CMS宣布发现了一个质量在126~GeV 附近的新的中性玻色子，粒子物理学家们开始
+研究该粒子的CP，耦合等基本性质\cite{CMS-2013,ATLAS-2013}。下一步的一个重要目标就是精确检验电弱自发对称
+破缺机制，例如精确测量Higgs粒子的质量、自旋手征和衰变宽度，
+费米子与规范玻色子的耦合正比于费米子的质量等等。
+进一步来说，测量Higgs粒子的自耦合也是十分重要的。因为只有Higgs自耦合才能重构Higgs二重态势，
+这也是电弱自发对称破缺的根源。
+\begin{eqnarray}
+V_H = \mu^2\Phi^+\Phi + \lambda(\Phi^+\Phi)^2\;;\quad \lambda = \frac{m^2_H}{2v^2} \; \textrm{and} \;
+\mu^2 = -\frac{m^2_H}{2}
+\end{eqnarray}
+其中$v\approx 246~\textrm{GeV}$，然后可以把Higgs势用物理的Higgs质量来表示。三个Higgs耦合的耦合常数
+$\lambda_{HHH}$和Higgs粒子的质量的关系为
+\begin{eqnarray}
+\lambda_{HHH} = \frac{3m^2_H}{v}
+\end{eqnarray}
+这样的耦合只有在两个及以上的Higgs粒子产生的过程\cite{HiggsSelfCoupling:1,HiggsSelfCoupling:2,
+HiggsSelfCoupling:3}中才能研究。
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=1]{gghh.eps}
+\caption{胶子与胶子聚合道产生双Higgs粒子。}
+\label{fig:gghh}
+\end{figure}
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=1]{qqhhqq.eps}
+\caption{WW/ZZ聚合产生双Higgs粒子。}
+\label{fig:vbfhh}
+\end{figure}
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=1]{qqvhh.eps}
+\caption{矢量玻色子V(W/Z)辐射产生双Higgs粒子。}
+\label{fig:qqvhh}
+\end{figure}
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=1]{tthh.eps}
+\caption{$pp\to HHt\bar{t}$产生道。}
+\label{fig:tthh}
+\end{figure}
+
+
+在标准模型中，Higgs对的产生道主要分为以下几个过程：
+\begin{enumerate}
+\item 
+胶子聚合过程$gg\to HH$，主要通过重夸克圈(参考图(\ref{fig:gghh}))产生。该过程类似于$gg\to H$
+产生过程，是Higgs对产生的最主要过程，其贡献比玻色子聚合产生过程要大一个量级。如图(\ref{fig:gghh})所示，该
+过程的主要贡献是top夸克圈。该过程的次领头阶QCD修正可以利用有效场理论近似中的低能定理\cite{LET:1,LET:2,
+LET:3}计算出来，Higgs与胶子对的耦合通过把top夸克质量取成无穷大来近似得出。次领头阶的计算可以参考文献
+\cite{HiggsPairInSM}。
+
+\item 矢量玻色子聚合(VBF)产生Higgs对，即是$qq'\to V^{*}V^{*}qq'\to HH qq' (V = W,Z)$
+(参考图(\ref{fig:vbfhh}))。该过程的产生机制与标准模型下VBF产生单个Higgs粒子类似，一方面由于s道过程
+$qq'\to V^*HH\to qq'HH$是可以忽略的，另一方面在次领头阶由于色矩阵使得QCD修正的贡献只出现在$W/Z$的
+结构函数里，
+所以该过程同样可以用结构函数法\cite{SF:Han,SF:Figy,SF:Berger,SF:Harlander,SF:Zaro,big-vbf}来计算其次
+领头阶和次次领头阶QCD修正。
+
+\item 双Higgs从矢量玻色子$W/Z$轫致辐射产生，$qq'\to V^*\to VHH (V = W,Z)$(参考图\ref{fig:qqvhh})。
+该过程类似于Drell–Yan过程，其次次领头阶QCD修正可以参考文献\cite{HiggsPairInSM}。
+
+\item 双Higgs伴随顶夸克对产生，$pp\to t\bar{t}HH$(参考图\ref{fig:tthh})，该过程的主要贡献源自于top夸克圈。
+\end{enumerate}
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=1]{HH_main_fig.eps}
+\caption{Higgs对在LHC上产生的四个主要道随能标变化的曲线，且包含了高阶QCD修正。引用自文献
+\cite{HiggsPairInSM}}
+\label{fig:pphh}
+\end{figure}
+
+在标准模型下这四个双Higgs产生的主要道的贡献大小可以参考图(\ref{fig:pphh})。
+可以看出，当质子质子碰撞的质心系
+能量为14~TeV的时候，截面大小依次为胶子胶子聚合道、VBF道、双Higgs伴随top夸克对产生道和玻色子轫致辐射Higgs
+对产生道。另外文献\cite{HiggsPairInSM}对Higgs对的衰变道：
+$b\bar{b}\gamma\gamma$、$b\bar{b}\tau\bar{\tau}$和$b\bar{b}W^+W^-$做了详细讨论，本文就不再讨论了。
+
+虽然VBF道的产生截面没有胶子胶子聚合道的截面大，但由于VBF道具有明显的信号特征：两个可以方便标记的jets，
+所以当选择合适的相空间截断后很容易提取该道的信号。矢量玻色子聚合产生单个Higgs粒子过程的次领头阶和
+次次领头阶QCD修正已经在文献\cite{SF:Zaro,big-vbf}中用结构函数法详细的研究过了。受到此方法的启发，我们
+理论组计算了VBF道产生Higgs对在标准模型和2HDM模型下的次次领头阶QCD修正\cite{HH:Ling,HH:Li}，而本文主要讨论
+2HDM模型下的VBF道产生Higgs对的次次领头阶的QCD修正。
+
+关于2HDM模型的理论我们已经在第二章介绍过了，本论文关注的过程$pp\to V^*V^* + 2jets\to h^0h^0 +2jets$
+可以用来研究三Higgs自耦合$\lambda_{h^0h^0h^0}$和$\lambda_{H^0h^0h^0}$\cite{Moretti:2004wa,spira:1212}。
+注意我们假定轻的CP为偶的Higgs粒子$h^0$为标准模型的Higgs粒子。
+
+
+\section{VBF过程的结构函数法}
+
+\subsection{VBF过程的定义}
+VBF的英文意思是Vector boson fusion，即矢量玻色子聚合。一般情况下，产生道的定义并不是很明确的，因为产生道
+的定义一般是基于领头阶的费曼图。虽然过程在领头阶可能没有问题，但当涉及到共振态粒子和高阶修正效应时，
+产生道的定义会变得不够明确。
+下面我们考虑一个简单的例子，例如在领头阶仅涉及电弱耦合的一类过程，如Drell-Yan、单top夸克
+产生和玻色子辐射Higgs粒子。当我们考虑到共振的中间态或末态，这些过程在领头阶可以很好的定义。但VBF过程在
+领头阶的定义就有点问题，因为$pp\to Hjj$过程的t道(真正的VBF)和过程$pp\to HV^*\to Hjj$会有干涉。幸运的是
+这些干涉效应非常的小，并且在窄宽度近似下可以认为没有干涉效应。另一个例子是过程$tW$的次领头阶修正会和
+$t\bar{t}$过程有重叠。
+
+通常有两种互补的方法可以遵循。一种方法是考虑所有的干涉效应，用规范不变的方案来处理宽度效应。这种方案可以
+应用在次领头阶QCD和电弱修正中，一般可以应用出名且权威的复质量方案(complex-mass scheme)\cite{CMS}。
+例如文献\cite{DD:VBFHiggs}采用此方法计算过程$pp\to Hjj$的次领头阶QCD和次领头阶电弱修正。这种方法的好处是
+把所有的干涉效应都考虑了，但当干涉效应非常小的时候就会有一定的局限性。一方面使得计算量大大增加，另外
+一方面实验上的分析也会变得更加复杂。所以，当干涉效应可以忽略且高阶效应不影响该过程的定义时，可以用某一
+特征定义产生道。例如VBF道产生Higgs粒子的过程可以确切的定义为VBF道产生Higgs粒子。
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=1.5]{singleHiggs.eps}
+\caption{标准模型下VBF道产生单个Higgs粒子。}
+\label{fig:singleHiggs}
+\end{figure}
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=1.5]{hhjj_Fig1a.eps}
+\caption{2HDM模型下VBF道产生轻的CP为偶的Higgs粒子对。}
+\label{fig:doubleHiggs}
+\end{figure}
+VBF道在标准模型下产生一个Higgs粒子和在2HDM下产生轻的CP为偶的Higgs对的示意图为图(\ref{fig:singleHiggs})
+和图(\ref{fig:doubleHiggs})。
+
+\subsection{领头阶树图分析}
+%%%
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=1.5]{hhjj_born.eps} 
+\caption{VBF道产生单个Higgs粒子的领头阶主导费曼图。}
+\label{fig:vbfborn}
+\end{figure}
+图(\ref{fig:vbfborn})展示了VBF产生单个Higgs粒子的领头阶主导费曼图。我们用$p_1$和$p_2$表示初态夸克的
+四动量，用$p_3$和$p_4$表示末态夸克的四动量。图(\ref{fig:vbfborn})的幅度可以表示成
+\begin{eqnarray}
+\mathcal{M}^{VBF}_{LO} = 2(\sqrt{2}G_F)^{1/2}M^2_V \frac{1}{q^2_1 - M^2_V} \frac{1}{q^2_2 - M^2_V}
+\bar{u}(p_3)\Gamma_{\mu}u(p_1) \bar{u}(p_4)\Gamma^{\mu}u(p_2)
+\label{eqn:vbfloAmplitude}
+\end{eqnarray}
+其中
+\begin{eqnarray}
+\begin{split}
+& q_1 = p_3 - p_1 \\
+& q_2 = p_4 - p_2
+\end{split}
+\end{eqnarray}
+$\Gamma_{\mu}$是$Vq\bar{q}$顶点，在标准模型下夸克和W和Z玻色子的相互作用可以写成如下形式
+\begin{eqnarray}
+\Gamma_{\mu} =  (\sqrt{2}G_F)^{1/2} M_V (v_q \gamma_{\mu} - a_q \gamma_{\mu}\gamma_5)
+\end{eqnarray}
+即是通常的费米子与规范玻色子的耦合，其中对于W玻色子
+\begin{eqnarray}
+v_q = a_q = \frac{1}{\sqrt 2}
+\end{eqnarray}
+对于Z玻色子为
+\begin{eqnarray}
+v_q = I_q -2 Q_q \sin^2\theta_w, \quad a_q = I_q \, .
+\end{eqnarray}
+
+从公式(\ref{eqn:vbfloAmplitude})中我们可以推断出VBF信号的几个特征：首先，VBF过程是一个t道过程，并且传播子
+是有质量的矢量玻色子。所以总截面是有限的，且当动量转移$Q^2_i = -q^2_i$远小于$M^2_V$时，贡献较大。最后一个
+事实就是末态两个夸克倾向于携带很大比例的初态夸克的动量，所以末态夸克在探测器里大多是背对背的事例，且有
+很大的不变质量，故Higgs粒子多出现在探测器的中心区域。图(\ref{fig:cmsHiggs})展示了CMS探测器中一个可能的
+VBF道产生单个Higgs粒子且Higgs粒子衰变成双光子的事例。
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.3]{vbf7tev_3d.png} 
+\caption{CMS实验上的一个候选VBF事例的示意图，其中靠近束流的是jet，中心区域是双光子。}
+\label{fig:cmsHiggs}
+\end{figure}
+
+另一个重要结论是末态拓扑会显著抑制干涉效应。例如过程$uu\to Huu$和$ud\to Hud$有两种费曼图的贡献，
+其中一张是t道图，另一张是u道图。当这两张费曼图干涉后，传播子的表达式为
+\begin{eqnarray}
+PROP_{interference} =  \frac{1}{2p_1\cdot p_3 + M^2_V} \frac{1}{2p_2\cdot p_4 + M^2_V} 
+\frac{1}{2p_1\cdot p_4 + M^2_V} \frac{1}{2p_2\cdot p_3 + M^2_V} \nonumber \\
+\end{eqnarray}
+对于t道图的自己干涉贡献为
+\begin{eqnarray}
+PROP_{t-channel} = \frac{1}{(2p_1\cdot p_3 + M^2_V)^2} \frac{1}{(2p_2\cdot p_4 + M^2_V)^2}
+\end{eqnarray}
+从上面的讨论中可以得出下面定性关系
+\begin{eqnarray}
+p_1\simeq p_3 \, \quad p_2\simeq p_4
+\end{eqnarray}
+通过这样的近似，我们可以推出压低因子粗略为$\left(\frac{M^2_V}{2p_3\cdot p_4}\right)^2$，由于末态粒子的
+不变质量($s_{34} = 2p_3\cdot p_4$)较大($\mathcal{O}(TeV)$)，所以t道图与u道图的干涉效应很小，在计算中
+只需考虑这些干涉的领头阶就足够了。
+
+\subsection{结构函数}
+结构函数法最早应用于计算双光子对撞产生轻子对\cite{SF:twophoton}过程，随后就被推广到强子对撞机上
+\cite{SF:Lindfors}，在此基础之上，韩涛等人\cite{SF:Han}用结构函数法首次计算了VBF道单Higgs产生的次领头阶
+QCD修正。为了把此方法推广到次次领头阶QCD的修正计算上，需要证明其它贡献都可以忽略\cite{big-vbf}。
+为了方便分析，我们仍旧以单Higgs产生为例。在领头阶，非因子化贡献(不能表达成图(\ref{fig:singleHiggs}))可以
+分为非VBF过程的s道贡献图和VBF过程图的干涉效应。s道的图与VBF过程由于动力学机制不同，所以当我们施加VBF事例
+截断(cut)后，s道图的贡献可以完全忽略\cite{DD:VBF}。VBF图之间的干涉效应在领头阶及QCD修正比较小
+\cite{DD:VBF}，所以只需在最终的结果上计入领头阶的干涉效应就行了。
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.7]{hhjj_fac1.eps} 
+\includegraphics[scale=0.7]{hhjj_fac2.eps} 
+\caption{VBF道产生单个Higgs粒子的次领头阶可因子化的费曼图}
+\label{fig:vbfFac}
+\end{figure}
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.7]{hhjj_nonfac1.eps} 
+\includegraphics[scale=0.7]{hhjj_nonfac2.eps} 
+\caption{VBF道产生单个Higgs粒子的次领头阶不可因子化的费曼图}
+\label{fig:vbfNonfac}
+\end{figure}
+
+在次领头阶的计算当中，由于色守恒，只有可因子化为VBF过程的贡献不为零。$pp\to Hjj$的次领头阶QCD修正
+(虚修正和实辐射部分)可以分为两类：一类是胶子仅连接一条夸克线，也称为可因子化部分
+(参考图(\ref{fig:vbfFac}))；另一类是胶子连接两条夸克线，称为不可因子化部分(参考图(\ref{fig:vbfNonfac}))。
+一个比较有趣的现象是由于色守恒的原因这些非因子化的图的贡献为零。解释这种现象可以利用QCD的SU(3)群的性质：
+由于非因子化图中包含单个的Gell-Mann色矩阵$Tr[t_a] = 0$。
+
+为了讨论更高阶的贡献，总截面可以写成
+\begin{eqnarray}
+\sigma_{NNLO} = \sigma_0(1 + \alpha_s\Delta_1 + \alpha^2_s\Delta_2)
+\end{eqnarray}
+其中$\Delta_2 = \Delta^{fact}_2 + \Delta^{non-fact}_2$。然而精确的计算$\Delta^{non-fact}_2$是超出目前的
+计算能力的。文献\cite{big-vbf}中详细讨论的非因子化过程与可因子化过程的比值，结果显示这些高阶的非因子化
+过程的贡献可以忽略掉。
+
+
+下面我们讨论可因子化图的实辐射过程是否会改变拓扑图(\ref{fig:singleHiggs})，也即是说实辐射粒子对VBF特征
+信号的影响。为了简单起见，我们首先讨论在软胶子近似下的情况。假定胶子动量为$k < p_i$且从Born图
+(\ref{fig:vbfborn})上辐射出来，这胶子－夸克－夸克费曼规则简化为
+\begin{eqnarray}
+V^{\mu}_{qqg,soft} = 2g_s T^a_{ij} p^{\mu}
+\end{eqnarray}
+其中$p$是夸克的动量，$a,\mu$分别为胶子的色和洛伦兹指标，此外$i,j$为出射和入射夸克的色指标。
+VBF的Born图上实辐射一个极化为$\epsilon_g$的胶子的幅度为
+\begin{eqnarray}
+\mathcal{M}^{VBF}_{soft} = g_s T^a_{ij}\left(\frac{p_1\cdot \epsilon_g}{p_1\cdot k} -
+\frac{p_3\cdot\epsilon_g}{p_3\cdot k} \right)\mathcal{M}^{VBF}_{LO}
+\end{eqnarray}
+因此，部分子层次上的微分截面可以写成
+\begin{eqnarray}
+d\sigma^{VBF}_{soft} = d\sigma^{VBF}_{LO} \frac{\alpha_s C_F}{\pi}\frac{dk^0}{k^0}\frac{d\phi}{2\pi}
+d\cos\theta_g\frac{1-\cos\theta_{13}}{(1-\cos\theta_{1g})(1-\cos\theta_{3g})}
+\end{eqnarray}
+上式中$\theta_{ij}$是粒子$i,j$之间的夹角：
+\begin{eqnarray}
+\cos\theta_{ij} = \frac{\vec{p}_i\cdot \vec{p}_j}{|\vec{p}_i||\vec{p}_j|}
+\end{eqnarray}
+将上式改写为
+\begin{eqnarray}
+&& \frac{1-\cos\theta_{13}}{(1-\cos\theta_{1g})(1-\cos\theta_{3g})} = \nonumber \\
+&=& \frac{1}{2}\left[\left(\frac{1-\cos\theta_{13}}{(1-\cos\theta_{1g})(1-\cos\theta_{3g})} +
+\frac{1}{1-\cos\theta_{1g}} - \frac{1}{1-\cos\theta_{3g}}
+\right) + (1\leftrightarrow3)\right] \nonumber \\
+&=& W_1 + W_3
+\end{eqnarray}
+这样$W_i$只包含$\theta_{ig}\to 0$时的共线发散。$W_i$具有下面的性质
+\begin{eqnarray}
+\int\limits^{2\pi}_{0} \frac{d\phi}{2\pi} W_i = \frac{1}{1-\cos\theta_{ig}}\Theta(\theta_{13}-\theta_{ig})
+\label{eqn:wiProperty}
+\end{eqnarray}
+方程(\ref{eqn:wiProperty})具有非常重要的物理意义：在软胶子近似下，胶子只是从夸克上小角度辐射出来或者说，
+大角度辐射是被压制的。这种现象称为角度序(angular ordering)。接着我们证明角度序的条件
+(\ref{eqn:wiProperty})。以$W_1$为例，把动量$\vec{p}_1,\vec{p}_3,\vec{k}$参数化成
+\begin{eqnarray}
+\vec{p}_1 &=& |\vec{p}_1|(0, 0, 1)\,, \nonumber \\
+\vec{p}_2 &=& |\vec{p}_3|(\sin\theta_{13}, 0, \cos\theta_{13}), \nonumber \\
+\vec{k}   &=& |\vec{k}| (\sin\theta_{1g}\cos\phi, \sin\theta_{1g}\sin\phi, \cos\theta_{1g}) 
+\end{eqnarray}
+角度$\theta_{13}$与胶子的轴角有如下关系
+\begin{eqnarray}
+\cos\theta_{3g} = \sin\theta_{13}\sin\theta_{1g}\cos\phi + \cos\theta_{13}\cos\theta_{1g}
+\end{eqnarray}
+并且可以写成如下形式
+\begin{equation}
+\begin{split}
+& 1-\cos\theta_{3g} = a - b \cos\theta \nonumber \\
+& a = 1 - \cos\theta_{13}\cos\theta_{1g} \\
+& b = \sin\theta_{13}\sin\theta_{1g}
+\end{split}
+\end{equation}
+定义$z = exp(i\phi)$，则
+\begin{eqnarray}
+I_1 \equiv \int^{2\pi}_0 \frac{d\phi}{2\pi} \frac{1}{1-\cos\theta_{3g}} = \frac{1}{i\pi b}
+\oint \frac{z}{(z-z_+)(z-z_-)}
+\end{eqnarray}
+其中$z_{\pm}$为
+\begin{eqnarray}
+z_{\pm} = \frac{a}{b} \pm \sqrt{\frac{a^2}{b^2} - 1}
+\end{eqnarray}
+利用留数定理可得
+\begin{eqnarray}
+I_1 = \sqrt{\frac{1}{a^2-b^2}} = \frac{1}{|\cos\theta_{1g}- \cos\theta_{13}|}
+\end{eqnarray}
+利用上式我们最终可以证明关系式(\ref{eqn:wiProperty})：
+\begin{eqnarray}
+\int^{2\pi}_0 &=& \frac{1}{2(1-\cos\theta_{1g})}[1+(\cos\theta_{1g}-\cos\theta_{13})]I_1
+\nonumber \\
+&=& \begin{cases}
+\frac{1}{2(1-\cos\theta_{1g})} & if~\theta_{1g} < \theta_{13} \\
+0 & else
+\end{cases}
+\end{eqnarray}
+从上面的分析中可以推测出VBF过程的实辐射胶子总是靠近被辐射的夸克，所以高阶辐射修正后的VBF信号特征与Born
+过程类似。
+
+基于上述分析，下面详细讨论如何用结构函数法计算VBF过程产生Higgs粒子的截面。VBF产生n个Higgs粒子
+的微分截面可以表示成\cite{SF:Han,big-vbf}
+\begin{eqnarray}
+d\sigma
+&=&
+\sum_{(V_1 V_2)}
+\frac{1}{2 S} 2 G_F^2 M^2_{V_1} M^2_{V_2}
+\frac{1}{\left( Q^2_1 + M^2_{V_1} \right)^2}
+\frac{1}{\left( Q^2_2 + M^2_{V_2} \right)^2} 
+\nonumber \\
+&& \times
+W_{\mu \nu}^{V_1}(x_1, Q^2_1)
+{\cal M}^{\mu \rho}_{V_1 V_2}
+{\cal M}^{\ast \nu \sigma}_{V_1 V_2}
+W_{\rho \sigma}^{V_2}(x_2, Q^2_2) \nonumber \\
+&&
+\times
+\frac{d^3 \vec{P}_{X_1}}{\left( 2 \pi \right)^3 2 E_{X_1}}
+\frac{d^3 \vec{P}_{X_2}}{\left( 2 \pi \right)^3 2 E_{X_2}}
+d s_1 d s_2
+d PS_n(k_1,\ldots k_n)
+\nonumber \\
+&& \times
+\left( 2 \pi \right)^4 \delta^4 \left( P_1 + P_2 - P_{X_1} - P_{X_2} - \sum_{j=1,\ldots,n} k_j \right)
+\label{eq:sfapproach}
+\end{eqnarray}
+其中，$(V_1 V_2) = (ZZ), (W^+W^-), (W^-W^+)$，$G_F$是费米子常数，$\sqrt{S}$是质子的质心系对撞能量，
+$dPS_n(k_1,\ldots,k_n)$表示末态n个Higgs粒子的相空间。对于单Higgs和双Higgs产生的相空间为
+\begin{eqnarray}
+dPS(P_H) &=& \frac{d^3P_H}{(2\pi)^3 2 E_H} \nonumber \\
+dPS(k_1,k_2) &=& \frac{d^3k_1}{(2\pi)^3 2 E_1} \frac{d^3k_2}{(2\pi)^3 2 E_2}
+\end{eqnarray}
+另外，$M^{\mu\nu}_{V_1V_2}$表示VBF过程的矩阵元，对于单Higgs产生为$V_1(-q_1) + V_2(-q_2)\to H(p_H)$的幅度，
+而对于双Higgs粒子产生为$V_1(-q_1) + V_2(-q_2)\to h^0(k_1) + h^0(k_2)$的幅度。物理能标$Q$为
+$Q^2_i = -q^2_i$~($i=1,2$)。$x_i = Q^2_i/(2P_i\cdot q_i)$是通常的深度非弹(DIS)变量，$s_i = (P_i+q_i)^2$
+是第i个质子碰撞后的残余物。关于相空间的最终简化形式可以参考附录\ref{chap:HiggsPairPS}，下面我们详细讨论
+强子结构张量和矢量玻色子聚合过程的矩阵元。
+
+深度非弹的强子张量$W_{\mu \nu}^V(x, Q^2)$可以表示成通常的深度非弹结构函数$F_j^V(x_i, Q_i^2)$
+(i=1,2,~j = 1, 2, 3)：
+\begin{eqnarray}
+\label{eq:disWmunu} W_{\mu \nu}^{V}(x_i, Q_i^2) &=& \left( -g_{\mu
+\nu} + \frac{q_{i,\mu} q_{i,\nu}}{q_i^2} \right) F_{1}^{V}(x_i,
+Q_i^2) + \frac{\hat{P}_{i,\mu} \hat{P}_{i,\nu}}{P_i \cdot q_i}
+F_{2}^{V}(x_i, Q_i^2) 
+\nonumber \\
+&+& 
+i \epsilon_{\mu \nu \alpha \beta}
+\frac{P_i^\alpha q_i^\beta}{2 P_i \cdot q_i} F_{3}^{V}(x_i,
+Q_i^2),~~ (V = Z, W^{\pm})
+\end{eqnarray}
+其中，$\epsilon_{\mu\nu\alpha\beta}$是全反对称张量，动量${\hat P}_i$的定义为
+\begin{equation}
+\label{eq:def-Phat} \hat{P}_{i,\mu} = P_{i,\mu} - \frac{P_i \cdot
+q_i}{q_i^2} q_{i,\mu}
+\end{equation}
+由于QCD的因子化定理，结构函数可以表达成部分子PDF和短距(short-distance)Wilson系数函数$C_i$的卷积。
+我们用$g(x,\mu_F)$来表示胶子在能标$\mu_F$时的PDF，对于特定味道i的夸克和反夸克的PDF为$q_i(x,\mu_F)$和
+$\bar{q}_i(x,\mu_F)$。通常用下面组合的PDF来计算
+\begin{eqnarray}
+\begin{split}
+& ~q_{{\rm s}} = \sum_{i=1}^{n_f} \left( q_i + \bar{q}_i \right),
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  (\mbox{singlet}), \\
+& q_{{\rm ns}}^{{\rm v}} = \sum_{i=1}^{n_f} \left( q_i - \bar{q}_i
+\right),~~~ q^{\pm}_{{\rm ns}, ij} = \left( q_i \pm \bar{q}_i
+\right) - \left( q_j \pm \bar{q}_j \right),~~~~~~
+(\mbox{non-singlets}) \\
+& q^+_{ns,i} = (q_i + \bar{q}_i) - q_s\,, \quad q^-_{ns,i} =  (q_i-\bar{q}_i) - q^v_{ns} \,,
+\quad (\mbox{non-singlets})
+\end{split}
+\end{eqnarray}
+
+对于交换$Z$玻色子的中性流，深度非弹结构函数$F^Z_i~(i=1,2,3)$可以表示成
+\begin{eqnarray}
+\label{eq:DISF-Z}
+F_{i}^{Z}(x, Q^2)
+&=&
+2 f_i(x)
+\int_0^1 d y \int_0^1 d z \delta(x - y z) \sum_{j=1}^{n_f} \left( v_j^2 + a_j^2 \right) \nonumber \\
+&\times&
+\Big[
+q^{+}_{{\rm ns}, j}(y, \mu_f) C^{+}_{i, {\rm ns}}(z, Q, \mu_r, \mu_f)
++
+q_{{\rm s}}(y, \mu_f) C_{i, {\rm q}}(z, Q, \mu_r, \mu_f)
+\nonumber \\
+&& +
+g(y, \mu_f) C_{i, {\rm g}}(z, Q, \mu_r, \mu_f)
+\Big], \nonumber \\
+F_{3}^{Z}(x, Q^2)
+&=&
+2 f_3(x)
+\int_0^1 d y \int_0^1 d z \delta(x - y z) \sum_{j=1}^{n_f} 2 v_j a_j \nonumber \\
+&&
+\times
+\Big[
+q^{-}_{{\rm ns}, j}(y, \mu_f) C^{-}_{3, {\rm ns}}(z, Q, \mu_r, \mu_f)
++
+q_{{\rm ns}}^{{\rm v}}(y, \mu_f) C_{3, {\rm ns}}^{{\rm v}}(z, Q, \mu_r, \mu_f)
+\Big]
+\nonumber \\
+\end{eqnarray}
+其中$i=1,2$，$f_1(x) = 1/2$，$f_2(x) = x$，$f_3(x) = 1$。上式中的$v_i$和$a_i$为
+\begin{eqnarray}
+v_i = I_i^3 - 2 Q_i \sin^2\theta_W \,,\quad
+a_i = I_i^3
+\end{eqnarray}
+其中$Q_i$和$I^3_i$分别为夸克$q_i$的电荷和弱同位旋第三分量。对于交换$W$玻色子的带电流，深度非弹结构函数
+$F^{W^{\pm}_i}~(i=1,2,3)$的表达式为
+\begin{eqnarray}
+\label{eq:DISF-W}
+F_{i}^{W^{\mp}}(x, Q^2)
+&=&
+f_i(x)
+\int_0^1 d y \int_0^1 d z \delta(x - y z) \frac{1}{n_f} \sum_{j=1}^{n_f} \left( v_j^2 + a_j^2 \right) \nonumber \\
+&\times&
+\Big[
+\pm \delta q^{-}_{{\rm ns}}(y, \mu_f) C^{-}_{i, {\rm ns}}(z, Q, \mu_r, \mu_f)
++
+q_{{\rm s}}(y, \mu_f) C_{i, {\rm q}}(z, Q, \mu_r, \mu_f)
+\nonumber \\
+&&+ g(y, \mu_f) C_{i, {\rm g}}(z, Q, \mu_r, \mu_f)
+\Big], \nonumber \\
+F_{3}^{W^{\mp}}(x, Q^2)
+&=&
+f_3(x)
+\int_0^1 d y \int_0^1 d z \delta(x - y z) \frac{1}{n_f} \sum_{j=1}^{n_f} 2 v_j a_j \nonumber \\
+&\times&
+\Big[
+\pm \delta q^{+}_{{\rm ns}}(y, \mu_f) C^{+}_{3, {\rm ns}}(z, Q, \mu_r, \mu_f)
++
+q_{{\rm ns}}^{{\rm v}}(y, \mu_f) C_{3, {\rm ns}}^{{\rm v}}(z, Q, \mu_r, \mu_f)
+\Big] \nonumber \\
+\end{eqnarray}
+上式中的$v_i$和$a_i$为
+\begin{eqnarray}
+v_i = a_i = \frac{1}{\sqrt{2}}
+\end{eqnarray}
+可以看出结构函数仅依赖标度因子x、$Q^2$、重整化能标$\mu_r$和因子化能标$\mu_f$。
+
+公式(\ref{eq:DISF-Z})和(\ref{eq:DISF-W})中的Wilson系数函数是用来参数化硬的部分子散射过程并且可以按照
+强精细结构常数$\alpha_s$的阶数微扰展开。这些Wilson系数可以从文献读出
+\begin{eqnarray}
+\label{eq:WF-NS-pm}
+C^{\pm}_{i, {\rm ns}}
+&=&
+\delta(1-x)
++ a_s \biggl[ c_{i, {\rm ns}}^{(1), \pm} + L_M P_{{\rm ns}}^{(0), \pm} \biggr] \nonumber \\
+&& +
+a_s^2
+\biggl[ c_{i, {\rm ns}}^{(2), \pm}
++ L_M
+\biggl(
+P_{{\rm ns}}^{(1), \pm} + c_{i, {\rm ns}}^{(1), \pm} \otimes (P_{{\rm ns}}^{(0), \pm} - \beta_0)
+\biggr)
+\nonumber \\
+&&
++ L_M^2
+\biggl(
+\frac{1}{2} P_{{\rm ns}}^{(0), \pm} \otimes (P_{{\rm ns}}^{(0), \pm} - \beta_0)
+\biggr)
+\nonumber \\
+&& +
+\left.
+\beta_0 L_R
+\biggl( c_{i, {\rm ns}}^{(1), \pm} + L_M P_{{\rm ns}}^{(0), \pm} \biggr)
+\biggr]
+\right., \qquad (i = 1, 2, 3),
+\end{eqnarray}
+
+\begin{eqnarray}
+\label{eq:WF-S-quark}
+C_{i, {\rm q}}
+&=&
+\delta(1-x)
++ a_s \biggl[ c_{i, {\rm q}}^{(1)} + L_M P_{{\rm qq}}^{(0)} \biggr] \nonumber \\
+&& +
+\left.
+a_s^2
+\biggl[ c_{i, {\rm q}}^{(2)}
++ L_M
+\biggl(
+P_{{\rm qq}}^{(1)} + c_{i, {\rm q}}^{(1)} \otimes (P_{{\rm qq}}^{(0)} - \beta_0)
++ c_{i, {\rm g}}^{(1)} \otimes P_{{\rm gq}}^{(0)}
+\biggr)
+\right. \nonumber \\
+&& +
+\left.
+L_M^2
+\biggl(
+\frac{1}{2} P_{{\rm qq}}^{(0)} \otimes (P_{{\rm qq}}^{(0)} - \beta_0)
++ \frac{1}{2} P_{{\rm qg}}^{(0)} \otimes P_{{\rm gq}}^{(0)}
+\biggr)
+\right. \nonumber \\
+&& +
+\left.
+\beta_0 L_R
+\biggl( c_{i, {\rm q}}^{(1)} + L_M P_{{\rm qq}}^{(0)} \biggr)
+\biggr]
+\right., \qquad (i = 1, 2),
+\end{eqnarray}
+\begin{eqnarray}
+\label{eq:WF-S-gluon}
+C_{i, {\rm g}}
+&=&
+a_s \biggl[ c_{i, {\rm g}}^{(1)} + L_M P_{{\rm qg}}^{(0)} \biggr] \nonumber \\
+&& +
+\left.
+a_s^2
+\biggl[ c_{i, {\rm g}}^{(2)}
++ L_M
+\biggl(
+P_{{\rm qg}}^{(1)} + c_{i, {\rm q}}^{(1)} \otimes P_{{\rm qg}}^{(0)}
++ c_{i, {\rm g}}^{(1)} \otimes (P_{{\rm gg}}^{(0)} - \beta_0)
+\biggr)
+\right. \nonumber \\
+&& +
+\left.
+L_M^2
+\biggl(
+\frac{1}{2} P_{{\rm qq}}^{(0)} \otimes P_{{\rm qg}}^{(0)}
++ \frac{1}{2} P_{{\rm qg}}^{(0)} \otimes (P_{{\rm gg}}^{(0)} - \beta_0)
+\biggr)
+\right. \nonumber \\
+&& +
+\left.
+\beta_0 L_R
+\biggl( c_{i, {\rm g}}^{(1)} + L_M P_{{\rm qg}}^{(0)} \biggr)
+\biggr]
+\right., \qquad (i = 1, 2)
+\end{eqnarray}
+其中，$a_s =  \alpha_s(\mu_r)/(4\pi)$，$L_M = \ln(Q^2/\mu^2_f)$，$L_R = \ln(\mu^2_r/\mu^2_f)$，
+$\beta_0 = (11 C_A - 2 n_f)/3$是单圈beta函数的系数，此外$\otimes$表示标准的Mellin卷积。另外劈裂函数和
+系数函数具有如下关系
+\begin{eqnarray}
+P_{{\rm ns}}^{(0), \pm}
+=
+P_{{\rm qq}}^{(0)},~~~~~~~~~~~~~~~~~~~~~
+c_{i, {\rm ns}}^{(1), \pm}
+=
+c_{i, {\rm q}}^{(1)},~~~~
+(i = 1, 2, 3)
+\end{eqnarray}
+双圈阶的夸克到夸克劈裂函数和夸克单态的深度非弹系数函数$c^{(2)}_{i,q}$通常表达为
+\begin{eqnarray}
+P_{{\rm qq}}^{(1)} = P_{{\rm ns}}^{(1), +} + P_{{\rm ps}}^{(1)},~~~~~~~~~~~~~~~~~~~~~
+c_{i, {\rm q}}^{(2)} = c_{i, {\rm ns}}^{(2), +} + c_{i, {\rm ps}}^{(2)},~~~~(i = 1, 2)
+\end{eqnarray}
+上式中的$P_{{\rm ps}}^{(1)}$和$c_{i, {\rm ps}}^{(2)}$是纯单态部分精确到$\alpha^2_s$的贡献。所有的深度非弹
+系数函数$c_{i, {\rm q}}^{(1)}$，$c_{3, {\rm q}}^{(1)}$，$c_{i, {\rm g}}^{(1)}$，
+$c_{i, {\rm ns}}^{(2), \pm}$，$c_{i, {\rm ps}}^{(2)}$，$c_{i, {\rm g}}^{(2)}$ $(i = 1, 2)$和劈裂函数
+$P_{{\rm qq}}^{(0)}$, $P_{{\rm qg}}^{(0)}$，$P_{{\rm gq}}^{(0)}$，$P_{{\rm gg}}^{(0)}$，
+$P_{{\rm ns}}^{(1), \pm}$，$P_{{\rm ps}}^{(1)}$，$P_{{\rm qg}}^{(1)}$可以在文献\cite{vanNeerven:1999ns,
+vanNeerven:1999distl,vanNeerven:2000uj,Vermaseren:2005qc,Moch:2008fj}中找到。这些系数函数和劈裂函数可以
+表示成调和多重对数函数$H_{\vec{m}}(x)/(1 \pm x)$ \cite{Remiddi:1999ew}。在计算中，我们采用Fortran程序
+HPLOG\cite{Gehrmann}实现数值计算这些特殊函数。
+
+下面我们讨论公式(\ref{eq:sfapproach})中VBF聚合部分的矩阵元$\mathcal{M}^{\mu\nu}_{V_1V_2}$。对于$W^+W^-$和
+$ZZ$聚合生成单个标准模型Higgs粒子的矩阵元为
+\begin{eqnarray}
+\mathcal{M}^{\mu\nu}_{WW} &=& 2(\sqrt{2}G_F)^{1/2}m^2_W g^{\mu\nu} \,, \nonumber \\
+\mathcal{M}^{\mu\nu}_{ZZ} &=& 2(\sqrt{2}G_F)^{1/2}m^2_Z g^{\mu\nu}
+\end{eqnarray}
+最终我们可以求得$WW$或$ZZ$聚合的平方强子张量：
+\begin{eqnarray}
+ \label{eq:WMMW-SM}
+{\lefteqn{
+ W_{\mu\nu} \left(x_1, Q^2_1\right)\mathcal M^{\mu\rho} \mathcal {M^*}^{\nu\sigma} W_{\rho\sigma}\left(x_2,Q^2_2\right) 
+\,=\, 4 \sqrt 2 G_F M_{V_i}^4 \, \times 
+}} 
+\nonumber\\
+&\times&
+     \left\{ F_1 \left(x_1, Q^2_1\right) F_1 \left(x_2,Q^2_2\right) \left[2+\frac{ (q_1\cdot q_2)^2}{q_1^2 q_2^2}\right]+ \right. 
+\nonumber\\
+& &
+     +\frac{ F_1 \left(x_1, Q^2_1\right) F_2 \left(x_2,Q^2_2\right) }{P_2\cdot q_2}
+ \left[  \frac{ (P_2 \cdot q_2)^2 }{q_2^2} +\frac{1}{q_1^2}\left(P_2\cdot q_1-\frac{P_2 \cdot q_2}{q_2^2} q_1 \cdot q_2\right)^2\right] 
+\nonumber\\
+& &
+     +\frac{ F_2 \left(x_1, Q^2_1\right) F_1 \left(x_2,Q^2_2\right) }{P_1\cdot q_1}
+ \left[  \frac{ (P_1 \cdot q_1)^2 }{q_1^2} +\frac{1}{q_2^2}\left(P_1\cdot q_2-\frac{P_1 \cdot q_1}{q_1^2} q_1 \cdot q_2\right)^2\right] 
+\nonumber\\
+& &
+    +\frac{ F_2 \left(x_1, Q^2_1\right) F_2 \left(x_2,Q^2_2\right) }{(P_1\cdot q_1) (P_2\cdot q_2)} 
+\, \times
+\nonumber\\
+& &
+\hspace*{5mm} \times
+ \left(P_1\cdot P_2 - \frac{(P_1\cdot q_1)  (P_2\cdot q_1)}{q_1^2} - \frac{(P_1\cdot q_2) (P_2\cdot q_2)}{q_2^2} 
+   +\frac{(P_1\cdot q_1) (P_2\cdot q_2) (q_1\cdot q_2)}{q_1^2 q_2^2} \right)^2 
+\nonumber\\
+& &
+    \left. +\frac{ F_3 \left(x_1, Q^2_1\right) F_3 \left(x_2,Q^2_2\right) }{2 (P_1\cdot q_1) (P_2\cdot q_2)} 
+          \biggl((P_1\cdot P_2) (q_1 \cdot q_2) - (P_1 \cdot q_2) (P_2\cdot q_1) \biggr)
+ \right\}
+\end{eqnarray}
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.7]{hhjj_WW.eps}
+\caption{$ZZ \rightarrow h^0 h^0$聚合过程的费曼图。}
+\label{fig:zzfusion}
+\end{figure}
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.7]{hhjj_ZZ.eps}
+\caption{$W^+ W^- \rightarrow h^0 h^0$聚合过程的费曼图。}
+\label{fig:wwfusion}
+\end{figure}
+
+
+对于双Higgs产生过程，上面的矢量玻色子聚合部分的矩阵元就会变得很复杂，所以需要结合自动化的程序来计算，
+例如利用FeynArts产生矩阵元然后利用FeynCalc\cite{feyncalc}程序包计算平方后的强子矩阵元。过程
+$W^+(-q_1) + W^-(-q_2)\rightarrow h^0(k_1) + h^0(k_2)$和
+$Z(-q_1) + Z(-q_2)\rightarrow h^0(k_1) + h^0(k_2)$的费曼图分别如图(\ref{fig:zzfusion})和
+(\ref{fig:wwfusion})所示。$W^+(-q_1) + W^-(-q_2) \to h^0(k_1) + h^0(k_2)$聚合过程的矩阵元为
+\begin{eqnarray} \label{eq:WWfusion}
+{\mathcal M}^{\mu\nu}_{W^+W^-} &=& \sqrt{2} G_F M_W^2   \nonumber \\
+&\times&
+\left\{
+g^{\mu\nu} \left[ 2 + 4 \sin^2(\beta - \alpha) \left(
+\frac{M_W^2}{(q_1 + k_1)^2 - M_W^2} + \frac{M_W^2}{(q_1 + k_2)^2 -
+M_W^2} \right) \right.
+\right. \nonumber \\
+&+&
+\left.
+\frac{6 \sin(\beta - \alpha) \left(2 \cos(\beta + \alpha) + \sin2\alpha \sin(\beta - \alpha)\right)}{\sin 2\beta}
+\frac{m_{h^0}^2}{(q_1 + q_2)^2 - m_{h^0}^2}
+\right. \nonumber \\
+&+&
+\left.
+\frac{2 \cos^2(\beta - \alpha) \sin2\alpha}{\sin 2\beta}
+\frac{m_{H^0}^2 + 2 m_{h^0}^2}{(q_1 + q_2)^2 - m_{H^0}^2}
+\right] \nonumber \\
+&+&
+\left.
+(q_1 + 2 k_1)^{\mu} (q_2 + 2 k_2)^{\nu}
+\left[
+\frac{\cos^2(\beta - \alpha)}{(q_1 + k_1)^2-m_{H^{\pm}}^2} + \frac{\sin^2(\beta - \alpha)}{(q_1 + k_1)^2 - M_W^2}
+\right]
+\right. \nonumber \\
+&+&
+\left.
+(q_1 + 2 k_2)^{\mu} (q_2 + 2 k_1)^{\nu}
+\left[
+\frac{\cos^2(\beta - \alpha)}{(q_1 + k_2)^2-m_{H^{\pm}}^2} + \frac{\sin^2(\beta - \alpha)}{(q_1 + k_2)^2 - M_W^2}
+\right]
+\right\}
+\nonumber \\
+\end{eqnarray}
+$Z(-q_1) + Z(-q_2) \rightarrow h^0(k_1) + h^0(k_2)$聚合过程的矩阵元为
+\begin{eqnarray}
+\label{eq:ZZfusion}
+{\mathcal M}^{\mu\nu}_{ZZ}
+&=&
+ \sqrt{2} G_F M_Z^2 \nonumber \\
+&\times&
+\left\{
+g^{\mu\nu}
+\left[
+2 + 4 \sin^2(\beta - \alpha)
+\left(
+\frac{M_Z^2}{(q_1 + k_1)^2 - M_Z^2} + \frac{M_Z^2}{(q_1 + k_2)^2 - M_Z^2}
+\right)
+\right.
+\right. \nonumber \\
+&+&
+\left.
+\frac{6 \sin(\beta - \alpha) \left(2 \cos(\beta + \alpha) + \sin2\alpha \sin(\beta - \alpha)\right)}{\sin 2\beta}
+\frac{m_{h^0}^2}{(q_1 + q_2)^2 - m_{h^0}^2}
+\right. \nonumber \\
+&+& 
+\left.
+\frac{2 \cos^2(\beta - \alpha) \sin2\alpha}{\sin 2\beta}
+\frac{m_{H^0}^2 + 2 m_{h^0}^2}{(q_1 + q_2)^2 - m_{H^0}^2}
+\right] \nonumber \\
+&+&
+\left.
+(q_1 + 2 k_1)^{\mu} (q_2 + 2 k_2)^{\nu}
+\left[
+\frac{\cos^2(\beta - \alpha)}{(q_1 + k_1)^2-m_{A^0}^2} + \frac{\sin^2(\beta - \alpha)}{(q_1 + k_1)^2 - M_Z^2}
+\right]
+\right. \nonumber \\
+&+&
+\left.
+(q_1 + 2 k_2)^{\mu} (q_2 + 2 k_1)^{\nu}
+\left[
+\frac{\cos^2(\beta - \alpha)}{(q_1 + k_2)^2-m_{A^0}^2} + \frac{\sin^2(\beta - \alpha)}{(q_1 + k_2)^2 - M_Z^2}
+\right]
+\right\}
+\nonumber \\
+\end{eqnarray}
+对于过程$W^-(-q_1) + W^+(-q_2) \rightarrow h^0(k_1) + h^0(k_2)$，该过程的矩阵元等同于过程
+${\mathcal M}^{\mu\nu}_{W^-W^+} = {\mathcal M}^{\mu\nu}_{W^+W^-}$。当$m_{H^0} > 2 m_{h^0}$时，我们采用
+固定宽度方案并做替换$m^2_{H^0}\to m^2_{H^0} - i\Gamma_{H^0} m_{H^0}$。
+
+最终双Higgs粒子产生过程的强子平方矩阵元可以表示成
+\begin{eqnarray}
+W_{\mu \nu}^{V_1}(x_1, Q^2_1) {\cal M}^{\mu
+\rho}_{V_1 V_2} {\cal M}^{\ast \nu \sigma}_{V_1 V_2} W_{\rho
+\sigma}^{V_2}(x_2, Q^2_2) = \sum_{i,j=1}^3 C_{ij}^{V_1 V_2}
+F_i^{V_1}(x_1, Q^2_1) F_j^{V_2}(x_2, Q^2_2) \nonumber \\
+\label{eq:squaredht} 
+\end{eqnarray}
+其中$C_{ij}^{V_1 V_2}$需要用FeynCalc\cite{feyncalc}程序包自动推导。
+
+最后讨论整个程序的实现流程：
+\begin{enumerate}
+\item 首先简化结构函数法表示的微分截面(\ref{eq:sfapproach})的相空间。虽然文献\cite{big-vbf}中的附录提供了
+一种参数化相空间的方法，但在这种方法下推导参数化后的积分变量的范围是一件很困难的事，且结果不直观。
+我们在附录\ref{chap:HiggsPairPS}提供了一种新的相空间推导方式，该参数化方法首先把VBF过程的相空间变换到
+部分子层次上的相空间，然后就可以用通常的相空间级联因子化的方法产生相空间，且这些积分变量的范围很容易确定。
+\item 其次我们要计算被积函数－强子平方矩阵元。这些矩阵元中比较困难的就是计算矢量玻色子$W/Z$的结构函数。
+结构函数最终可以表示成已知的劈裂函数和Wilson系数函数的卷积，这样需要一维积分才能计算出来。但整个程序还要
+对相空间进行积分，所以我们必须重新改写结构函数的形式：
+\begin{eqnarray}
+F(x) = \int\limits^{x}_{0} dy g(y) = \int\limits^1_0 dz x g(xz) \nonumber \\
+\end{eqnarray}
+两个结构函数相乘为
+\begin{eqnarray}
+F_1(x)F_2(x) = \int\limits^1_0 \int\limits^1_0 dz_1 dz_2 x^2 g_1(xz_1) g_2(xz_2)
+\end{eqnarray}
+积分变量$z_1$和$z_2$最终可以和相空间的积分变量放在一起做数值积分。
+\item 积分程序可以采用通常的Monte Carlo程序VEGAS\cite{vegas}。被积分函数中的劈裂函数和系数函数的卷积要
+提前推导好，因为这些函数中包含Plus函数，最终遇到的特殊函数可以用HPLOG程序计算。VBF聚合部分的矩阵元和
+$C_{ij}^{V_1 V_2}$用FeynArts和FeynCalc自动推导。所以整个程序具有相当高的自动化程度，可以计算单个和两个
+Higgs粒子产生过程，也可以计算新模型(利用FeynArts中的Model文件或用FeynRules\cite{feynrules}自动生成)
+下的Higgs粒子产生过程。
+\end{enumerate}
+
+\section{数值结果与讨论}
+在本节我们给出过程$pp\to h^0h^0+2jets$的总的积分截面和轻的CP为偶的Higgs粒子对的微分分布。我们选取质子对撞
+的质心系能量$\sqrt{S}$分别为14、33和100~TeV，此外计算采用的方法为结构函数法并精确到QCD次次领头阶。在数值
+计算的时候我们采用如下电弱参数：
+\begin{eqnarray}
+M_W = 80.385~ {\textrm GeV},\;
+M_Z = 91.1876~ {\textrm GeV},\;
+G_F = 1.1663787 \times 10^{-5}~ {\textrm GeV}^{-2}
+\end{eqnarray}
+Weinberg角采用在壳方案定义为$\sin^2\theta_W = 1 - M_W^2/M_Z^2$。我们采用2HDM类型II的基准点B1和B2
+作为输入参数。为了展示和比较，我们用表格(\ref{tab:benchmark})列出了这两个基准点。B1和B2两个基准点
+满足文献\cite{sushufang:2hdm}中的所有的理论和实验约束。对于基准点B1，有关系$m_{H^0} > 2m_{h^0}$且存在
+$H^0\to h^0h^0$的共振效应。然而对于基准点B2并不存在共振效应，所以B2的结果应该和标准模型类似。
+
+\begin{table}
+  \centering
+  \begin{tabular}{|c|c|c|c|c|c|c|}
+    \hline\hline
+     ~~~~~ & ~$\sin(\beta-\alpha)$ & ~~~~$\tan\beta$~~~~ & $m_{h^0}$~(GeV) & $m_{H^0}$~(GeV)
+     & $m_{A^0}$~(GeV) & $m_{H^{\pm}}$~(GeV) \\
+    \hline
+    B1 & 0.6 & 2 & 126 & 275 & 600 & 600 \\
+    B2 & 1 & 1.5 & 126 & 160 & 380 & 420 \\
+    \hline\hline
+  \end{tabular}
+\caption{2HDM模型下的两个基准点。} 
+\label{tab:benchmark}
+\end{table}
+
+由于计算中涉及到$H^0$粒子的共振，我们用2HDMC程序\cite{cpc:2hdmc}计算$H^0$的总宽度为
+$\Gamma_{H^0} = 5.484~\textrm{GeV}$。我们选取MSTW2008 PDFs\cite{mstw2008}来计算部分子动量密度分布函数与
+Wilson系数函数的卷积。在计算$ZZ$聚合过程的时候，我们把b夸克的质量置为零，且采用五味道方案$n_f = 5$。然而
+在计算$WW$聚合过程的时候，由于初态的b夸克不包含在内(不然末态会产生top夸克)，我们采用$n_f = 4$。
+在下面的分析中为了简单起见，我们选取重整化和因子化能标相等$\mu = \mu_r = \mu_f$，且中心值为
+$\mu^2=-q_i^2=Q^2~(i=1,2)$\footnote{这里$\mu^2=Q^2$是指$\mu_1^2=\mu_{1,f}^2=\mu_{1,r}^2=Q_1^2$且
+$\mu_2^2=\mu_{2,f}^2=\mu_{2,r}^2=Q_2^2$。}。另一方面，为了保证计算的微扰性和数值计算的稳定性，我们设置
+$Q > Q_0 = 2~GeV$，积分总截面与$Q_0$的独立性已通过数值计算检验。
+
+\subsection{总截面对模型参数的依赖}
+VBF道产生轻的CP为偶的Higgs粒子对过程的总截面依赖于2HDM(II)的模型参数(参考矩阵元(\ref{eq:WWfusion})和
+(\ref{eq:ZZfusion}))，例如CP为偶的Higgs粒子的质量，真空期望值$v$，还有两个CP为偶的Higgs粒子的混合角等等。
+在本小节，我们主要讨论VBF道$h^0h^0+2jets$产生过程在$\sqrt{S} = 14~TeV$的时候对2HDM模型参数的依赖性。
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.8]{hhjj_para1.eps}
+\caption{VBF道$h^0 h^0 + 2~ jets$产生过程的领头阶和次次领头阶QCD修正后的总截面对重的CP为偶的Higgs粒子质量
+$m_{H^0}$的依赖。其它参数固定为$\sqrt{S} = 14~TeV$，$\sin(\beta-\alpha) = 0.6$和$\tan\beta = 2$。}
+\label{fig:2HDM-parameter1}
+\end{figure}
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.8]{hhjj_para2.eps}
+\caption{VBF道$h^0 h^0 + 2~ jets$产生过程的领头阶和次次领头阶QCD修正后的总截面对$\tan\beta$的依赖。
+其它参数固定为$\sqrt{S} = 14~TeV$，$\sin(\beta-\alpha) = 0.6$和$m_{H^0} = 275~GeV$。}
+\label{fig:2HDM-parameter2}
+\end{figure}
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.8]{hhjj_para3.eps}
+\caption{VBF道$h^0 h^0 + 2~ jets$产生过程的领头阶和次次领头阶QCD修正后的总截面对$\sin(\beta-\alpha)$的
+依赖。其它参数固定为$\sqrt{S} = 14~TeV$，$\tan\beta = 0.6$和$m_{H^0} = 275~GeV$。}
+\label{fig:2HDM-parameter3}
+\end{figure}
+
+在图(\ref{fig:2HDM-parameter1})中我们展示了领头阶和次次领头阶修正后的总的积分截面与模型参数$m_{H^0}$的
+依赖关系，其它模型参数与基准点B1保持一致。从图中我们可以明显看到，在
+$m_{H^0} \sim 2 m_{h^0} =252~{\rm GeV}$处，总截面突然增大。其缘由是当$m_{H^0} > 2m_{h^0}$时，
+$H^0\to h^0h^0$会产生共振效应。特别是当$m_{H^0} > 260~GeV$的时候，总截面的增长率最大。
+
+图(\ref{fig:2HDM-parameter2})中我们展示了领头阶和次次领头阶QCD修正后的总的积分截面对真空期望值比例(VEV)
+$\tan\beta$的依赖关系。我们同样采用2HDM(II)模型中除$\tan\beta$外的基准点B1中的值，$\tan\beta$的值从
+0.5变化到10。在图中我们可以看到领头阶和次次领头阶修正后的总截面在$\tan\beta\sim 0.75$和6.0的时候分别达到
+最小值和最大值。特别是当$\tan\beta > 4.0$时，领头阶和次次领头阶QCD修正后的总截面都超过了600~fb。
+
+图(\ref{fig:2HDM-parameter3})显示了领头阶和次次领头阶QCD修正后的总截面对模型参数$\sin(\beta-\alpha)$的
+依赖关系，其它参数同样采用基准点B1中的值，例如$\tan\beta = 2$和$m_{H^0} = 275~GeV$。从图中我们还可以
+得出当$\sin(\beta-\alpha) = 0.2$的时候领头阶和次次领头阶修正后的总截面到达最大值，随后在$0.2 < 
+\sin(\beta-\alpha) < 0.9$的时候总截面逐渐减小。
+以上三张图说明了总截面对模型参数的依赖并非单调。
+
+\subsection{总截面的理论不确定度}
+
+\subsubsection{能标不确定度}
+由于我们的计算是基于微扰理论的固定阶计算，所以忽略了更高阶的辐射修正贡献。为了衡量这种理论不确定度，我们
+通过改变重整化或因子化能标$\mu$在一个中心值(接近该过程的物理能标)附近变动。对于VBF过程，我们选取能标的
+变动范围是
+\begin{eqnarray}
+\frac{1}{4} Q \leq \mu = \mu_r = \mu_f \leq 4 Q
+\end{eqnarray}
+其中中心值$Q = -q^2$是矢量玻色子的虚度(virtuality)。当然理想情况下可以采用因子化和重整化能标分别变动，但
+由于计算量的原因，我们假定$\mu_r$始终等于$\mu_f$。
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.7]{hhjj_scale1.eps}
+\includegraphics[scale=0.7]{hhjj_scale2.eps}
+\caption{VBF过程$pp\to h^0 h^0 + 2~ jets$领头阶、次领头阶和次次领头阶QCD修正后的总积分截面对能标的依赖
+关系，其中我们选取质子质心系对撞能量$\sqrt{S} = 14~ {\textrm TeV}$。\\
+(a) 计算选取2HDM(II)的基准点B1。(b) 计算选取2HDM(II)的基准点B2。}
+\label{fig:x-scale}
+\end{figure}
+图(\ref{fig:x-scale})展示了VBF过程$pp\to h^0h^0+2jets$的领头阶、次领头阶和次次领头阶QCD修正后的总截面
+对能标的依赖关系。其中，图(\ref{fig:x-scale}a)和图(\ref{fig:x-scale}b)分别表示在基准点B1和B2处计算
+所得。我们可以看到，领头阶Born过程的总截面随着能标的增大而逐渐减小。其原因是领头阶只与因子化能标有关，且
+当因子化能标增大时，相应夸克和胶子的PDF会较小，所以截面会与能标成反比。对于次领头阶和次次领头阶的总截面，
+由于同时引入$\mu_r$和$\mu_f$，所以依赖关系比较复杂。
+
+\begin{table}
+  \centering
+  \begin{tabular}{|c|c|c|c|}
+   \hline\hline
+     ~~~~~ & $\sigma_{LO}$ (fb) & $\sigma_{NLO}$ (fb) & $\sigma_{NNLO}$ (fb) \\
+    \hline
+    B1 &   ~$311.30^{+32.38~(+10\%)}_{-28.88~(-9\%)}$~     &  ~$333.20^{+2.51~(+0.8\%)}_{-12.08~(-3.6\%)}$~   &   ~$334.18^{+9.82~(+2.9\%)}_{-1.83~(-0.5\%)}$~ \\
+    B2 &   ~$1.858^{+0.374~(+20\%)}_{-0.270~(-15\%)}$~     &  ~$1.976^{+0.00~~(+0.0\%)}_{-0.078~(-3.9\%)}$~   &   ~$1.986^{+0.045~(+2.3\%)}_{-0.00~(-0.0\%)}$ ~ \\
+    \hline\hline
+  \end{tabular}
+\caption{VBF过程$pp\to h^0h^0+2jets$的领头阶、次领头阶和次次领头阶QCD修正后的总截面。其中，质子质心系能量
+为$\sqrt{S} = 14~{\textrm TeV}$，计算采用的基准点为B1和B2。能标不确定度通过变化
+$\mu\in [Q/4,~ 4 Q]$所得，小括号内的数值为相对能标不确定度。} 
+\label{tab:x-error}
+\end{table}
+表格(\ref{tab:x-error})中列出了VBF过程$pp\to h^0h^0+2jets$的领头阶、次领头阶和次次领头阶QCD修正后的总截面
+以及相应的能标不确定度。可以发现，当考虑了高阶辐射修正后，总的能标不确定度显著的减小了。对于基准点B1和
+B2，我们定义能标不确定度的上下边界分别为:
+\begin{eqnarray}
+\delta^{upper} \equiv \frac{\max \left[ \sigma(\mu) - \sigma(\mu=Q) \right]}{\sigma(\mu=Q)} 
+\nonumber \\
+\delta^{lower} \equiv \frac{\min \left[ \sigma(\mu) - \sigma(\mu=Q) \right]}{\sigma(\mu=Q)} 
+\end{eqnarray}
+且$\mu \in [Q/4, 4Q]$。我们可以从表中读出领头阶的能标不确定度为$\left(^{(+10\%)}_{(-9\%)}\right)$和
+$\left(^{(+20\%)}_{(-15\%)}\right)$，在次领头阶分别减小为$\left(^{(+0.8\%)}_{(-3.6\%)}\right)$和
+$\left(^{(+0.0\%)}_{(-3.9\%)}\right)$，最后在次次领头阶分别减小为$\left(^{(+2.9\%)}_{(-0.5\%)}\right)$和
+$\left(^{(+2.3\%)}_{(-0.0\%)}\right)$。可以看出次次领头阶总截面$\sigma_{NNLO}$的能标不确定度明显小于
+相应的领头阶和次领头阶的能标不确定度。因此，从能标不确定度的依赖方面来讲，次次领头阶的修正是极其重要的。
+
+此外，图(\ref{fig:x-scale})还展示了次次领头阶QCD修正在中心值$\mu = Q$时的修正小于1\%。和在$[Q/4,4Q]$中的
+其它能标相比，能标选取$\mu = Q$更加自然，其原因是当$\mu = Q$时的微扰收敛性更好。所以在下面的计算中，我们
+采用中心值$Q$作为重整化和因子化能标。
+
+\subsubsection{$PDF+\alpha_s$不确定度}
+为了讨论PDF的不确定度对计算结果的影响，我们仅选取MSTW2008来分析。PDF的不确定度源于在拟合数据时，这些数据
+在实验上存在不确定性。对于固定的$\alpha_s$，MSTW2008提供一个中心PDF集合$S_0$和2n个PDF本征矢量集合
+$S^{\pm}_i(i = 1,\ldots,n, n=20)$。任意质子对撞过程的散射截面的PDF不确定度可以用下面公式给出
+\cite{mstw2008:method}
+\begin{eqnarray}
+\left( \Delta \sigma^{\alpha_s}_{PDF} \right)_{+}
+&=&
+\sqrt{
+\sum_{i=1}^{n}
+\biggl\{
+\max
+\Big[
+\sigma^{\alpha_s}(S^+_i) - \sigma^{\alpha_s}(S_0),~
+\sigma^{\alpha_s}(S^-_i) - \sigma^{\alpha_s}(S_0),~
+0
+\Big]
+\biggr\}^2
+}, \nonumber \\
+\left( \Delta \sigma^{\alpha_s}_{PDF} \right)_{-}
+&=&
+\sqrt{
+\sum_{i=1}^{n}
+\biggl\{
+\max
+\Big[
+\sigma^{\alpha_s}(S_0) - \sigma^{\alpha_s}(S^+_i),~
+\sigma^{\alpha_s}(S_0) - \sigma^{\alpha_s}(S^-_i),~
+0
+\Big]
+\biggr\}^2
+}
+\nonumber \\
+\label{eq:pdferror-mstw}
+\end{eqnarray}
+其中$\sigma^{\alpha_s}(S_0)$，$\sigma^{\alpha_s}(S_i^{+})$和$\sigma^{\alpha_s}(S_i^{-})$表示总截面分别利用
+PDF集合$S_0$，$S^+_i$和$S^-_i$计算所得。
+
+除了PDF不确定度外，在计算当中还有一种不确定度源于强耦合精细结构常数$\alpha_s$的误差。为了衡量$\alpha_s$对
+计算带来的不确定度，MSTW实验组提供了五组对应不同的$\alpha_s$的PDF集合：最佳拟合对应于$\alpha^0$，其它四个
+PDF集合分别对应于$\alpha_s = \alpha_s^0 \pm 0.5 \sigma$和$\alpha_s = \alpha_s^0 \pm 1 \sigma$。其中
+$\alpha^0_s$和$\sigma$是$\alpha_s$的中心值和标准偏差。通过比较这五组PDF给出的总截面，
+纯的$\alpha_s$不确定度定义为
+\begin{eqnarray}
+\label{eq:aserror-mstw}
+\left( \Delta \sigma_{\alpha_s} \right)_{+}
+&=&
+\max_{\alpha_s}
+\Big[
+\sigma^{\alpha_s}(S_0)
+\Big]
+- \sigma^{\alpha_s^0}(S_0), \nonumber \\
+\left( \Delta \sigma_{\alpha_s} \right)_{-}
+&=&
+\sigma^{\alpha_s^0}(S_0) -
+\min_{\alpha_s}
+\Big[
+\sigma^{\alpha_s}(S_0)
+\Big]
+\end{eqnarray}
+其中max和min表示遍历所有五个$\alpha_s$对应的PDF，然后计算出对应截面的最大值和最小值。
+
+对于MSTW2008~PDF集合，$PDF+\alpha_s$的组合不确定度为\cite{mstw2008:method}
+\begin{eqnarray}
+\label{eq:pdfaserror-mstw}
+\left( \Delta \sigma_{PDF+\alpha_s} \right)_{+}
+&=&
+\max_{\alpha_s}
+\Big[
+\sigma^{\alpha_s}(S_0) + \left( \Delta \sigma^{\alpha_s}_{PDF} \right)_{+}
+\Big]
+- \sigma^{\alpha_s^0}(S_0), \nonumber \\
+\left( \Delta \sigma_{PDF+\alpha_s} \right)_{-}
+&=&
+\sigma^{\alpha_s^0}(S_0) -
+\min_{\alpha_s}
+\Big[
+\sigma^{\alpha_s}(S_0) - \left( \Delta \sigma^{\alpha_s}_{PDF} \right)_{-}
+\Big]
+\end{eqnarray}
+如果$\left( \Delta \sigma^{\alpha_s}_{PDF}\right)_{\pm}$对$\alpha_s$的依赖是可以忽略的，则$PDF+\alpha_s$
+总的不确定度可以用以下公式近似
+\begin{eqnarray}
+\left( \Delta \sigma_{PDF+\alpha_s} \right)_{\pm}
+&\simeq&
+\left( \Delta \sigma_{PDF} \right)_{\pm} +
+\left( \Delta \sigma_{\alpha_s} \right)_{\pm}
+\label{eq:pdfaserror-appro}
+\end{eqnarray}
+其中$\left( \Delta \sigma_{PDF} \right)_{\pm} = (\Delta \sigma^{\alpha_s^0}_{PDF})_{\pm}$是纯的PDF
+不确定度。所以为了减少计算的复杂度，我们用公式(\ref{eq:pdfaserror-appro})来计算$PDF+\alpha_s$组合的
+不确定度。
+
+\subsubsection{积分总截面的不确定度}
+\begin{table}
+  \centering 
+  \begin{tabular}{|c|c|c|c|}
+  \hline\hline
+  \multicolumn{2}{|c|}{$\sqrt{S}$ (TeV)} & $\sigma_{LO}$ (fb) & $\sigma_{NLO}$ (fb) \\
+  \hline
+  \multirow{3}{*}{14}  & B1 &
+   $311.30^{+32.38 +4.06}_{-28.88-4.04} \left( ^{+ 10.4 \% + 1.3 \%}_{-9.3 \% - 1.3 \%} \right)$ &
+   $333.20^{+2.51 +8.46}_{-12.08-6.57} \left( ^{+ 0.8 \% + 2.5 \%}_{-3.6 \% - 2.0 \%} \right)$ \\
+   & B2 &
+   $1.858^{+0.374 +0.028}_{-0.270-0.026} \left( ^{+ 20.1 \% + 1.5 \%}_{-14.5 \% - 1.4 \%} \right)$ &
+   $1.976^{+0 +0.052}_{-0.078-0.039} \left( ^{+ 0 \% + 2.6 \%}_{-3.9 \% - 2.0 \%} \right)$ \\
+   \hline
+   \multirow{3}{*}{33}  & B1 &
+   $1404^{+0 +15}_{-30-16} \left( ^{+ 0 \% + 1.1 \%}_{-2.1 \% - 1.1 \%} \right)$ &
+   $1500^{+54 +35}_{-74-32} \left( ^{+ 3.6 \% + 2.3 \%}_{-4.9 \% - 2.1 \%} \right)$ \\
+   & B2 &
+   $11.234^{+0.878 +0.129}_{-0.830-0.149} \left( ^{+ 7.8 \% + 1.1 \%}_{-7.4 \% - 1.3 \%} \right)$ &
+   $12.002^{+0.190 +0.297}_{-0.562-0.225} \left( ^{+ 1.6 \% + 2.5 \%}_{-4.7 \% - 1.9 \%} \right)$ \\
+   \hline
+   \multirow{3}{*}{100}  & B1 &
+   $7271^{+770 +73}_{-1130-81} \left( ^{+ 10.6 \% + 1.0 \%}_{-15.5 \% - 1.1 \%} \right)$ &
+   $7554^{+535 +188}_{-580-119} \left( ^{+ 7.1 \% + 2.5 \%}_{-7.7 \% - 1.6 \%} \right)$ \\
+   & B2 &
+   $75.36^{+4.91 +2.07}_{-6.34-1.07} \left( ^{+ 6.5 \% + 2.7 \%}_{-8.4 \% - 1.4 \%} \right)$ &
+   $79.82^{+3.92 +2.99}_{-5.26-1.95} \left( ^{+ 4.9 \% + 3.7 \%}_{-6.6 \% - 2.4 \%} \right)$ \\
+   \hline \hline
+  \end{tabular}
+\caption{VBF过程$pp\to h^0h^0+2jets$领头阶和次领头阶QCD修正后的总截面，其中实验室质心系能量的选取为
+$\sqrt{S} = 14,33,100~TeV$且基准点的选取分别为B1和B2。此外，上下标中的第一个数值表示能标不确定度，
+第二个表示$PDF+\alpha_s$组合不确定度，括号里的数值表示相应的相对不确定度。}
+\label{tab:x-ppcolliders1}
+\end{table}
+
+\begin{table}
+  \centering 
+  \begin{tabular}{|c|c|c|}
+  \hline\hline
+  \multicolumn{2}{|c|}{$\sqrt{S}$ (TeV)} & $\sigma_{NNLO}$ (fb) \\
+  \hline
+  \multirow{3}{*}{14}  & B1 &
+   $334.18^{+9.82 +7.36}_{-1.83-5.87} \left( ^{+ 2.9 \% + 2.2 \%}_{-0.5 \% - 1.8 \%} \right)$ \\
+   & B2 &
+   $1.986^{+0.045 +0.048}_{-0-0.035} \left( ^{+ 2.3 \% + 2.4 \%}_{-0.0 \% - 1.8 \%} \right)$ \\
+   \hline
+   \multirow{3}{*}{33}  & B1 &
+   $1503^{+73 +32}_{-17-28} \left( ^{+ 4.9 \% + 2.1 \%}_{-1.1 \% - 1.9 \%} \right)$ \\
+   & B2 &
+   $12.041^{+0.359 +0.258}_{-0.060-0.209} \left( ^{+ 3.0 \% + 2.1 \%}_{-0.5 \% - 1.7 \%} \right)$ \\
+   \hline
+   \multirow{3}{*}{100}  & B1 &
+   $7578^{+553 +150}_{-134-170} \left( ^{+ 7.3 \% + 2.0 \%}_{-1.8 \% - 2.2 \%} \right)$ \\
+   & B2 &
+   $80.05^{+3.92 +1.58}_{-0.80-1.48} \left( ^{+ 4.9 \% + 2.0 \%}_{-1.0 \% - 1.8 \%} \right)$ \\
+   \hline \hline
+  \end{tabular}
+\caption{该表格延续表格\ref{tab:x-ppcolliders1}，列出的是次次领头阶QCD修正后的总截面、理论不确定度和相应
+的相对不确定度。}
+\label{tab:x-ppcolliders2}
+\end{table}
+在表格(\ref{tab:x-ppcolliders1})和(\ref{tab:x-ppcolliders2})中我们列出了VBF过程$pp\to h^0h^0+2jets$
+的领头阶、次领头阶和次次领头阶QCD修正后的总的积分截面。其中对撞能量的选取为$\sqrt{S} = 14,33,100~TeV$且
+模型参数基准点为B1和B2。表格中还详细列出了能标不确定度和$PDF+\alpha_s$组合不确定度来衡量理论计算的可靠性。
+从表格中可以看出，重整化和因子化的能标不确定度和$PDF+\alpha_s$组合不确定度是可以比拟的，并且次领头阶和
+次次领头阶QCD修正可以减小这两种不确定度。为了得出总的不确定度，我们简单的把能标不确定度和$PDF+\alpha_s$
+不确定度线性相加。对于模型基准点B1和B2，在质心系对撞能量为14~TeV时，理论上的预言精确到次次领头阶后总的
+不确定度小于5.1\%。另一方面，随着对撞能量从14~TeV提升到100~TeV，次次领头阶QCD修正后的总截面和理论上的
+不确定度也逐渐增大。
+
+\subsection{运动学微分分布}
+跟VBF产生过程$h^0+2jets$类似，过程$pp\to h^0h^0+2jets$的信号涉及两个前冲和后冲的jets，并且Higgs粒子集中
+出现在探测器中心区域。这些特征对从复杂的QCD背景中鉴别出VBF信号起着极其重要的作用。由于精确研究末态Higgs
+粒子的运动学分布对于理论和实验分析都是十分重要的，我们计算了次次领头阶QCD修正后的轻的CP为偶的Higgs粒子的
+横动量$p_T$、快度y和不变质量M的分布。为了衡量次次领头阶QCD修正的影响，我们引入微分次次领头阶QCD的K因子，
+定义如下：
+\begin{eqnarray}
+K(x) = \frac{d \sigma_{NNLO}}{dx}\Big/\frac{d \sigma_{LO}}{dx}
+\end{eqnarray}
+其中x表示某个运动学变量。
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.55]{hhjj_pta1.eps}
+\includegraphics[scale=0.55]{hhjj_ptb1.eps}
+\includegraphics[scale=0.55]{hhjj_pta2.eps}
+\includegraphics[scale=0.55]{hhjj_ptb2.eps}
+\includegraphics[scale=0.55]{hhjj_pta3.eps}
+\includegraphics[scale=0.55]{hhjj_ptb3.eps}
+\caption{在对撞能量分别为14、33和100~TeV的时候，领头Higgs($h^0_1$)和次领头Higgs($h^0_2$)粒子的横动量分布，
+其中模型参数基准点分别为B1和B2。}
+\label{fig:HiggsPT}
+\end{figure}
+图(\ref{fig:HiggsPT})描述了VBF过程$pp\to h^0h^0+2jets$的领头阶和次次领头阶QCD修正后的领头Higgs($h^0_1$)
+和次领头Higgs($h^0_2$)粒子在对撞能量分别为$14,33,100~TeV$时的横动量分布，其中模型参数的基准点分别为
+B1和B2。领头Higgs($h^0_1$)和次领头Higgs($h^0_2$)的定义为下
+\begin{eqnarray}
+p_{Th^0_{1}} > p_{Th^0_{2}}
+\end{eqnarray}
+我们可以看出次次领头阶QCD修正增强了Higgs粒子的横动量$p_T$分布，但是对$p_{Th^0_1}$和$p_{Th^0_2}$分布在图中
+所示范围内的K因子始终不大于1.10。在对撞能量$\sqrt{S}$分别为14、33和100~TeV的时候，$p_{Th^0_1}$的分布在
+$p_{Th^0_1}\sim 80~GeV$的时候达到最大值，而对于$p_{Th^0_2}$的分布，在$p_{Th^0_2}\sim 45~GeV$的时候
+达到最大值。另一方面，随着对撞能量的增加，Higgs粒子$h^0_1$和$h^0_2$的分布形状包括极值都没有变化。
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.55]{hhjj_ya1.eps}
+\includegraphics[scale=0.55]{hhjj_yb1.eps}
+\includegraphics[scale=0.55]{hhjj_ya2.eps}
+\includegraphics[scale=0.55]{hhjj_yb2.eps}
+\includegraphics[scale=0.55]{hhjj_ya3.eps}
+\includegraphics[scale=0.55]{hhjj_yb3.eps}
+\caption{在对撞能量分别为14、33和100~TeV的时候，领头Higgs($h^0_1$)和次领头Higgs($h^0_2$)粒子的快度分布，
+其中模型参数基准点分别为B1和B2。}
+\label{fig:rapidity}
+\end{figure}
+图(\ref{fig:rapidity})展示了领头阶和次次领头阶QCD修正后的Higgs粒子$h^0_1$和$h^0_2$的快度分布，其中模型
+参数基准点分别为B1和B2。我们可以看出，两个Higgs粒子的分布集中在探测器的中心区域，刚好符合VBF过程的信号
+特征。
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.8]{hhjj_mhh1.eps}
+\includegraphics[scale=0.8]{hhjj_mhh2.eps}
+\caption{质心系对撞能量为14~TeV时的Higgs对的不变质量分布图，其中模型参数基准点分别为B1和B2。}
+\label{fig:mhh}
+\end{figure}
+我们在图(\ref{fig:mhh})中展示了Higgs粒子对的不变质量的分布图，其中图(\ref{fig:mhh}a)和图(\ref{fig:mhh}b)
+分别表示在模型基准点B1和B2时的分布。对于基准点B2，Higgs粒子对的不变质量大部分集中在
+$M_{h^0h^0}\sim 370~GeV$区域，然后随着$M_{h^0h^0}$的增加开始缓慢下降，且相应的K因子的范围为
+$[1.05, 1.09]$。对于基准点B1，由于$H^0\to h^0h^0$的共振效应，Higgs对不变质量的分布在
+$M_{h^0h^0} \sim 276~ {\rm GeV}$的时候突然变得很大。VBF过程$pp\to h^0h^0+2jets$的产生截面由VBF过程
+$pp\to H^0+2jets$附带着衰变过程$H^0\to h^0h^0$主导。通过分析$h^0$粒子对不变质量的分布，我们可以直接探测
+Higgs自耦合顶点$\lambda_{h^0h^0h^0}$和$\lambda_{H^0h^0h^0}$，而这些耦合可以用来重新构建出Higgs势并且提取
+$H^0$粒子的产生信号。
+
+\section{小结}
+在此项工作中，我们详细研究了强子对撞机上2HDM模型下VBF产生轻的CP偶Higgs粒子对的次次领头阶QCD修正。计算采用结构函数法(structure function approach)。我们主要研究了积分总截面对模型参数的
+依赖性，另外还有理论不确定度(重整化能标，因子化能标和$PDF+\alpha_s$组合的不确定度)对总截面的影响，以此
+表明次次领头阶修正可以显著减小理论不确定度。此外，结果还显示能标不确定度和$PDF+\alpha_s$组合不确定度
+大致相当。在对撞能量$\sqrt{S} = 14~TeV$的LHC上，通过能标不确定度和$PDF+\alpha_s$组合不确定度线性组合出的
+总的不确定度在次次领头阶QCD修正后小于5.1\%。我们同样利用结构函数法研究了末态Higgs粒子对在领头阶和
+次次领头阶QCD修正后的横动量、快度和不变质量的分布，并且得到了相空间依赖的K因子。特别是通过分析Higgs对的
+不变质量$M_{h^0h^0}$的分布，我们得到Higgs自耦合强度$\lambda_{h^0h^0h^0}$和$\lambda_{H^0h^0h^0}$的信息，
+并提取$H^0\to h^0h^0$的共振信号来探测新的Higgs粒子。
+
